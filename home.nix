@@ -103,9 +103,16 @@
   programs.micro = {
     enable = true;
     settings = {
-      "colorscheme" = "zenburn";
-      "tabsize" = 2;
-      "tabstospaces" = true;
+      colorscheme = "gotham";
+      tabsize = 2;
+      tabstospaces = true;
+      autoindent = true;
+      colorcolumn = 100;
+      diffgutter = true;
+      hlsearch = true;
+      mkparents = true;
+      savecursor = true;
+      manipulator = true;
     };
   };
 
