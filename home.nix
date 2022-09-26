@@ -15,6 +15,16 @@
   # the Home Manager release notes for a list of state version
   # changes in each release.
   home.stateVersion = "22.05";
+  home.enableNixpkgsReleaseCheck = true;
+
+  nixpkgs.config.allowUnfree = true;
+  nix.package = pkgs.nixUnstable;
+  nix.settings = {
+    experimental-features = "nix-command flakes";
+    max-jobs = 6;
+    cores = 2;
+    auto-optimise-store = true;
+  };
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
@@ -136,6 +146,7 @@
     # pkgs is the set of all packages in the default home.nix implementation
     cloc
     cloudflare-dyndns
+    config.nix.package
     coreutils
     delta
     entr
