@@ -1,21 +1,20 @@
 { config, pkgs, ... }:
 
 {
-  # Home Manager needs a bit of information about you and the
-  # paths it should manage.
   home.username = "abhinav";
   home.homeDirectory = "/Users/abhinav";
-
-  # This value determines the Home Manager release that your
-  # configuration is compatible with. This helps avoid breakage
-  # when a new Home Manager release introduces backwards
-  # incompatible changes.
-  #
-  # You can update Home Manager without changing this value. See
-  # the Home Manager release notes for a list of state version
-  # changes in each release.
   home.stateVersion = "22.05";
   home.enableNixpkgsReleaseCheck = true;
+
+  home.shellAliases = {
+    j = "just";
+    g = "git";
+    l = "bat";
+    m = "micro";
+    du = "dua interactive";
+  };
+
+  home.sessionVariables = { EDITOR = "micro"; };
 
   nixpkgs.config.allowUnfree = true;
   nix.package = pkgs.nixUnstable;
@@ -26,7 +25,6 @@
     auto-optimise-store = true;
   };
 
-  # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 
   programs.htop = {
@@ -64,13 +62,6 @@
   programs.fish = {
     enable = true;
 
-    shellAliases = {
-      j = "just";
-      g = "git";
-      l = "bat";
-      m = "micro";
-    };
-
     plugins = [
       {
         name = "foreign-env";
@@ -101,7 +92,6 @@
       }
     ];
     interactiveShellInit = ''
-      set EDITOR micro
       fzf_configure_bindings --git_status=\cs --history=\cr --variables=\cv --directory=\cf --git_log=\cg
     '';
 
@@ -138,16 +128,17 @@
   programs.micro = {
     enable = true;
     settings = {
-      colorscheme = "gotham";
-      tabsize = 2;
-      tabstospaces = true;
       autoindent = true;
       colorcolumn = 100;
+      colorscheme = "gotham";
       diffgutter = true;
       hlsearch = true;
       mkparents = true;
       savecursor = true;
       softwrap = true;
+      tabsize = 2;
+      tabstospaces = true;
+      # plugins
       manipulator = true;
     };
   };
