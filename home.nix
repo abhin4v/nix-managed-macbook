@@ -57,6 +57,7 @@
     shellAliases = {
       j = "just";
       g = "git";
+      l = "bat";
     };
 
     plugins = [
@@ -94,10 +95,23 @@
         fenv source $HOME/.nix-profile/etc/profile.d/hm-session-vars.sh
       end
     '';
+  };
 
-    loginShellInit = ''
-      fish_add_path --move --prepend --path $HOME/.nix-profile/bin /run/wrappers/bin /etc/profiles/per-user/$USER/bin /run/current-system/sw/bin /nix/var/nix/profiles/default/bin # https://github.com/LnL7/nix-darwin/issues/122
-    '';
+  programs.bat = {
+    enable = true;
+    config = {
+      italic-text = "always";
+      paging = "always";
+      tabs = "2";
+      theme = "DarkNeon";
+    };
+  };
+
+  programs.fzf = {
+    enable = true;
+    enableFishIntegration = true;
+    fileWidgetCommand = "fd --type f --no-ignore";
+    historyWidgetOptions = [ "--reverse" "--sort" "--exact" ];
   };
 
   programs.micro = {
@@ -112,6 +126,7 @@
       hlsearch = true;
       mkparents = true;
       savecursor = true;
+      softwrap = true;
       manipulator = true;
     };
   };
