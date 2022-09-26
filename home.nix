@@ -145,11 +145,13 @@
 
   # Packages to install
   home.packages = with pkgs; [
+    broot
     cloc
     cloudflare-dyndns
     config.nix.package
     coreutils
     delta
+    dua
     entr
     fd
     gitui
