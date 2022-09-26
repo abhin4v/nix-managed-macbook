@@ -68,6 +68,7 @@
       j = "just";
       g = "git";
       l = "bat";
+      m = "micro";
     };
 
     plugins = [
@@ -89,9 +90,19 @@
           sha256 = "16k94hz3s6wayass6g1lhlcjmbpf2w8mzx90qrrqp120h80xwp25";
         };
       }
+      {
+        name = "fzf";
+        src = pkgs.fetchFromGitHub {
+          owner = "PatrickF1";
+          repo = "fzf.fish";
+          rev = "2bb6f712b0b99fc5cc40ca78b6b3ba8b2529b0f7";
+          hash = "sha256-XmRGe39O3xXmTvfawwT2mCwLIyXOlQm7f40mH5tzz+s=";
+        };
+      }
     ];
     interactiveShellInit = ''
       set EDITOR micro
+      fzf_configure_bindings --git_status=\cs --history=\cr --variables=\cv --directory=\cf --git_log=\cg
     '';
 
     shellInit = ''
@@ -143,13 +154,13 @@
 
   # Packages to install
   home.packages = with pkgs; [
-    # pkgs is the set of all packages in the default home.nix implementation
     cloc
     cloudflare-dyndns
     config.nix.package
     coreutils
     delta
     entr
+    fd
     gitui
     graphviz-nox
     haskellPackages.cabal-plan
