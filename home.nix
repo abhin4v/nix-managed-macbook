@@ -172,6 +172,15 @@
     nixfmt
     statix
     tree
+
+    # fonts
+    fira-mono
+    inconsolata
+    jetbrains-mono
+    nanum-gothic-coding
+    roboto-mono
+    source-code-pro
+    (import ./dm-mono.nix { inherit lib fetchzip; })
   ];
 
 }
