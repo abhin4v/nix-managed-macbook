@@ -1,0 +1,3 @@
+#!/bin/bash
+
+nix-collect-garbage -d --delete-old
