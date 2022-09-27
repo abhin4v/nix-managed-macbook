@@ -4,6 +4,7 @@
   imports = [ ./fish.nix ./git.nix ];
 
   home.packages = with pkgs; [
+    bash
     broot
     cloc
     cloudflare-dyndns
