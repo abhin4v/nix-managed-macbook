@@ -14,8 +14,8 @@
     l = "bat";
     m = "micro";
     du = "dua interactive";
+    br = "broot";
   };
 
   home.sessionVariables = { EDITOR = "micro"; };
-
 }

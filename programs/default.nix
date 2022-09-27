@@ -7,9 +7,10 @@
     broot
     cloc
     cloudflare-dyndns
+    comma
     config.nix.package
     coreutils
-    delta
+    ddgr
     dua
     entr
     fd
@@ -18,12 +19,15 @@
     haskellPackages.cabal-plan
     haskellPackages.graphmod
     httpie
-    mosh
+    jetbrains.idea-community
     micro
     niv
     nixfmt
+    nix-diff
+    ranger
+    shellcheck
     statix
-    tree
+    tealdeer
 
     # fonts
     fira-mono

@@ -33,6 +33,13 @@
         };
       }
     ];
+
+    functions = {
+      where = "readlink -f (which $argv)";
+      ghe =
+        "set -l dir (mktemp -d); git clone --depth 1 https://github.com/$argv $dir; cd $dir; ranger;";
+    };
+
     interactiveShellInit = ''
       fzf_configure_bindings --git_status=\cs --history=\cr --variables=\cv --directory=\cf --git_log=\cg
     '';
