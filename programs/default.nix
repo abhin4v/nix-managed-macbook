@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 
 {
-  imports = [ ./fish.nix ];
+  imports = [ ./fish.nix ./git.nix ];
 
   home.packages = with pkgs; [
     broot
