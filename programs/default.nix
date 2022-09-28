@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 
 {
-  imports = [ ./fish.nix ./git.nix ];
+  imports = [ ./fish.nix ./git.nix ./vscode.nix ];
 
   home.packages = with pkgs; [
     bash
@@ -26,6 +26,7 @@
     nixfmt
     nix-diff
     ranger
+    rnix-lsp
     shellcheck
     statix
     tealdeer
