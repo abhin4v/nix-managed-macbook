@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 
 {
-  imports = [ ./fish.nix ./git.nix ./vscode.nix ];
+  imports = [ ./fish.nix ./git.nix ./starship.nix ./vscode.nix ];
 
   home.packages = with pkgs; [
     bash

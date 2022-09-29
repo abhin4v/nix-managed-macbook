@@ -15,15 +15,6 @@
         };
       }
       {
-        name = "agnoster";
-        src = pkgs.fetchFromGitHub {
-          owner = "oh-my-fish";
-          repo = "theme-agnoster";
-          rev = "43860ce1536930bca689470e26083b0a5b7bd6ae";
-          sha256 = "16k94hz3s6wayass6g1lhlcjmbpf2w8mzx90qrrqp120h80xwp25";
-        };
-      }
-      {
         name = "fzf";
         src = pkgs.fetchFromGitHub {
           owner = "PatrickF1";
