@@ -42,6 +42,8 @@
 
     interactiveShellInit = ''
       fzf_configure_bindings --git_status=\cs --history=\cr --variables=\cv --directory=\cf --git_log=\cg
+      thefuck --alias f | source
+      neofetch
     '';
 
     shellInit = ''

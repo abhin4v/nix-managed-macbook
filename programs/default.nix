@@ -10,7 +10,7 @@
     cloudflare-dyndns
     comma
     config.nix.package
-    coreutils
+    coreutils-full
     ddgr
     dua
     entr
@@ -22,14 +22,18 @@
     httpie
     jetbrains.idea-community
     micro
+    neofetch
     niv
-    nixfmt
+    nix
     nix-diff
+    nixfmt
     ranger
     rnix-lsp
     shellcheck
+    spotify-tui
     statix
     tealdeer
+    thefuck
 
     # fonts
     fira-mono
@@ -39,6 +43,7 @@
     roboto-mono
     source-code-pro
     (import ../packages/dm-mono.nix { inherit lib fetchzip; })
+    (nerdfonts.override { fonts = [ "Monoid" "Agave" "Iosevka" "Lekton" "VictorMono" ]; })
   ];
 
   programs.home-manager.enable = true;
@@ -51,6 +56,8 @@
       hide_userland_threads = true;
       highlight_base_name = true;
       show_program_path = false;
+      sort_direction = false;
+      sort_key = "PERCENT_CPU";
       tree_view = true;
     };
   };
