@@ -39,14 +39,7 @@
 
     shellInit = ''
       # nix
-      if test -e /nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh
-        fenv source /nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh
-      end
-
-      # home-manager
-      if test -e $HOME/.nix-profile/etc/profile.d/hm-session-vars.sh
-        fenv source $HOME/.nix-profile/etc/profile.d/hm-session-vars.sh
-      end
+      fenv source /nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh
     '';
   };
 }
