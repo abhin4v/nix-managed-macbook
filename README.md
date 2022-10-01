@@ -4,23 +4,32 @@ This is the [Nix] and [Home Manager] configuration for managing my MacBook.
 
 ## Usage
 
-First install [Nix]. To install `home-manager` and set up the MacBook as per the config, run:
+First install [Nix]. Then, in the repo directory, run `nix develop` to get into the Nix shell.
+
+To set up the MacBook as per the config, run:
 
 ```bash
-bin/install
+just switch
 ```
 
 To update installed packages, run:
 
 ```bash
-bin/update
+just update
 ```
 
-To cleanup garbage, run:
+To clean up garbage, run:
 
 ```bash
-bin/cleanup
+just clean
+```
+
+If you have [`just`] installed, you can also run these commands from any other directory, without starting Nix shell:
+
+```bash
+just <repo_dir>/switch # or update or clean
 ```
 
 [Nix]: https://nixos.org
 [Home Manager]: https://github.com/nix-community/home-manager
+[`just`]: https://just.systems

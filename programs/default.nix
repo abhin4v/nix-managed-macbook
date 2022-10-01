@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ inputs, config, pkgs, ... }:
 
 {
   imports = [ ./fish.nix ./git.nix ./starship.nix ./vscode.nix ];
@@ -42,11 +42,9 @@
     nanum-gothic-coding
     roboto-mono
     source-code-pro
-    (import ../packages/dm-mono.nix { inherit lib fetchzip; })
+    (import ../packages/dm-mono.nix { inherit lib pkgs; dm-mono-src = "${inputs.dm-mono-font}"; })
     (nerdfonts.override { fonts = [ "Monoid" "Agave" "Iosevka" "Lekton" "VictorMono" ]; })
   ];
-
-  programs.home-manager.enable = true;
 
   programs.htop = {
     enable = true;

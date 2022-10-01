@@ -1,0 +1,132 @@
+{
+  "nodes": {
+    "dm-mono-font": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1586946937,
+        "narHash": "sha256-Xj6UmvH7tqW6xdobBxuafqc7TB1nrTFwHWv4DaZmwx8=",
+        "owner": "googlefonts",
+        "repo": "dm-mono",
+        "rev": "57fadabfb200a77de2812540026c249dc3013077",
+        "type": "github"
+      },
+      "original": {
+        "owner": "googlefonts",
+        "repo": "dm-mono",
+        "type": "github"
+      }
+    },
+    "fish-plugin-foreign-env": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1649621402,
+        "narHash": "sha256-3h03WQrBZmTXZLkQh1oVyhv6zlyYsSDS7HTHr+7WjY8=",
+        "owner": "oh-my-fish",
+        "repo": "plugin-foreign-env",
+        "rev": "b3dd471bcc885b597c3922e4de836e06415e52dd",
+        "type": "github"
+      },
+      "original": {
+        "owner": "oh-my-fish",
+        "repo": "plugin-foreign-env",
+        "type": "github"
+      }
+    },
+    "fish-plugin-fzf": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1664172134,
+        "narHash": "sha256-1Rx17Y/NgPQR4ibMnsZ/1UCnNbkx6vZz43IKfESxcCA=",
+        "owner": "PatrickF1",
+        "repo": "fzf.fish",
+        "rev": "1a0bf6c66ce37bfb0b4b0d96d14e958445c21448",
+        "type": "github"
+      },
+      "original": {
+        "owner": "PatrickF1",
+        "repo": "fzf.fish",
+        "type": "github"
+      }
+    },
+    "flake-compat": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1650374568,
+        "narHash": "sha256-Z+s0J8/r907g149rllvwhb4pKi8Wam5ij0st8PwAh+E=",
+        "owner": "edolstra",
+        "repo": "flake-compat",
+        "rev": "b4a34015c698c7793d592d66adbab377907a2be8",
+        "type": "github"
+      },
+      "original": {
+        "owner": "edolstra",
+        "repo": "flake-compat",
+        "type": "github"
+      }
+    },
+    "home-manager": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ],
+        "utils": "utils"
+      },
+      "locked": {
+        "lastModified": 1664573442,
+        "narHash": "sha256-AovlSIuJfMf8n9QLNUVtsCul+NVHIoen7APH2fLls3k=",
+        "owner": "nix-community",
+        "repo": "home-manager",
+        "rev": "a7f0cc2d7b271b4a5df9b9e351d556c172f7e903",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-community",
+        "repo": "home-manager",
+        "type": "github"
+      }
+    },
+    "nixpkgs": {
+      "locked": {
+        "lastModified": 1664497144,
+        "narHash": "sha256-oLTtXSp95umHunc+uFyGxUiZCXQlGFjXMz+w95hGZi4=",
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "671fabc93b4d1a3b38499c7b20776477c91b2b15",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nixos",
+        "ref": "nixpkgs-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "root": {
+      "inputs": {
+        "dm-mono-font": "dm-mono-font",
+        "fish-plugin-foreign-env": "fish-plugin-foreign-env",
+        "fish-plugin-fzf": "fish-plugin-fzf",
+        "flake-compat": "flake-compat",
+        "home-manager": "home-manager",
+        "nixpkgs": "nixpkgs"
+      }
+    },
+    "utils": {
+      "locked": {
+        "lastModified": 1659877975,
+        "narHash": "sha256-zllb8aq3YO3h8B/U0/J1WBgAL8EX5yWf5pMj3G0NAmc=",
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "rev": "c0e246b9b83f637f4681389ecabcb2681b4f3af0",
+        "type": "github"
+      },
+      "original": {
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "type": "github"
+      }
+    }
+  },
+  "root": "root",
+  "version": 7
+}
