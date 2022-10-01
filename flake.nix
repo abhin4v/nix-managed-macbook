@@ -40,6 +40,9 @@
       };
       devShells.${system}.default = pkgs.mkShell {
         buildInputs = with pkgs; [ (import home-manager { inherit pkgs; }).home-manager just ];
+        shellHook = ''
+          export NIXPKGS_PATH=${pkgs.path};
+        '';
       };
     };
 }

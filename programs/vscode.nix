@@ -1,6 +1,15 @@
 { config, pkgs, ... }:
 
-{
+let
+  marketplaceExtensions = [
+    "13xforever/language-x86-64-assembly"
+    "ban/spellright"
+    "dawhite/mustache"
+    "kirozen/wordcounter"
+    "pedrorgirardi/vscode-cljfmt"
+    "wmaurer/change-case"
+  ];
+in {
   programs.vscode = {
     enable = true;
     mutableExtensionsDir = false;
@@ -13,6 +22,7 @@
         esbenp.prettier-vscode
         haskell.haskell
         jdinhlife.gruvbox
+        jebbs.plantuml
         jnoortheen.nix-ide
         justusadam.language-haskell
         kamikillerto.vscode-colorize
@@ -23,50 +33,9 @@
         timonwong.shellcheck
         tyriar.sort-lines
         zhuangtongfa.material-theme
-      ] ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
-        {
-          publisher = "13xforever";
-          name = "language-x86-64-assembly";
-          version = "3.0.0";
-          sha256 = "sha256-wIsY6Fuhs676EH8rSz4fTHemVhOe5Se9SY3Q9iAqr1M=";
-        }
-        {
-          publisher = "ban";
-          name = "spellright";
-          version = "3.0.90";
-          sha256 = "sha256-yAHlwX2stqGuUu3Q+mVxsF1JKmTgy/kkT63VH3YlomM=";
-        }
-        {
-          publisher = "dawhite";
-          name = "mustache";
-          version = "1.1.1";
-          sha256 = "sha256-PkymMex1icvDN2Df38EIuV1O9TkMNWP2sGOjl1+xGMk=";
-        }
-        {
-          publisher = "jebbs";
-          name = "plantuml";
-          version = "2.17.4";
-          sha256 = "sha256-fnz6ubB73i7rJcv+paYyNV1r4cReuyFPjgPM0HO40ug";
-        }
-        {
-          publisher = "kirozen";
-          name = "wordcounter";
-          version = "2.4.3";
-          sha256 = "sha256-gkdMaMiDwQNjmrGfUK/c/bQUn1bovESRPJ+etz2yfJk=";
-        }
-        {
-          publisher = "pedrorgirardi";
-          name = "vscode-cljfmt";
-          version = "1.3.0";
-          sha256 = "sha256-gZ8Fo7YXSapnQL6UbYUKJDg27wYqK2NG1lcJUae6dWs=";
-        }
-        {
-          publisher = "wmaurer";
-          name = "change-case";
-          version = "1.0.0";
-          sha256 = "sha256-tN/jlG2PzuiCeERpgQvdqDoa3UgrUaM7fKHv6KFqujc=";
-        }
-      ];
+      ] ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace (builtins.filter
+        ({ publisher, name, ... }: builtins.elem (publisher + "/" + name) marketplaceExtensions)
+        (import ./vscode/extensions.nix).extensions);
 
     userSettings = {
       debug.console.fontSize = 13;

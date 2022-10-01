@@ -29,7 +29,11 @@ _switch:
 # switch to latest home-manager generation
 switch: (_run "_switch")
 
-_update: && _switch
+_update-vscode-extensions:
+    $NIXPKGS_PATH/pkgs/applications/editors/vscode/extensions/update_installed_exts.sh > \
+        {{ root_dir }}/programs/vscode/extensions.nix
+
+_update: _update-vscode-extensions && _switch
     nix flake update --commit-lock-file "{{ root_dir }}"
 
 # update packages and switch
