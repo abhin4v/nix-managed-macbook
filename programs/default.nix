@@ -27,6 +27,7 @@
     nix
     nix-diff
     nixfmt
+    proselint
     ranger
     rnix-lsp
     shellcheck
