@@ -98,8 +98,8 @@
   {
     name = "rust-analyzer";
     publisher = "rust-lang";
-    version = "0.4.1226";
-    sha256 = "0q1pm6xybpbpx5516vy6mnjjpx77sm3cahmip3cf10b63xrfpd5j";
+    version = "0.4.1233";
+    sha256 = "1rna5l6n8xrznj69ywwnhz8im22lvmzlj6qbz4j7282phkqrj9zf";
   }
   {
     name = "just";
@@ -110,8 +110,8 @@
   {
     name = "code-spell-checker";
     publisher = "streetsidesoftware";
-    version = "2.10.0";
-    sha256 = "1hn2v1q54wnx2lwngd5azdycm47ifi8wsina5ikxfp7v5gl940xx";
+    version = "2.10.1";
+    sha256 = "03cx684mn0nk47xpm46dly8g0lxars5h46vj41p8nhgsq9429rhm";
   }
   {
     name = "shellcheck";
