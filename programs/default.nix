@@ -17,8 +17,6 @@
     fd
     gitui
     graphviz-nox
-    haskellPackages.cabal-plan
-    haskellPackages.graphmod
     httpie
     jetbrains.idea-community
     micro
@@ -35,6 +33,7 @@
     statix
     tealdeer
     thefuck
+    tree
 
     # fonts
     fira-mono
