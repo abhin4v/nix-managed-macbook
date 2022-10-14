@@ -98,8 +98,8 @@
   {
     name = "rust-analyzer";
     publisher = "rust-lang";
-    version = "0.4.1240";
-    sha256 = "0azrr0xyyp9lgzvag4zqpm4yw0cvdcqsk3049qqikj2gk6h8bxw7";
+    version = "0.4.1243";
+    sha256 = "069s4wjyf6zzlxvlwycb4vryf5rflk0x6bq1a2h9x7jsgqjm3lc0";
   }
   {
     name = "just";
@@ -134,8 +134,8 @@
   {
     name = "material-theme";
     publisher = "zhuangtongfa";
-    version = "3.15.5";
-    sha256 = "0crrzpdy8fy4l1nim93qscmlpz2jhyb6hf0gh1rzqgfnk9w431xi";
+    version = "3.15.6";
+    sha256 = "0c6dwy6z3980hbf9njf8b8bvd602q2d6bflkrwqd93n9c0fa4n1d";
   }
 ];
 }
