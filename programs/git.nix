@@ -13,7 +13,9 @@
       p = "push";
       s = "status";
       ui = "!gitui";
+      ap = "add -p";
       ca = "commit --amend --no-edit";
+      cm = "commit -m";
       pf = "push --force-with-lease";
       lg =
         "log --graph --abbrev-commit --decorate --all --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(auto)%d%C(reset)'";

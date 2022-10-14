@@ -24,7 +24,7 @@ _build:
 build: (_run "_build")
 
 _switch:
-    home-manager switch --flake "{{ root_dir }}#abhinav"
+    home-manager -v switch --flake "{{ root_dir }}#abhinav"
 
 # switch to latest home-manager generation
 switch: (_run "_switch")

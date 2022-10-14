@@ -17,6 +17,7 @@
     br = "${pkgs.broot}/bin/broot";
     du = "${pkgs.dua}/bin/dua interactive";
     tf = "${pkgs.coreutils-full}/bin/tail -f";
+    cat = "bat";
   };
 
   home.sessionVariables = { EDITOR = "micro"; };
