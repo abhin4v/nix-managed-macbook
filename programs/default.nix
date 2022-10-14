@@ -11,7 +11,9 @@
     comma
     config.nix.package
     coreutils-full
+    curl
     ddgr
+    dig
     dua
     entr
     fd
@@ -19,12 +21,14 @@
     graphviz-nox
     httpie
     jetbrains.idea-community
+    less
     micro
     neofetch
     niv
     nix
     nix-diff
     nixfmt
+    openssh
     proselint
     ranger
     rnix-lsp
@@ -42,7 +46,7 @@
     nanum-gothic-coding
     roboto-mono
     source-code-pro
-    (import ../packages/dm-mono.nix { inherit lib pkgs; dm-mono-src = "${inputs.dm-mono-font}"; })
+    (pkgs.callPackage ../packages/dm-mono.nix { dm-mono-src = "${inputs.dm-mono-font}"; })
     (nerdfonts.override { fonts = [ "Monoid" "Agave" "Iosevka" "Lekton" "VictorMono" ]; })
   ];
 

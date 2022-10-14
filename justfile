@@ -18,7 +18,7 @@ _run cmd:
     fi
 
 _build:
-    home-manager build --flake "{{ root_dir }}#abhinav"
+    home-manager -v build --flake "{{ root_dir }}#abhinav"
 
 # build latest home-manager generation
 build: (_run "_build")
