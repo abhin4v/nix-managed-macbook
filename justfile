@@ -1,4 +1,4 @@
-in_nix_shell := if env_var_or_default("IN_NIX_SHELL", "false") == "false" { "false" } else { "true" }
+in_nix_shell := env_var_or_default("IN_NIX_SHELL", "false")
 root_dir := justfile_directory()
 
 # choose a just command to run
@@ -11,10 +11,10 @@ help:
 
 _run cmd:
     #!/usr/bin/env -S sh -eu
-    if [ "{{ in_nix_shell }}" = "true" ]; then
-      just "{{ root_dir }}/{{ cmd }}"
-    else
+    if [ "{{ in_nix_shell }}" = "false" ]; then
       nix-shell "{{ root_dir }}/shell.nix" --run "just \"{{ root_dir }}/{{ cmd }}\""
+    else
+      just "{{ root_dir }}/{{ cmd }}"
     fi
 
 _build:

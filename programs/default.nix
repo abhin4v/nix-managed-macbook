@@ -1,45 +1,50 @@
 { inputs, config, pkgs, ... }:
 
-{
-  imports = [ ./fish.nix ./git.nix ./starship.nix ./vscode.nix ];
-
-  home.packages = with pkgs; [
-    bash
-    broot
-    cloc
-    cloudflare-dyndns
-    comma
+let
+  nixPackages = with pkgs; [
     config.nix.package
-    coreutils-full
-    curl
-    ddgr
-    dig
-    dua
-    entr
-    fd
-    gitui
-    graphviz-nox
-    httpie
-    jetbrains.idea-community
-    less
-    micro
-    neofetch
     niv
     nix
     nix-diff
+    nix-du
     nixfmt
-    openssh
-    proselint
-    ranger
     rnix-lsp
-    shellcheck
-    spotify-tui
     statix
+  ];
+  networkingPackages = with pkgs; [
+    curl
+    dig
+    httpie
+    openssh
+  ];
+  cmdLineUtilPackages = with pkgs; [
+    bash
+    broot
+    coreutils-full
+    fd
+    gnugrep
+    less
+    ranger
     tealdeer
     thefuck
     tree
-
-    # fonts
+  ];
+  miscPackages = with pkgs; [
+    cloc
+    comma
+    ddgr
+    dua
+    entr
+    gitui
+    graphviz-nox
+    jetbrains.idea-community
+    micro
+    neofetch
+    proselint
+    shellcheck
+    spotify-tui
+  ];
+  fonts = with pkgs; [
     fira-mono
     inconsolata
     jetbrains-mono
@@ -49,6 +54,10 @@
     (pkgs.callPackage ../packages/dm-mono.nix { dm-mono-src = "${inputs.dm-mono-font}"; })
     (nerdfonts.override { fonts = [ "Monoid" "Agave" "Iosevka" "Lekton" "VictorMono" ]; })
   ];
+in {
+  imports = [ ./fish.nix ./git.nix ./starship.nix ./vscode.nix ];
+
+  home.packages = nixPackages ++ networkingPackages ++ cmdLineUtilPackages ++ miscPackages ++ fonts;
 
   programs.htop = {
     enable = true;
