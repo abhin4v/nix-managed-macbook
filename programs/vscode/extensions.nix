@@ -62,8 +62,8 @@
   {
     name = "nix-ide";
     publisher = "jnoortheen";
-    version = "0.1.23";
-    sha256 = "0i5zqfz2ic57z9b4v6mrs68dzhvgpnr5984srjapi0nzm30k127b";
+    version = "0.2.1";
+    sha256 = "0bibb3r4cb7chnx6vpyl41ig12pc0cbg0sb8f2khs52c71nk4bn8";
   }
   {
     name = "language-haskell";
@@ -98,8 +98,8 @@
   {
     name = "rust-analyzer";
     publisher = "rust-lang";
-    version = "0.4.1243";
-    sha256 = "069s4wjyf6zzlxvlwycb4vryf5rflk0x6bq1a2h9x7jsgqjm3lc0";
+    version = "0.4.1246";
+    sha256 = "0zwggmv3f6mq8wkzgzlkni6ha1cis298vkfjacvkw6b9am416gk1";
   }
   {
     name = "just";
