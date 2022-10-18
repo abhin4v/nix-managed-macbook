@@ -36,6 +36,12 @@
     sha256 = "1j8qn5grg8v3n3v66d8c77slwpdr130xzpv06z1wp2bmxhqsck1y";
   }
   {
+    name = "xml";
+    publisher = "DotJoshJohnson";
+    version = "2.5.1";
+    sha256 = "1v4x6yhzny1f8f4jzm4g7vqmqg5bqchyx4n25mkgvw2xp6yls037";
+  }
+  {
     name = "prettier-vscode";
     publisher = "esbenp";
     version = "9.9.0";

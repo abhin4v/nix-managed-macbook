@@ -19,6 +19,7 @@ in {
         bierner.markdown-mermaid
         bungcip.better-toml
         davidanson.vscode-markdownlint
+        dotjoshjohnson.xml
         esbenp.prettier-vscode
         haskell.haskell
         jdinhlife.gruvbox
