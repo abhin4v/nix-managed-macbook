@@ -104,8 +104,8 @@
   {
     name = "rust-analyzer";
     publisher = "rust-lang";
-    version = "0.4.1249";
-    sha256 = "0f7yqb3ljknblg4wkn7qjj6g2iq0r21jslbnwkjlnpc6k97n4p0c";
+    version = "0.4.1254";
+    sha256 = "01j1kngbzqh907hmp3f5zhp8s4sl2bfdsrqihwc1sm86wl2zp6c8";
   }
   {
     name = "just";
@@ -122,8 +122,8 @@
   {
     name = "shellcheck";
     publisher = "timonwong";
-    version = "0.23.1";
-    sha256 = "0qp3lnfz9pyaahl7f50g2v7r72m8sm4awf1pxjhyjjn0nr3gxrkv";
+    version = "0.26.0";
+    sha256 = "1vff010dw85ln15bqp434nwg8b86q6apaihx7cnxbxxzap15kh4v";
   }
   {
     name = "sort-lines";
