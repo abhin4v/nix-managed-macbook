@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 
 {
-  imports = [ ./programs ./launchd.nix ./nix.nix ];
+  imports = [ ./programs ./scripts ./launchd.nix ./nix.nix ];
 
   home.username = "abhinav";
   home.homeDirectory = "/Users/abhinav";
