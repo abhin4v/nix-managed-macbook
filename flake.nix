@@ -28,7 +28,12 @@
   outputs = inputs@{ nixpkgs, home-manager, ... }:
     let
       system = "x86_64-darwin";
-      pkgs = import nixpkgs {
+      nixpkgs-patched = (import nixpkgs { inherit system; }).applyPatches {
+        name = "nixpkgs-patched-198739";
+        src = nixpkgs;
+        patches = [ ./packages/nixos-nixpkgs-198739.patch ];
+      };
+      pkgs = import nixpkgs-patched {
         inherit system;
         config = { allowUnfree = true; };
       };
