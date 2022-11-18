@@ -32,7 +32,6 @@ let
   miscPackages = with pkgs; [
     cloc
     comma
-    ddgr
     dua
     entr
     gitui
@@ -43,6 +42,7 @@ let
     proselint
     shellcheck
     spotify-tui
+    toot
   ];
   fonts = with pkgs; [
     fira-mono
