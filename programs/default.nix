@@ -16,6 +16,7 @@ let
     dig
     httpie
     openssh
+    mosh
   ];
   cmdLineUtilPackages = with pkgs; [
     bash
@@ -25,8 +26,6 @@ let
     gnugrep
     less
     ranger
-    tealdeer
-    thefuck
     tree
   ];
   miscPackages = with pkgs; [
@@ -41,8 +40,8 @@ let
     neofetch
     proselint
     shellcheck
-    spotify-tui
     toot
+    typos
   ];
   fonts = with pkgs; [
     fira-mono
