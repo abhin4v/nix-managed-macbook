@@ -114,7 +114,7 @@ in {
     settings = {
       autoindent = true;
       colorcolumn = 100;
-      colorscheme = "gotham";
+      colorscheme = "gruvbox";
       diffgutter = true;
       hlsearch = true;
       mkparents = true;
