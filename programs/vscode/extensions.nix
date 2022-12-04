@@ -44,8 +44,8 @@
   {
     name = "prettier-vscode";
     publisher = "esbenp";
-    version = "9.9.0";
-    sha256 = "1zba2k51ylpzz47r74kdr2adp669xw19a866gw0wndcigkhcrgk2";
+    version = "9.10.3";
+    sha256 = "0hvxwcaihkls4azkcj0674sgnn32iiw0pm0brmdinqag95696fq5";
   }
   {
     name = "haskell";
@@ -104,8 +104,8 @@
   {
     name = "rust-analyzer";
     publisher = "rust-lang";
-    version = "0.4.1299";
-    sha256 = "1bwvii8sa006b04w069ldgwn5qsddryfzj13prhfjqrvq3sw99x8";
+    version = "0.4.1307";
+    sha256 = "032x8mvhr8569khs09m11f6yv7kdqbzd710r0plk5hlnxsalfrm7";
   }
   {
     name = "just";
