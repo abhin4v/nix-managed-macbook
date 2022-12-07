@@ -134,8 +134,8 @@ in {
       update.mode = "none";
 
       "[haskell]" = { editor.defaultFormatter = "haskell.haskell"; };
-
       "[javascript]" = { editor.defaultFormatter = "esbenp.prettier-vscode"; };
+      "[json]" = { editor.defaultFormatter = "esbenp.prettier-vscode"; };
     };
 
     keybindings = [

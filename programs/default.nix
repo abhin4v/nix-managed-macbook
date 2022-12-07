@@ -36,6 +36,7 @@ let
     gitui
     graphviz-nox
     jetbrains.idea-community
+    just
     micro
     neofetch
     proselint
@@ -83,11 +84,6 @@ in {
   };
 
   programs.nix-index = {
-    enable = true;
-    enableFishIntegration = true;
-  };
-
-  programs.just = {
     enable = true;
     enableFishIntegration = true;
   };
