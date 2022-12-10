@@ -14,8 +14,8 @@
   {
     name = "markdown-mermaid";
     publisher = "bierner";
-    version = "1.15.2";
-    sha256 = "0wq15fviv2zxn58xbgzwh8x958iy24q0963pbrci732hnyb9s9m8";
+    version = "1.16.0";
+    sha256 = "01pribqcf8g4m0zbh2hzw2lgypy61iqw45x3ac52k1z5727k4mjd";
   }
   {
     name = "better-toml";
@@ -48,10 +48,16 @@
     sha256 = "0hvxwcaihkls4azkcj0674sgnn32iiw0pm0brmdinqag95696fq5";
   }
   {
+    name = "copilot";
+    publisher = "GitHub";
+    version = "1.62.7527";
+    sha256 = "0hjhs4bczip0cf5r31izs1iqz0ppdpzdhjhygwdmg64iky87qm3r";
+  }
+  {
     name = "haskell";
     publisher = "haskell";
-    version = "2.2.1";
-    sha256 = "14p9g07zsb3da4ilaasgsdvh3wagfzayqr8ichsf6k5c952zi8fk";
+    version = "2.2.2";
+    sha256 = "1d5b0p6r9ipwb7j4cx9w13vq31h78bh2sfwl54xri4gyvialhryd";
   }
   {
     name = "gruvbox";
@@ -104,8 +110,8 @@
   {
     name = "rust-analyzer";
     publisher = "rust-lang";
-    version = "0.4.1307";
-    sha256 = "032x8mvhr8569khs09m11f6yv7kdqbzd710r0plk5hlnxsalfrm7";
+    version = "0.4.1314";
+    sha256 = "0r2389rdaybksf4g7js6sqc0w5azhna9cifkkqlgkzcifmrngavj";
   }
   {
     name = "just";
@@ -116,14 +122,14 @@
   {
     name = "code-spell-checker";
     publisher = "streetsidesoftware";
-    version = "2.11.1";
-    sha256 = "0m59v9lg1nk19hkpsyb4lq72hqhcvbqi7mf9414vghka3bxrx953";
+    version = "2.12.0";
+    sha256 = "1d8qxkz03pia9g8vqn07fp8m5c1ag3hg1bmb33fjn24xam0p85qf";
   }
   {
     name = "shellcheck";
     publisher = "timonwong";
-    version = "0.28.2";
-    sha256 = "03n8g2il5nrwnvyji0y5kizf6a07f9bs9lqh37z08nwwwz4d9x4w";
+    version = "0.29.1";
+    sha256 = "1na1h7brl1xjpfq2lxljnsqr0msdkyxnfs01jz7sdidx6py9ww17";
   }
   {
     name = "sort-lines";

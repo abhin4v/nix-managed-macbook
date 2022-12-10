@@ -28,8 +28,8 @@ in {
         jnoortheen.nix-ide
         justusadam.language-haskell
         kamikillerto.vscode-colorize
-        matklad.rust-analyzer
         mhutchie.git-graph
+        rust-lang.rust-analyzer
         skellock.just
         streetsidesoftware.code-spell-checker
         timonwong.shellcheck
