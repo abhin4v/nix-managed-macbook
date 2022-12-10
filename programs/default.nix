@@ -35,6 +35,7 @@ let
     entr
     gitui
     graphviz-nox
+    iterm2
     jetbrains.idea-community
     just
     micro
