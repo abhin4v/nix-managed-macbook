@@ -108,6 +108,13 @@ in {
         language = [ "en" ];
       };
 
+      github.copilot.enable = {
+        "*" = true;
+        yaml = false;
+        plaintext = false;
+        markdown = true;
+      };
+
       telemetry = {
         enableCrashReporter = false;
         enableTelemetry = false;
