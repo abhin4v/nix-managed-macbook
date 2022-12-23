@@ -8,14 +8,14 @@
   {
     name = "spellright";
     publisher = "ban";
-    version = "3.0.90";
-    sha256 = "0qx24mv1zmdd9wjgkjz0chm4jpdhf5jzml7daapa3dmcgp0ya0f8";
+    version = "3.0.112";
+    sha256 = "007gmal0bd1amr382yvb5jnj7bqw7hq9vn507nxz348fiph21mpg";
   }
   {
     name = "markdown-mermaid";
     publisher = "bierner";
-    version = "1.16.0";
-    sha256 = "01pribqcf8g4m0zbh2hzw2lgypy61iqw45x3ac52k1z5727k4mjd";
+    version = "1.17.3";
+    sha256 = "08vgmsxb92hyl5jrvys82m6wgn21iilvi0jkkrpify2kdnvkr9gd";
   }
   {
     name = "better-toml";
@@ -50,8 +50,8 @@
   {
     name = "copilot";
     publisher = "GitHub";
-    version = "1.62.7527";
-    sha256 = "0hjhs4bczip0cf5r31izs1iqz0ppdpzdhjhygwdmg64iky87qm3r";
+    version = "1.65.7705";
+    sha256 = "1irddmjlymlj5s0xgivq1v559qhw424fzagwb7vi3yqkkkv3lfd7";
   }
   {
     name = "haskell";
@@ -68,8 +68,8 @@
   {
     name = "plantuml";
     publisher = "jebbs";
-    version = "2.17.4";
-    sha256 = "1s6jp1rx1k03ir7j3fsyqkhnnp9m6akabznb4pmjxpkvn2wzlz3y";
+    version = "2.17.5";
+    sha256 = "0l0amipyf74bkyiksnqfy2qcvv3qsshk9bqqqx28fk06nvx1zy8b";
   }
   {
     name = "nix-ide";
@@ -110,8 +110,8 @@
   {
     name = "rust-analyzer";
     publisher = "rust-lang";
-    version = "0.4.1314";
-    sha256 = "0r2389rdaybksf4g7js6sqc0w5azhna9cifkkqlgkzcifmrngavj";
+    version = "0.4.1329";
+    sha256 = "1bwqqjdly0dx8f04al2gbp35ahd357mihfgb8rqvlj0nny3glf22";
   }
   {
     name = "just";
@@ -128,8 +128,8 @@
   {
     name = "shellcheck";
     publisher = "timonwong";
-    version = "0.29.1";
-    sha256 = "1na1h7brl1xjpfq2lxljnsqr0msdkyxnfs01jz7sdidx6py9ww17";
+    version = "0.29.2";
+    sha256 = "0h819yqjccm6j4hsxzcqfrdh43c2qp40h09m4zdb2h2nn99nicmf";
   }
   {
     name = "sort-lines";
