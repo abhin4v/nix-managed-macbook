@@ -12,7 +12,7 @@ let
 in {
   programs.vscode = {
     enable = true;
-    mutableExtensionsDir = false;
+    mutableExtensionsDir = true;
 
     extensions = with pkgs.vscode-extensions;
       [
