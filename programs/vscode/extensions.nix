@@ -110,8 +110,8 @@
   {
     name = "rust-analyzer";
     publisher = "rust-lang";
-    version = "0.4.1332";
-    sha256 = "1vafhxb3d2qq8qn6nwnw3a21qjjr7g48hhc72s9fv5lb238hdk08";
+    version = "0.4.1341";
+    sha256 = "0v9ib5aw6hs8gvn0ya69416z2vs76bnykfixz72j743ickph0q1d";
   }
   {
     name = "just";
