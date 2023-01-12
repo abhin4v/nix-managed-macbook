@@ -26,8 +26,8 @@
   {
     name = "vscode-markdownlint";
     publisher = "DavidAnson";
-    version = "0.48.1";
-    sha256 = "0npmvaw734r8pk17cz8vccxwxnbpk076ickndkd9gymcyqd5jfnx";
+    version = "0.49.0";
+    sha256 = "0mnk9bkiqqrgb97f4kw558ciffqlk1h2pv5x2abldmxq2ahww7rj";
   }
   {
     name = "mustache";
@@ -44,14 +44,14 @@
   {
     name = "prettier-vscode";
     publisher = "esbenp";
-    version = "9.10.3";
-    sha256 = "0hvxwcaihkls4azkcj0674sgnn32iiw0pm0brmdinqag95696fq5";
+    version = "9.10.4";
+    sha256 = "0br00867d2p0d7fjw8ska3anz16rfyhh3b2i6fpfi6qv8h3p46wj";
   }
   {
     name = "copilot";
     publisher = "GitHub";
-    version = "1.65.7705";
-    sha256 = "1irddmjlymlj5s0xgivq1v559qhw424fzagwb7vi3yqkkkv3lfd7";
+    version = "1.67.7944";
+    sha256 = "09h40lclm4vlvyij5l740cfjsvwxdlb36l1dalq9px0a2bla7fyq";
   }
   {
     name = "haskell";
@@ -110,8 +110,8 @@
   {
     name = "rust-analyzer";
     publisher = "rust-lang";
-    version = "0.4.1341";
-    sha256 = "0v9ib5aw6hs8gvn0ya69416z2vs76bnykfixz72j743ickph0q1d";
+    version = "0.4.1364";
+    sha256 = "12fiwzhgxmiafck54bq33fi0q6kp3lq6ia72ra5rsy0v95hbhp7q";
   }
   {
     name = "just";
@@ -122,14 +122,14 @@
   {
     name = "code-spell-checker";
     publisher = "streetsidesoftware";
-    version = "2.12.0";
-    sha256 = "1d8qxkz03pia9g8vqn07fp8m5c1ag3hg1bmb33fjn24xam0p85qf";
+    version = "2.14.0";
+    sha256 = "0473vlyni3kz09xbw1bk0zzz685lyi9n3qvyga6ajnk60g9i1xqf";
   }
   {
     name = "shellcheck";
     publisher = "timonwong";
-    version = "0.29.2";
-    sha256 = "0h819yqjccm6j4hsxzcqfrdh43c2qp40h09m4zdb2h2nn99nicmf";
+    version = "0.29.3";
+    sha256 = "170cv76chyjl3w20bbwvx9spc10sk3c9ha2l8kcr0lyrmm97bvpv";
   }
   {
     name = "sort-lines";
