@@ -14,8 +14,8 @@
   {
     name = "markdown-mermaid";
     publisher = "bierner";
-    version = "1.17.3";
-    sha256 = "08vgmsxb92hyl5jrvys82m6wgn21iilvi0jkkrpify2kdnvkr9gd";
+    version = "1.17.4";
+    sha256 = "1b8hvhn7bhg7hsb3zji69gnkxck7j9i35mmys0znxw2wj8nc16cc";
   }
   {
     name = "better-toml";
@@ -50,8 +50,8 @@
   {
     name = "copilot";
     publisher = "GitHub";
-    version = "1.67.7944";
-    sha256 = "09h40lclm4vlvyij5l740cfjsvwxdlb36l1dalq9px0a2bla7fyq";
+    version = "1.69.8032";
+    sha256 = "0f0hjhlwcz0l6zabp02alivg1c2qfb3pr3ggd1m77l5h2h5p8y1y";
   }
   {
     name = "haskell";
@@ -110,8 +110,8 @@
   {
     name = "rust-analyzer";
     publisher = "rust-lang";
-    version = "0.4.1364";
-    sha256 = "12fiwzhgxmiafck54bq33fi0q6kp3lq6ia72ra5rsy0v95hbhp7q";
+    version = "0.4.1378";
+    sha256 = "1nay6xq1mb5j0k8m0ghkak85y9n7msmly306fry5rc0hx12cibpr";
   }
   {
     name = "just";
@@ -146,8 +146,8 @@
   {
     name = "material-theme";
     publisher = "zhuangtongfa";
-    version = "3.15.6";
-    sha256 = "0c6dwy6z3980hbf9njf8b8bvd602q2d6bflkrwqd93n9c0fa4n1d";
+    version = "3.15.7";
+    sha256 = "1hxh5wg39h5k3p2cgh8vdh7l0pxsrw2cvfwbhsx8ifs8748qagi5";
   }
 ];
 }
