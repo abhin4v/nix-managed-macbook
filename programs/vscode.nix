@@ -5,6 +5,7 @@ let
     "13xforever/language-x86-64-assembly"
     "ban/spellright"
     "dawhite/mustache"
+    "GitHub/copilot"
     "kirozen/wordcounter"
     "pedrorgirardi/vscode-cljfmt"
     "wmaurer/change-case"
@@ -21,7 +22,6 @@ in {
         davidanson.vscode-markdownlint
         dotjoshjohnson.xml
         esbenp.prettier-vscode
-        github.copilot
         haskell.haskell
         jdinhlife.gruvbox
         jebbs.plantuml

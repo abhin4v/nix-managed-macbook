@@ -6,7 +6,6 @@ let
     niv
     nix
     nix-diff
-    nix-du
     nixfmt
     rnix-lsp
     statix
