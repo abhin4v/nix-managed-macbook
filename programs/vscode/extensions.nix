@@ -50,8 +50,8 @@
   {
     name = "copilot";
     publisher = "GitHub";
-    version = "1.71.8269";
-    sha256 = "1f1mfvhwc3y7v2196fl1k8zjh164axqarmm5k9nafxz2sda79lvf";
+    version = "1.73.8685";
+    sha256 = "1525ai1znn7bpaxzhc7yfj92bicxjld6lj3lqhh5ncwj1dagan2v";
   }
   {
     name = "haskell";
@@ -110,8 +110,8 @@
   {
     name = "rust-analyzer";
     publisher = "rust-lang";
-    version = "0.4.1391";
-    sha256 = "045q7hwzh6xa2s8ydl59chwcvz746wpwn5826w409sx1vwls2j35";
+    version = "0.4.1413";
+    sha256 = "1xh44ga8na4sn37r1mmir37jis0g39j66k6vc1vjdn6zvdaygf3f";
   }
   {
     name = "just";
@@ -122,14 +122,14 @@
   {
     name = "code-spell-checker";
     publisher = "streetsidesoftware";
-    version = "2.16.0";
-    sha256 = "0h4dfdapmpx3zkgbzajr08qxr74wi1bvbcm22gpln0ig05h1rgj2";
+    version = "2.17.1";
+    sha256 = "1wi0rdyl71dyjvdrq2aj9bxfh32hm5rd4lqgk23pianzmnmq0141";
   }
   {
     name = "shellcheck";
     publisher = "timonwong";
-    version = "0.29.3";
-    sha256 = "170cv76chyjl3w20bbwvx9spc10sk3c9ha2l8kcr0lyrmm97bvpv";
+    version = "0.29.4";
+    sha256 = "11xfvbm6whyb5cg3v94m3vbf9z29xc6mlsbh8ifg4m2aw7l1mnd9";
   }
   {
     name = "sort-lines";

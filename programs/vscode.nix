@@ -69,7 +69,7 @@ in {
           ".envrc*" = "shellscript";
         };
         autoSave = "afterDelay";
-        autoSaveDelay = 5000;
+        autoSaveDelay = 60000;
         exclude = {
           "**/.git" = true;
           "**/.svn" = true;
