@@ -50,8 +50,8 @@
   {
     name = "copilot";
     publisher = "GitHub";
-    version = "1.73.8685";
-    sha256 = "1525ai1znn7bpaxzhc7yfj92bicxjld6lj3lqhh5ncwj1dagan2v";
+    version = "1.77.9225";
+    sha256 = "1awqw7bpyvw72hnj9l1hx21djgjpjl15h5pq5la408ll4rd2645m";
   }
   {
     name = "haskell";
@@ -122,8 +122,8 @@
   {
     name = "code-spell-checker";
     publisher = "streetsidesoftware";
-    version = "2.17.1";
-    sha256 = "1wi0rdyl71dyjvdrq2aj9bxfh32hm5rd4lqgk23pianzmnmq0141";
+    version = "2.18.0";
+    sha256 = "03sxx2sy4dw07dcwna7r7yzih3visqqmrl0klcbrpmynjfbb21qz";
   }
   {
     name = "shellcheck";
