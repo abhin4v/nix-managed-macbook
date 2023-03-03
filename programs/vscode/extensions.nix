@@ -102,6 +102,24 @@
     sha256 = "000zhgzijf3h6abhv4p3cz99ykj6489wfn81j0s691prr8q9lxxh";
   }
   {
+    name = "black-formatter";
+    publisher = "ms-python";
+    version = "2023.1.10581010";
+    sha256 = "14ab8hcqg37wa7mjbkrx4bmzrpgrdjvh2jswqra6j9c0jzbhb25k";
+  }
+  {
+    name = "python";
+    publisher = "ms-python";
+    version = "2023.5.10621009";
+    sha256 = "1iglj0vh5nga86sj508l85pl687i8p2q99vrsp98hxqd96z20c5i";
+  }
+  {
+    name = "vscode-pylance";
+    publisher = "ms-python";
+    version = "2023.3.11";
+    sha256 = "1cniqhjyzjc9zn9dhr9dnj416f9j5lrd0x6z0clhxa5i0hsc2sb8";
+  }
+  {
     name = "vscode-cljfmt";
     publisher = "pedrorgirardi";
     version = "1.3.0";

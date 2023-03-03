@@ -7,6 +7,9 @@ let
     "dawhite/mustache"
     "GitHub/copilot"
     "kirozen/wordcounter"
+    "ms-python/black-formatter"
+    "ms-python/python"
+    "ms-python/vscode-pylance"
     "pedrorgirardi/vscode-cljfmt"
     "wmaurer/change-case"
   ];
@@ -142,6 +145,9 @@ in {
       "[haskell]" = { editor.defaultFormatter = "haskell.haskell"; };
       "[javascript]" = { editor.defaultFormatter = "esbenp.prettier-vscode"; };
       "[json]" = { editor.defaultFormatter = "esbenp.prettier-vscode"; };
+      "[python]" = { editor.defaultFormatter = "ms-python.black-formatter"; };
+
+      black-formatter.args = ["--line-length" "100"];
     };
 
     keybindings = [
