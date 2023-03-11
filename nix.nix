@@ -2,7 +2,7 @@
 
 {
   nixpkgs.config.allowUnfree = true;
-  nix.package = pkgs.nixUnstable;
+  nix.package = pkgs.nixStable;
   nix.settings = {
     experimental-features = [ "nix-command" "flakes" "repl-flake" ];
     max-jobs = 6;
