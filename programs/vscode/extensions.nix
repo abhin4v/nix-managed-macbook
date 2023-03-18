@@ -50,8 +50,8 @@
   {
     name = "copilot";
     publisher = "GitHub";
-    version = "1.77.9225";
-    sha256 = "1awqw7bpyvw72hnj9l1hx21djgjpjl15h5pq5la408ll4rd2645m";
+    version = "1.78.9758";
+    sha256 = "028di2bayvabm0y9qbhrpar8jgbld304qr7vz8pp6yljplrrm1m8";
   }
   {
     name = "haskell";
@@ -92,8 +92,8 @@
   {
     name = "wordcounter";
     publisher = "kirozen";
-    version = "2.4.3";
-    sha256 = "16bwn8yvg7lz7j8l9g78asgi9d7xvjpm17xik9ih7hc3r1l4qiw2";
+    version = "2.4.4";
+    sha256 = "1df6qkvyhw2k1wmy9z3kr56bcljyr8yqdvxd5vjfh579s1k370ch";
   }
   {
     name = "git-graph";
@@ -110,14 +110,14 @@
   {
     name = "python";
     publisher = "ms-python";
-    version = "2023.5.10681722";
-    sha256 = "1hj2hbi68v7xcvl0c0i3xg9jm7bs5gwam2akmlfgqlrs9nbp0y4a";
+    version = "2023.5.10752340";
+    sha256 = "04zhh6p5h3cgp2q6dq5rjrishmzj1ah0xf7f37fydrs0xgara183";
   }
   {
     name = "vscode-pylance";
     publisher = "ms-python";
-    version = "2023.3.21";
-    sha256 = "0ih9ccmi61dv32w4caian9aghr7cv4lsrn3b02xprx0bfsdpz3q3";
+    version = "2023.3.25";
+    sha256 = "1x2n2h6x345hk04bw95q235kly46xy3xv3z7xrda8qjavcj8831f";
   }
   {
     name = "vscode-cljfmt";
@@ -134,8 +134,8 @@
   {
     name = "code-spell-checker";
     publisher = "streetsidesoftware";
-    version = "2.19.0";
-    sha256 = "0q0j526is9hzv214f102dd917lk83y7rbbmbl59whav4xgxnxpkk";
+    version = "2.20.1";
+    sha256 = "04znxhgn5z9086a8rcmyvss2d63bl583g1mgp8505p9kn3xys2ic";
   }
   {
     name = "shellcheck";
