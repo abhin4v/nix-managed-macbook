@@ -110,14 +110,14 @@
   {
     name = "python";
     publisher = "ms-python";
-    version = "2023.5.10752340";
-    sha256 = "04zhh6p5h3cgp2q6dq5rjrishmzj1ah0xf7f37fydrs0xgara183";
+    version = "2023.5.10821737";
+    sha256 = "119fh47zfx809slmpkalaa6sp8pmaiv5i3kcjddynad0xl5dgf34";
   }
   {
     name = "vscode-pylance";
     publisher = "ms-python";
-    version = "2023.3.25";
-    sha256 = "1x2n2h6x345hk04bw95q235kly46xy3xv3z7xrda8qjavcj8831f";
+    version = "2023.3.31";
+    sha256 = "09lm977r1bxm44lw7fiakjk4p9v5nhas3rdvgmwihzcpj7dm8v8p";
   }
   {
     name = "vscode-cljfmt";
@@ -134,8 +134,8 @@
   {
     name = "code-spell-checker";
     publisher = "streetsidesoftware";
-    version = "2.20.1";
-    sha256 = "04znxhgn5z9086a8rcmyvss2d63bl583g1mgp8505p9kn3xys2ic";
+    version = "2.20.3";
+    sha256 = "1p22ilk5cyr6h6jl89hwdcwvzslhzmh58zc7yysqlphv38s9pk6v";
   }
   {
     name = "shellcheck";
