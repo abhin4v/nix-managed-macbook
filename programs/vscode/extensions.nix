@@ -14,8 +14,8 @@
   {
     name = "markdown-mermaid";
     publisher = "bierner";
-    version = "1.17.7";
-    sha256 = "19ggscmn6axsnjih4g2cv0f4w4z7zvqrrq7zipk2qqsy21gvp9sq";
+    version = "1.18.1";
+    sha256 = "1357sszmicz0jcvf1z9dbbqbls40jjvki5piwvw9sbbznnrr4rr5";
   }
   {
     name = "better-toml";
@@ -50,14 +50,14 @@
   {
     name = "copilot";
     publisher = "GitHub";
-    version = "1.78.9758";
-    sha256 = "028di2bayvabm0y9qbhrpar8jgbld304qr7vz8pp6yljplrrm1m8";
+    version = "1.82.15";
+    sha256 = "1nfgfi827xiz347dmdyk3d5yhfjlaz1lx9ygssxjdm89zgpw13xz";
   }
   {
     name = "haskell";
     publisher = "haskell";
-    version = "2.2.2";
-    sha256 = "1d5b0p6r9ipwb7j4cx9w13vq31h78bh2sfwl54xri4gyvialhryd";
+    version = "2.2.4";
+    sha256 = "1qsvfb2a2k48gndda92w91z9acis43a151cdwmkmb8qprl311768";
   }
   {
     name = "gruvbox";
@@ -104,20 +104,20 @@
   {
     name = "black-formatter";
     publisher = "ms-python";
-    version = "2023.1.10581010";
-    sha256 = "14ab8hcqg37wa7mjbkrx4bmzrpgrdjvh2jswqra6j9c0jzbhb25k";
+    version = "2023.3.10961008";
+    sha256 = "0nbysvcnxgphr397dyxqvw87ajlbqpb4fqmjzbgcr7idn7dvjnh1";
   }
   {
     name = "python";
     publisher = "ms-python";
-    version = "2023.5.10821737";
-    sha256 = "119fh47zfx809slmpkalaa6sp8pmaiv5i3kcjddynad0xl5dgf34";
+    version = "2023.7.11011538";
+    sha256 = "0wm9d75jvrra9abyknn8nksbc27rr274zjwd5jyrf488i1mha8s0";
   }
   {
     name = "vscode-pylance";
     publisher = "ms-python";
-    version = "2023.3.31";
-    sha256 = "09lm977r1bxm44lw7fiakjk4p9v5nhas3rdvgmwihzcpj7dm8v8p";
+    version = "2023.4.21";
+    sha256 = "1y1bw1nbn59av37ym6dl5v6c1d5wif3l7galcv313q0y5ayqrd5k";
   }
   {
     name = "vscode-cljfmt";
@@ -134,14 +134,20 @@
   {
     name = "code-spell-checker";
     publisher = "streetsidesoftware";
-    version = "2.20.3";
-    sha256 = "1p22ilk5cyr6h6jl89hwdcwvzslhzmh58zc7yysqlphv38s9pk6v";
+    version = "2.20.4";
+    sha256 = "07z1yy7kzhl6w0xyi589b7ivbpy29nbx46258nm7rjn4jdfwmr8q";
+  }
+  {
+    name = "zig";
+    publisher = "tiehuis";
+    version = "0.2.6";
+    sha256 = "0c73jab7xvw1h4wkvsw950x9ihp0hy3wsqpa2z2ff4pk81ihqidk";
   }
   {
     name = "shellcheck";
     publisher = "timonwong";
-    version = "0.29.4";
-    sha256 = "11xfvbm6whyb5cg3v94m3vbf9z29xc6mlsbh8ifg4m2aw7l1mnd9";
+    version = "0.32.1";
+    sha256 = "0kbdpzv5mb5bmp29axd0xy0xh2gp3s2y55a13mm76c5zafwam3y0";
   }
   {
     name = "sort-lines";
