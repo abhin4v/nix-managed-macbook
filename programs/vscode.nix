@@ -12,6 +12,7 @@ let
     "ms-python/vscode-pylance"
     "pedrorgirardi/vscode-cljfmt"
     "wmaurer/change-case"
+    "ziglang/vscode-zig"
   ];
 in {
   programs.vscode = {
