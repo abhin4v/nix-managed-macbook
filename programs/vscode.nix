@@ -25,6 +25,7 @@ in {
         davidanson.vscode-markdownlint
         dotjoshjohnson.xml
         esbenp.prettier-vscode
+        golang.go
         haskell.haskell
         jdinhlife.gruvbox
         jebbs.plantuml

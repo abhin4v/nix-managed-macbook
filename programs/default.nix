@@ -28,6 +28,7 @@ let
     tree
   ];
   miscPackages = with pkgs; [
+    cabal2nix
     cloc
     comma
     dua

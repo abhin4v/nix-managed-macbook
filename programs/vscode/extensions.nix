@@ -54,6 +54,12 @@
     sha256 = "1nfgfi827xiz347dmdyk3d5yhfjlaz1lx9ygssxjdm89zgpw13xz";
   }
   {
+    name = "go";
+    publisher = "golang";
+    version = "0.38.0";
+    sha256 = "0i2kmlabpsvrb02ljy9asdlhqssm6as3h438rq0lx67qbjwsirf0";
+  }
+  {
     name = "haskell";
     publisher = "haskell";
     version = "2.2.4";
