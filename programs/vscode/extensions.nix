@@ -26,8 +26,8 @@
   {
     name = "vscode-markdownlint";
     publisher = "DavidAnson";
-    version = "0.49.0";
-    sha256 = "0mnk9bkiqqrgb97f4kw558ciffqlk1h2pv5x2abldmxq2ahww7rj";
+    version = "0.50.0";
+    sha256 = "09j38a2d18zm5lwnaf8lhnx093x8vxm7hxfbxgrx1faji346ps8p";
   }
   {
     name = "mustache";
@@ -50,8 +50,8 @@
   {
     name = "copilot";
     publisher = "GitHub";
-    version = "1.84.51";
-    sha256 = "1w6ir3g1fh51k0ysa1kc1y4czij9x0iangfiw50566vnixzm7d96";
+    version = "1.85.75";
+    sha256 = "00qa7zgzyybw5sa1v0lpbmbjgkx79wbd9la716sqix1l8vir76qx";
   }
   {
     name = "go";
@@ -110,26 +110,26 @@
   {
     name = "black-formatter";
     publisher = "ms-python";
-    version = "2023.3.10961008";
-    sha256 = "0nbysvcnxgphr397dyxqvw87ajlbqpb4fqmjzbgcr7idn7dvjnh1";
+    version = "2023.3.11241004";
+    sha256 = "1n4bgqks1xmqm7b65lcsb1k6pm6vdaaskg0j21fzysb7iriv48fm";
   }
   {
     name = "python";
     publisher = "ms-python";
-    version = "2023.7.11171005";
-    sha256 = "1v0n3rjmwl64dd8s68iqs6p5dimm3mykm3996aqa3kl16yfirrip";
+    version = "2023.9.11251005";
+    sha256 = "0cdnxybggn38gds44wzygy6862cc68mjiqk3slbf77srs5bmpdf1";
   }
   {
     name = "vscode-pylance";
     publisher = "ms-python";
-    version = "2023.4.41";
-    sha256 = "03vvlbxgcabyvdxx1648s8bl80xpj23d3vi3bi998gamq0r35maa";
+    version = "2023.5.11";
+    sha256 = "18nydn5i4cryakwxlzd5jhadrqrv01wgy01fphx7a7ahfxvivdxk";
   }
   {
     name = "vscode-cljfmt";
     publisher = "pedrorgirardi";
-    version = "1.3.0";
-    sha256 = "0svmpakm22apsr366ara0vpkcf141a2nv55y81kslj8pnsihb7w1";
+    version = "1.4.0";
+    sha256 = "1y5mlrfk6zsb32f7nj6nlh03xa4dyrf80iyjbq167i3gvy6n0d95";
   }
   {
     name = "just";
