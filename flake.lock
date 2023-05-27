@@ -35,11 +35,11 @@
     "fish-plugin-fzf": {
       "flake": false,
       "locked": {
-        "lastModified": 1674674469,
-        "narHash": "sha256-i9FcuQdmNlJnMWQp7myF3N0tMD/2I0CaMs/PlD8o1gw=",
+        "lastModified": 1684865037,
+        "narHash": "sha256-xWaMd5POCDeeFTsGtHbIvsPelIp+GZPC1X1CseCo3BA=",
         "owner": "PatrickF1",
         "repo": "fzf.fish",
-        "rev": "63c8f8e65761295da51029c5b6c9e601571837a1",
+        "rev": "c5e170730b4f8395e116d7c06883ed53da2d5561",
         "type": "github"
       },
       "original": {
@@ -71,11 +71,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1684189380,
-        "narHash": "sha256-GUp9OkZynocyppLur1VX8oAjtXGue0oKRHbsksOMUm0=",
+        "lastModified": 1685108129,
+        "narHash": "sha256-6Jv6LxrLfaueHj095oBUKBk++eW4Ya0qfHwhQVQqyoo=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "b7d814c5744dca7e70b3dc2638f06568dce96ca6",
+        "rev": "bec196cd9b5f34213c7dc90ef2a524336df70e30",
         "type": "github"
       },
       "original": {

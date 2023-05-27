@@ -44,8 +44,8 @@
   {
     name = "prettier-vscode";
     publisher = "esbenp";
-    version = "9.12.0";
-    sha256 = "0nplxds28f9s3ny0xg2w6h6gsq5nfa5x7292hxm00radh9himcbg";
+    version = "9.13.0";
+    sha256 = "1g28yngxnbflqzpjw4ircnfjsmh30cy1i81hl8gk0jqxm8xzbb12";
   }
   {
     name = "copilot";
@@ -116,14 +116,14 @@
   {
     name = "python";
     publisher = "ms-python";
-    version = "2023.9.11361009";
-    sha256 = "00l3vqyfc6xvm8128g50k399fp18cqx2nqcl3l82hlxm02y85vsk";
+    version = "2023.9.11461009";
+    sha256 = "1s4y5nwd9ajir4c7mviqy1qvn52s020fn2jfx4p1709ib24v3w73";
   }
   {
     name = "vscode-pylance";
     publisher = "ms-python";
-    version = "2023.5.21";
-    sha256 = "11g6pcr83rby1nf4nm9c4mjj2pkpqyhnygprfshb0gdn79ji7m1j";
+    version = "2023.5.41";
+    sha256 = "1d8hi8zdhwr93pji27lwhxish9as758jmpk8ra10hz5inq0fxfls";
   }
   {
     name = "vscode-cljfmt";
@@ -152,8 +152,8 @@
   {
     name = "sort-lines";
     publisher = "Tyriar";
-    version = "1.9.1";
-    sha256 = "0dds99j6awdxb0ipm15g543a5b6f0hr00q9rz961n0zkyawgdlcb";
+    version = "1.10.1";
+    sha256 = "0hfsmhd685y2i3k5x81a8wbp3spyvajx6bp0qknx5ksgs2axfpqb";
   }
   {
     name = "change-case";
@@ -164,8 +164,8 @@
   {
     name = "material-theme";
     publisher = "zhuangtongfa";
-    version = "3.15.13";
-    sha256 = "0gapamd6n280zlygfkdjyq1f3fdw3s44jj5bpq7i8k39q5c6cr24";
+    version = "3.15.14";
+    sha256 = "1rf8k6hrxkny8f9l3gd2sqsz7w4cqmx8ga5g7fpj3mdhc4bsmys7";
   }
   {
     name = "vscode-zig";
