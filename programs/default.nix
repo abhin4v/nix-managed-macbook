@@ -123,4 +123,6 @@ in {
       manipulator = true;
     };
   };
+
+  programs.zoxide.enable = true;
 }

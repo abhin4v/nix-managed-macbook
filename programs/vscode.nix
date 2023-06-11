@@ -54,7 +54,10 @@ in {
         fontFamily = "'DM Mono', NanumGothicCoding, Menlo, Monaco, 'Courier New', monospace";
         fontLigatures = true;
         fontSize = 13;
-        guides.indentation = false;
+        guides = {
+          indentation = false;
+          bracketPairs = true;
+        };
         inlineSuggest.enabled = true;
         minimap.enabled = false;
         renderControlCharacters = true;
