@@ -22,7 +22,7 @@ in {
     extensions = with pkgs.vscode-extensions;
       [
         bierner.markdown-mermaid
-        bungcip.better-toml
+        tamasfe.even-better-toml
         davidanson.vscode-markdownlint
         dotjoshjohnson.xml
         esbenp.prettier-vscode
