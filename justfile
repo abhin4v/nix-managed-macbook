@@ -42,4 +42,5 @@ update: (_run "_update")
 
 # clean up nix garbage
 clean:
+    home-manager expire-generations "-7 days"
     nix-collect-garbage -d --delete-old
