@@ -44,14 +44,14 @@
   {
     name = "copilot";
     publisher = "GitHub";
-    version = "1.105.361";
-    sha256 = "1jknhnc0awqlhmc3r6hy3h3aj854nlcilxrinxgn8f067bw02asm";
+    version = "1.110.397";
+    sha256 = "0a3pklbc7cnv12cmsrnc3rbnp8ji07r8zq0aj4fyn2l0rj08hpi7";
   }
   {
     name = "copilot-chat";
     publisher = "GitHub";
-    version = "0.7.2023082404";
-    sha256 = "0l35ni5yvcrprb12y1jakqcrasf52bp70wfjb61lay6ksa08bkfc";
+    version = "0.8.2023090801";
+    sha256 = "0wl6ph4ba39i6x9b0qg3x1k61mwfcdrxkr7cr1f17jd7mmy6iba5";
   }
   {
     name = "go";
@@ -110,20 +110,20 @@
   {
     name = "black-formatter";
     publisher = "ms-python";
-    version = "2023.5.12151008";
-    sha256 = "1gvj9wa5j8r5ljsa0yql1vq1lvs1svg26z42szyy5nar9z4345v0";
+    version = "2023.5.12511009";
+    sha256 = "0wblk79lycb2npil5lmzrxwy371zj1abz543ra9xvav9mxnhjal1";
   }
   {
     name = "python";
     publisher = "ms-python";
-    version = "2023.15.12361009";
-    sha256 = "0wz43ah4lp8b06s8kgciipvjy9q1f3wbgwp8517024hzbq7s71w1";
+    version = "2023.17.12511005";
+    sha256 = "06js7kskdp4bc8fjlvlqqdym80k4k4krqpw8mchxdw4i917ncihh";
   }
   {
     name = "vscode-pylance";
     publisher = "ms-python";
-    version = "2023.8.41";
-    sha256 = "06b9aibs9sg590882pznddacvmjlinsh30qhziaiwyhbanxnm1ix";
+    version = "2023.9.12";
+    sha256 = "1ny5ikkbyfcgbnpd52vb7r2xsby2anqkkwlrqzvza4zi669qmrnq";
   }
   {
     name = "vscode-cljfmt";
@@ -140,8 +140,8 @@
   {
     name = "code-spell-checker";
     publisher = "streetsidesoftware";
-    version = "2.20.5";
-    sha256 = "1krs4qr5gcbprlsd6x1323srxs28a74wv6hqcmzz6j52970fc7r1";
+    version = "3.0.0";
+    sha256 = "1j6img1g9pb36sa1shdn8mx6rnis872xfr85xwzyjhdh4ajwn39i";
   }
   {
     name = "even-better-toml";
@@ -152,8 +152,8 @@
   {
     name = "shellcheck";
     publisher = "timonwong";
-    version = "0.33.1";
-    sha256 = "01444b06j2ny58jh08cgp0i9if9sd6bjq3j0mnx3xcqncvya2l1c";
+    version = "0.34.0";
+    sha256 = "0b833lyvklkad1zvcvg141lr7qkrnjq0yca7fjsgwajfx4n8vwim";
   }
   {
     name = "sort-lines";
