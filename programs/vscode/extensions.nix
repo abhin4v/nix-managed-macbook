@@ -8,8 +8,8 @@
   {
     name = "spellright";
     publisher = "ban";
-    version = "3.0.116";
-    sha256 = "132g47k9w0m9fblli3vx1q7dwffsf6i5lbszlqxsp6h4i38jqiqg";
+    version = "3.0.118";
+    sha256 = "09y4mwqv8jraklmwzb9kdqgjz59zv23sghsc2294pg6cgwhmky06";
   }
   {
     name = "markdown-mermaid";
@@ -44,14 +44,14 @@
   {
     name = "copilot";
     publisher = "GitHub";
-    version = "1.110.397";
-    sha256 = "0a3pklbc7cnv12cmsrnc3rbnp8ji07r8zq0aj4fyn2l0rj08hpi7";
+    version = "1.115.434";
+    sha256 = "1vw3ijp1swgjx0flmd2f06xqs27bnz7kxiz1slwp55y6higi6dsm";
   }
   {
     name = "copilot-chat";
     publisher = "GitHub";
-    version = "0.8.2023090801";
-    sha256 = "0wl6ph4ba39i6x9b0qg3x1k61mwfcdrxkr7cr1f17jd7mmy6iba5";
+    version = "0.8.2023092101";
+    sha256 = "12zcn249kihmb179wribs51832xz9fscdhxaphq64dy75f02gxbh";
   }
   {
     name = "go";
@@ -110,20 +110,20 @@
   {
     name = "black-formatter";
     publisher = "ms-python";
-    version = "2023.5.12511009";
-    sha256 = "0wblk79lycb2npil5lmzrxwy371zj1abz543ra9xvav9mxnhjal1";
+    version = "2023.5.12561007";
+    sha256 = "0jwjsgki054f9bjddnm3hacy520w0lacwr0xdhkc9bj8vdfqf1ir";
   }
   {
     name = "python";
     publisher = "ms-python";
-    version = "2023.17.12511005";
-    sha256 = "06js7kskdp4bc8fjlvlqqdym80k4k4krqpw8mchxdw4i917ncihh";
+    version = "2023.17.12651009";
+    sha256 = "1narxmar7hp618ks9lzcrqg8zqv90ybi6y29db1gxcv93sghdkzk";
   }
   {
     name = "vscode-pylance";
     publisher = "ms-python";
-    version = "2023.9.12";
-    sha256 = "1ny5ikkbyfcgbnpd52vb7r2xsby2anqkkwlrqzvza4zi669qmrnq";
+    version = "2023.9.21";
+    sha256 = "1ryw5scpw3rpygq6cxx58cj90j5dqnpn9kbq1iq8sgqm7cgb2vaq";
   }
   {
     name = "vscode-cljfmt";
@@ -140,8 +140,8 @@
   {
     name = "code-spell-checker";
     publisher = "streetsidesoftware";
-    version = "3.0.0";
-    sha256 = "1j6img1g9pb36sa1shdn8mx6rnis872xfr85xwzyjhdh4ajwn39i";
+    version = "3.0.1";
+    sha256 = "0i76gf7zr0j4dr02zmxwfphk6yy8rvlj9rzq3k8pvnlfzkmh9ri9";
   }
   {
     name = "even-better-toml";
