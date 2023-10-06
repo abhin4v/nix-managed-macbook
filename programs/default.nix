@@ -9,6 +9,7 @@ let
     nixfmt
     rnix-lsp
     statix
+    cachix
   ];
   networkingPackages = with pkgs; [
     curl
