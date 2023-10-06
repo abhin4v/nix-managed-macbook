@@ -14,14 +14,14 @@
   {
     name = "markdown-mermaid";
     publisher = "bierner";
-    version = "1.19.0";
-    sha256 = "1kip6f6mlys3r36sbxnpsy92zz9g06dvgqc51q2jrqz3vbyi9rpy";
+    version = "1.20.0";
+    sha256 = "0g9xrssiw06rik0pz1kpv1smllxvnjfw50207gj70xnlvlxvpqjy";
   }
   {
     name = "vscode-markdownlint";
     publisher = "DavidAnson";
-    version = "0.51.0";
-    sha256 = "0jfdbldp86rfrmd7clxs43hablcg6p342wchlk5cmb8glxrgrnjy";
+    version = "0.52.0";
+    sha256 = "0pi1vr86hmf26v6zcaaa2dhb38fcs557ihy39yrzq9rgs5qa9jk3";
   }
   {
     name = "mustache";
@@ -44,14 +44,14 @@
   {
     name = "copilot";
     publisher = "GitHub";
-    version = "1.115.434";
-    sha256 = "1vw3ijp1swgjx0flmd2f06xqs27bnz7kxiz1slwp55y6higi6dsm";
+    version = "1.123.0";
+    sha256 = "0cwzdxf6cz2cxgwx8d58vd0a5d8iryjn9n7bamv5b0nf4bfqk7bg";
   }
   {
     name = "copilot-chat";
     publisher = "GitHub";
-    version = "0.8.2023092101";
-    sha256 = "12zcn249kihmb179wribs51832xz9fscdhxaphq64dy75f02gxbh";
+    version = "0.9.2023100601";
+    sha256 = "0r4lpm58igf8whbjh7p2fyaf1mfhihfbnp54wyxpdbm0kbzvmmii";
   }
   {
     name = "go";
@@ -110,20 +110,20 @@
   {
     name = "black-formatter";
     publisher = "ms-python";
-    version = "2023.5.12561007";
-    sha256 = "0jwjsgki054f9bjddnm3hacy520w0lacwr0xdhkc9bj8vdfqf1ir";
+    version = "2023.5.12771008";
+    sha256 = "0sl79nwd73v6dsf4y9qjb5isxpxad0ds1fk6nc318chl2m2v94cl";
   }
   {
     name = "python";
     publisher = "ms-python";
-    version = "2023.17.12651009";
-    sha256 = "1narxmar7hp618ks9lzcrqg8zqv90ybi6y29db1gxcv93sghdkzk";
+    version = "2023.19.12791027";
+    sha256 = "0swy3bh0prnx4n4xlp1df5m6vbdvg0faa9gvj2kr4y48dhajy4yh";
   }
   {
     name = "vscode-pylance";
     publisher = "ms-python";
-    version = "2023.9.21";
-    sha256 = "1ryw5scpw3rpygq6cxx58cj90j5dqnpn9kbq1iq8sgqm7cgb2vaq";
+    version = "2023.10.11";
+    sha256 = "18zbqfqv2lgzdj4dyigki3vs4l1nx8zc3b7723yz6b0k65cackf9";
   }
   {
     name = "vscode-cljfmt";
@@ -158,8 +158,8 @@
   {
     name = "sort-lines";
     publisher = "Tyriar";
-    version = "1.10.2";
-    sha256 = "0fc4ik702nrhwv40f0vakgp6wf5s60gax57cxkj9szd635h7m380";
+    version = "1.11.0";
+    sha256 = "0c8y2b64gsfbwjy6yvzkz86vj9vqhsrf50ah0645yybc737hzzig";
   }
   {
     name = "change-case";
