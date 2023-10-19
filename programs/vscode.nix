@@ -34,6 +34,7 @@ in {
         justusadam.language-haskell
         kamikillerto.vscode-colorize
         mhutchie.git-graph
+        rust-lang.rust-analyzer
         skellock.just
         streetsidesoftware.code-spell-checker
         timonwong.shellcheck

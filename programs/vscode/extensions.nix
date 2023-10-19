@@ -132,6 +132,12 @@
     sha256 = "1y5mlrfk6zsb32f7nj6nlh03xa4dyrf80iyjbq167i3gvy6n0d95";
   }
   {
+    name = "rust-analyzer";
+    publisher = "rust-lang";
+    version = "0.4.1700";
+    sha256 = "0rs23m8fvb3szh8hldrwarh1l9z33g84a86w28j6yxdkqqng0827";
+  }
+  {
     name = "just";
     publisher = "skellock";
     version = "2.0.0";
