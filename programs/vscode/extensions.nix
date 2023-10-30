@@ -44,14 +44,14 @@
   {
     name = "copilot";
     publisher = "GitHub";
-    version = "1.127.500";
-    sha256 = "1c58ijvv5mf3jvjmn990dkqmf13212qslls74i4c3m0fxk38apgy";
+    version = "1.130.519";
+    sha256 = "0ggsd9md3i50a28zgc71y2w8pv4d09zxfxq8rhbbx48p1qsd8mk3";
   }
   {
     name = "copilot-chat";
     publisher = "GitHub";
-    version = "0.9.2023101901";
-    sha256 = "0ibgdx3fj6l4dzbdwm6zmn0zzgv89gynh44l9lnl08g8m91m5r8w";
+    version = "0.9.2023102704";
+    sha256 = "1dx63vri1cpli1xzfmn7d5and93r3r94mjh22n5hr8wff4h46x5h";
   }
   {
     name = "go";
@@ -68,8 +68,8 @@
   {
     name = "gruvbox";
     publisher = "jdinhlife";
-    version = "1.8.0";
-    sha256 = "0bixrlhimy0qw94cy354fn0gcsb8s1y4m4yf1gkncaawqinmp09z";
+    version = "1.16.0";
+    sha256 = "01v3jsdkd506ks271cllkl571g075y100mn1di2ynd5gm7nmgqxr";
   }
   {
     name = "plantuml";
@@ -116,14 +116,14 @@
   {
     name = "python";
     publisher = "ms-python";
-    version = "2023.19.12921011";
-    sha256 = "0i6qqjmdrp2v951df2mcw2nzlpiccqhia8jipzs938x755yzd2pq";
+    version = "2023.19.13001012";
+    sha256 = "1jkhp70qdq9sxalfwxskfcgbw09078z0ih4l8ni1d4xppca1jlss";
   }
   {
     name = "vscode-pylance";
     publisher = "ms-python";
-    version = "2023.10.31";
-    sha256 = "017nn9hp46aszkmx2j2915gxxvljh3zgj7c6awc6gszk57g3ycqi";
+    version = "2023.10.53";
+    sha256 = "11viizkxfwfj14ldaikjq3pwlfswkz2a5w6kynxhvzsx6kfnr6mx";
   }
   {
     name = "vscode-cljfmt";
@@ -134,8 +134,8 @@
   {
     name = "rust-analyzer";
     publisher = "rust-lang";
-    version = "0.4.1700";
-    sha256 = "0rs23m8fvb3szh8hldrwarh1l9z33g84a86w28j6yxdkqqng0827";
+    version = "0.4.1712";
+    sha256 = "19dgcx7vkhdg3j1djmgjcd4i8xsdbfdgajyzlijnzcksahir67hy";
   }
   {
     name = "just";
@@ -182,8 +182,8 @@
   {
     name = "vscode-zig";
     publisher = "ziglang";
-    version = "0.4.3";
-    sha256 = "0d2wqsbrh499xyfsjxbbf5d5nf329n6hp4dvhyqbgaqzsp9pzkqz";
+    version = "0.5.1";
+    sha256 = "1m25bbgfv8x8f0ywadjwsmh4myqgp8xwf5yjrkskgr8axj8ny36a";
   }
 ];
 }
