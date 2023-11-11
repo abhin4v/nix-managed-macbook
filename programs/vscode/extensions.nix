@@ -44,14 +44,14 @@
   {
     name = "copilot";
     publisher = "GitHub";
-    version = "1.130.519";
-    sha256 = "0ggsd9md3i50a28zgc71y2w8pv4d09zxfxq8rhbbx48p1qsd8mk3";
+    version = "1.135.544";
+    sha256 = "0zw9iy169hkg8axzfp3jh65b8v39l87i10yvy3p0fh0v8jgbbq9r";
   }
   {
     name = "copilot-chat";
     publisher = "GitHub";
-    version = "0.9.2023102704";
-    sha256 = "1dx63vri1cpli1xzfmn7d5and93r3r94mjh22n5hr8wff4h46x5h";
+    version = "0.11.2023111001";
+    sha256 = "0s6nffvx361ari6kh8himprmvm93bynind9gr4civldamjmfy45h";
   }
   {
     name = "go";
@@ -68,8 +68,8 @@
   {
     name = "gruvbox";
     publisher = "jdinhlife";
-    version = "1.16.0";
-    sha256 = "01v3jsdkd506ks271cllkl571g075y100mn1di2ynd5gm7nmgqxr";
+    version = "1.17.0";
+    sha256 = "1w9h4ygvgbj71npwlkg39rsw63pdz28g2msifa1hmf4y543ii069";
   }
   {
     name = "plantuml";
@@ -110,20 +110,20 @@
   {
     name = "black-formatter";
     publisher = "ms-python";
-    version = "2023.5.12831009";
-    sha256 = "1sgwzxcji22fnzlw710i9ympmc4msa984aa9px5f4hyrwnvgvqwg";
+    version = "2023.7.13121006";
+    sha256 = "1i2sssknyad73i5mbaisymqfx0z70crxcsdr4yjawcpcf36lajvx";
   }
   {
     name = "python";
     publisher = "ms-python";
-    version = "2023.19.13001012";
-    sha256 = "1jkhp70qdq9sxalfwxskfcgbw09078z0ih4l8ni1d4xppca1jlss";
+    version = "2023.21.13141007";
+    sha256 = "1ba1r8hmpqahcafky5scnc2clyc1ja0g8xkhvmi295gc28s53rda";
   }
   {
     name = "vscode-pylance";
     publisher = "ms-python";
-    version = "2023.10.53";
-    sha256 = "11viizkxfwfj14ldaikjq3pwlfswkz2a5w6kynxhvzsx6kfnr6mx";
+    version = "2023.11.12";
+    sha256 = "1sz5jdnc52h8vskcb1v8dk1w8hx3l8lfj8fd4428xc23g8z5rxz3";
   }
   {
     name = "vscode-cljfmt";
@@ -134,8 +134,8 @@
   {
     name = "rust-analyzer";
     publisher = "rust-lang";
-    version = "0.4.1712";
-    sha256 = "19dgcx7vkhdg3j1djmgjcd4i8xsdbfdgajyzlijnzcksahir67hy";
+    version = "0.4.1727";
+    sha256 = "0li6xjil5s1kamgvah6381hap322521gkc6ia8bhhvvwmydmni24";
   }
   {
     name = "just";
