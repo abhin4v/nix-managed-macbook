@@ -29,6 +29,7 @@
     shellInit = ''
       # nix
       fenv source /nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh
+      fish_add_path -m ~/.local/bin ~/.cabal/bin
     '';
   };
 }
