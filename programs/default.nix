@@ -30,6 +30,7 @@ let
     tree
   ];
   miscPackages = with pkgs; [
+    binutils
     cabal2nix
     cloc
     comma
