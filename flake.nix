@@ -41,8 +41,9 @@
       devShells.${system}.default = pkgs.mkShell {
         buildInputs = with pkgs; [ (import home-manager { inherit pkgs; }).home-manager just ];
         shellHook = ''
-          ln -s ${pkgs.path} .direnv/nixpkgs;
-          export NIX_PATH=`pwd`/.direnv;
+          export NIX_PATH=$HOME/.hm-nixchannels;
+          mkdir -p $NIX_PATH;
+          ln -f -s ${pkgs.path} -T $NIX_PATH/nixpkgs;
         '';
       };
     };

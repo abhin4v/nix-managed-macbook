@@ -21,7 +21,10 @@
       cat = "${pkgs.bat}/bin/bat";
     };
 
-    sessionVariables = { EDITOR = "micro"; };
+    sessionVariables = {
+      EDITOR = "micro";
+      NIX_PATH = "$HOME/.hm-nixchannels";
+    };
 
     file."Applications/Home Manager Apps".source = let
       apps = pkgs.buildEnv {
