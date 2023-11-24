@@ -31,7 +31,7 @@ _switch:
 switch: (_run "_switch")
 
 _update-vscode-extensions:
-    $NIXPKGS_PATH/pkgs/applications/editors/vscode/extensions/update_installed_exts.sh > \
+    $NIX_PATH/nixpkgs/pkgs/applications/editors/vscode/extensions/update_installed_exts.sh > \
         {{ root_dir }}/programs/vscode/extensions.nix
 
 _update: _update-vscode-extensions && _switch
