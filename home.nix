@@ -1,11 +1,12 @@
-{ config, pkgs, ... }:
+{ config, pkgs, lib, ... }:
 
-{
-  imports = [ ./programs ./scripts ./launchd.nix ./nix.nix ];
+let username = config.home.username;
+in {
+  imports = [ ./programs ./scripts ./launchd.nix ];
 
   home = {
     username = "abhinav";
-    homeDirectory = "/Users/abhinav";
+    homeDirectory = lib.mkForce "/Users/${username}";
     stateVersion = "22.05";
     enableNixpkgsReleaseCheck = true;
 
@@ -23,7 +24,7 @@
 
     sessionVariables = {
       EDITOR = "micro";
-      NIX_PATH = "$HOME/.hm-nixchannels";
+      NIX_PATH = "/nix/var/nix/profiles/per-user/${username}/channels";
     };
 
     file."Applications/Home Manager Apps".source = let

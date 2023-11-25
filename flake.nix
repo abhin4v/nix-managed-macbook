@@ -3,6 +3,10 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs?rev=5f5210aa20e343b7e35f40c033000db0ef80d7b9";
+    nix-darwin = {
+      url = "github:LnL7/nix-darwin";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -29,25 +33,33 @@
     };
   };
 
-  outputs = inputs@{ nixpkgs, home-manager, ... }:
+  outputs = inputs@{ self, nixpkgs, nix-darwin, home-manager, ... }:
     let
       system = "x86_64-darwin";
       pkgs = import nixpkgs {
         inherit system;
         config = { allowUnfree = true; };
       };
-    in {
-      homeConfigurations.abhinav = home-manager.lib.homeManagerConfiguration {
-        inherit pkgs;
-        modules = [ ./home.nix ];
-        extraSpecialArgs = { inherit inputs; };
+    in
+    {
+      darwinConfigurations."Abhinavs-MacBook-Pro" = nix-darwin.lib.darwinSystem {
+        inherit system;
+        specialArgs = { inherit inputs; };
+        modules = [
+          ./configuration.nix
+          home-manager.darwinModules.home-manager
+          {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.users.abhinav = import ./home.nix;
+            home-manager.extraSpecialArgs = { inherit inputs; };
+          }
+        ];
       };
       devShells.${system}.default = pkgs.mkShell {
         buildInputs = with pkgs; [ (import home-manager { inherit pkgs; }).home-manager just ];
         shellHook = ''
-          export NIX_PATH=$HOME/.hm-nixchannels;
-          mkdir -p $NIX_PATH;
-          ln -f -s ${pkgs.path} -T $NIX_PATH/nixpkgs;
+          export NIXPKGS_PATH=${pkgs.path};
         '';
       };
     };
