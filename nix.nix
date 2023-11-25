@@ -1,19 +1,36 @@
-{ config, pkgs, ... }:
-
+{ config, pkgs, inputs, ... }:
 {
-  nixpkgs.config.allowUnfree = true;
-  nix.package = pkgs.nixStable;
-  nix.settings = {
-    experimental-features = [ "nix-command" "flakes" "repl-flake" ];
-    max-jobs = 6;
-    cores = 2;
-    auto-optimise-store = true;
-    connect-timeout = 5;
-    log-lines = 25;
-    min-free = 128000000;
-    max-free = 1000000000;
-    fallback = true;
-    warn-dirty = false;
-    keep-outputs = true;
+  services.nix-daemon.enable = true;
+  nix = {
+    package = pkgs.nixFlakes;
+    registry.nixpkgs.flake = inputs.nixpkgs;
+    nixPath = [{ nixpkgs = inputs.nixpkgs.outPath; }];
+    extraOptions = ''
+      keep-outputs = true
+      keep-derivations = true
+    '';
+    gc = {
+      automatic = true;
+      interval.Day = 1;
+      options = "--delete-older-than 7d";
+    };
+    settings = {
+      auto-optimise-store = true;
+      connect-timeout = 5;
+      cores = 2;
+      experimental-features = [ "nix-command" "flakes" "repl-flake" ];
+      fallback = true;
+      keep-outputs = true;
+      log-lines = 25;
+      max-free = 1000000000;
+      max-jobs = 6;
+      min-free = 128000000;
+      warn-dirty = false;
+      trusted-users = ["@admin"];
+    };
+  };
+  nixpkgs = {
+    hostPlatform = "x86_64-darwin";
+    config.allowUnfree = true;
   };
 }

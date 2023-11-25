@@ -1,5 +1,6 @@
 in_nix_shell := env_var_or_default("IN_NIX_SHELL", "false")
 root_dir := justfile_directory()
+hostname := `scutil --get LocalHostName`
 
 # choose a just command to run
 default:
@@ -18,24 +19,21 @@ _run cmd:
     fi
 
 _build:
-    home-manager -v build --flake "{{ root_dir }}#abhinav"
+    nix build {{ root_dir }}#darwinConfigurations.{{ hostname }}.system
 
 # build latest home-manager generation
 build: (_run "_build")
 
-_switch:
-    home-manager -v switch --flake "{{ root_dir }}#abhinav"
-    report-hm-changes
+_switch: _build
+    ./result/sw/bin/darwin-rebuild -v switch --flake "{{ root_dir }}"
 
 # switch to latest home-manager generation
 switch: (_run "_switch")
 
-_update-vscode-extensions:
-    $NIX_PATH/nixpkgs/pkgs/applications/editors/vscode/extensions/update_installed_exts.sh > \
-        {{ root_dir }}/programs/vscode/extensions.nix
-
-_update: _update-vscode-extensions && _switch
+_update: && _switch
     nix flake update --commit-lock-file "{{ root_dir }}"
+    $NIXPKGS_PATH/pkgs/applications/editors/vscode/extensions/update_installed_exts.sh > \
+        {{ root_dir }}/programs/vscode/extensions.nix
 
 # update packages and switch
 update: (_run "_update")

@@ -1,6 +1,7 @@
 { inputs, config, pkgs, ... }:
 
-{
+let username = config.home.username;
+in {
   programs.fish = {
     enable = true;
 
@@ -29,7 +30,8 @@
     shellInit = ''
       # nix
       fenv source /nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh
-      fish_add_path -m ~/.local/bin ~/.cabal/bin
+      fenv source /etc/profiles/per-user/${username}/etc/profile.d/hm-session-vars.sh
+      fish_add_path -m ~/.local/bin ~/.cabal/bin /etc/profiles/per-user/${username}/bin
     '';
   };
 }
