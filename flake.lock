@@ -84,6 +84,23 @@
         "type": "github"
       }
     },
+    "monaspace-font": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1699482037,
+        "narHash": "sha256-Zo56r0QoLwxwGQtcWP5cDlasx000G9BFeGINvvwEpQs=",
+        "owner": "githubnext",
+        "repo": "monaspace",
+        "rev": "601eb27f902432999302e0e64db2daacc954f156",
+        "type": "github"
+      },
+      "original": {
+        "owner": "githubnext",
+        "repo": "monaspace",
+        "rev": "601eb27f902432999302e0e64db2daacc954f156",
+        "type": "github"
+      }
+    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1700755841,
@@ -107,6 +124,7 @@
         "fish-plugin-fzf": "fish-plugin-fzf",
         "flake-compat": "flake-compat",
         "home-manager": "home-manager",
+        "monaspace-font": "monaspace-font",
         "nixpkgs": "nixpkgs"
       }
     }

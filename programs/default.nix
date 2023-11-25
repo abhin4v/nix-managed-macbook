@@ -56,6 +56,7 @@ let
     roboto-mono
     source-code-pro
     (pkgs.callPackage ../packages/dm-mono.nix { dm-mono-src = "${inputs.dm-mono-font}"; })
+    (pkgs.callPackage ../packages/monaspace.nix { monaspace-src = "${inputs.monaspace-font}"; })
     (nerdfonts.override { fonts = [ "Monoid" "Agave" "Iosevka" "Lekton" "VictorMono" ]; })
   ];
 in {

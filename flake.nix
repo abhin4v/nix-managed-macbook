@@ -15,6 +15,10 @@
       url = "github:googlefonts/dm-mono";
       flake = false;
     };
+    monaspace-font = {
+      url = "github:githubnext/monaspace?rev=601eb27f902432999302e0e64db2daacc954f156";
+      flake = false;
+    };
     fish-plugin-foreign-env = {
       url = "github:oh-my-fish/plugin-foreign-env";
       flake = false;
