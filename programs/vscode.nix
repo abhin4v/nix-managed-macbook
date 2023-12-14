@@ -139,7 +139,10 @@ in {
       window.autoDetectColorScheme = true;
 
       workbench = {
-        activityBar.visible = false;
+        activityBar = {
+          visible = false;
+          location = "hidden";
+        };
         colorTheme = "Gruvbox Dark Hard";
         editor.highlightModifiedTabs = true;
         preferredDarkColorTheme = "Gruvbox Dark Hard";
