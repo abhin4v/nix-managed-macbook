@@ -2,7 +2,7 @@
   description = "Home Manager configuration of Abhinav Sarkar";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs?rev=e8b0430bc4c4235607ae102010dec2ba32e8c0ca";
+    nixpkgs.url = "github:nixos/nixpkgs?rev=e1fa12d4f6c6fe19ccb59cac54b5b3f25e160870";
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
