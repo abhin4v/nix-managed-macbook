@@ -44,32 +44,32 @@
   {
     name = "copilot";
     publisher = "GitHub";
-    version = "1.148.0";
-    sha256 = "1va6r2flp031nvxka2kghkzmpj5i3rmb43zb5dqa6cd8ij9n1q22";
+    version = "1.153.669";
+    sha256 = "11qy0ksv8baym7ds7j6qmggr0l41bfacd3sy6niypxn33iad01mv";
   }
   {
     name = "copilot-chat";
     publisher = "GitHub";
-    version = "0.12.2024011101";
-    sha256 = "0i20x7yl6xcp3abv36lzr1agfxmmvqc56mvvc1y3a8wa2g412i27";
+    version = "0.12.2024012301";
+    sha256 = "18px2wnlb8vrh2fy0c413m0s57bkqcjmciv35bzfmi5grp5h6gwx";
   }
   {
     name = "go";
     publisher = "golang";
-    version = "0.40.1";
-    sha256 = "0844kxbi7qi79wal0cqcd4wiygc42fyhamn33lsx2ms4yj5jxri9";
+    version = "0.40.3";
+    sha256 = "15kicpv9xpn7l3w9mbmsjdzjmavh88p3skkim0a9prg9p40bsq0m";
   }
   {
     name = "haskell";
     publisher = "haskell";
-    version = "2.5.1";
-    sha256 = "1gy2s9pzwsiwjk2b3sqn9hp3zbcg1jxbf4zl9hcqan3q6v96m7dz";
+    version = "2.5.2";
+    sha256 = "09pr3ya77ryj5n80k5srwaxmr0j77f6xp67w0kz324i6fhjd12bq";
   }
   {
     name = "gruvbox";
     publisher = "jdinhlife";
-    version = "1.17.0";
-    sha256 = "1w9h4ygvgbj71npwlkg39rsw63pdz28g2msifa1hmf4y543ii069";
+    version = "1.18.0";
+    sha256 = "07iy4649vjqif40agvp2ck9695vl1kv4zv69rn4j6hi0jra8dhg2";
   }
   {
     name = "plantuml";
@@ -110,8 +110,8 @@
   {
     name = "black-formatter";
     publisher = "ms-python";
-    version = "2023.7.13471009";
-    sha256 = "18gdvmpnq5v6dp6v63vk43x27r1q5y8mzm516mr4rzvvgciyakqp";
+    version = "2023.9.10231018";
+    sha256 = "104ng2sl8pdi011pqbwdlp6b3xpkj6mfs9d5jcw099y9m18h5s3w";
   }
   {
     name = "debugpy";
@@ -122,14 +122,14 @@
   {
     name = "python";
     publisher = "ms-python";
-    version = "2023.25.10111009";
-    sha256 = "0bzxdkhxg9yz8ml9xhbghg4cc656gplwbjj969qqhdf60rsyl7il";
+    version = "2023.25.10221012";
+    sha256 = "14bkvlflib4wky6lw1hq0i01ymzf5349cl4d9minaam2lq0451i0";
   }
   {
     name = "vscode-pylance";
     publisher = "ms-python";
-    version = "2023.12.103";
-    sha256 = "1lkh94vyx9k23yw7i6sl1yy5f5wf3kjm8c5ljybzvy1lbi831lyf";
+    version = "2023.12.104";
+    sha256 = "07hh0x4z255xswcwd0dkyridpaxsbfnrna9hhbqiiz50vf4grzjx";
   }
   {
     name = "vscode-cljfmt";
@@ -140,8 +140,8 @@
   {
     name = "rust-analyzer";
     publisher = "rust-lang";
-    version = "0.4.1802";
-    sha256 = "0i4lmxx61hixnkcn37932q53g6a7gdzxknn6klln7xkibxzy1840";
+    version = "0.4.1817";
+    sha256 = "1nj3cw4nhan7gh04f91z09rh14l37zq6yjjvxqjw2ylvfjrz0klr";
   }
   {
     name = "just";
