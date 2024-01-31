@@ -30,10 +30,15 @@ _switch: _build
 # switch to latest home-manager generation
 switch: (_run "_switch")
 
-_update: && _switch
+_update: && _switch _brew-update
     nix flake update --commit-lock-file "{{ root_dir }}"
     $NIXPKGS_PATH/pkgs/applications/editors/vscode/extensions/update_installed_exts.sh > \
         {{ root_dir }}/programs/vscode/extensions.nix
+
+_brew-update:
+    brew update
+    brew upgrade
+    mas upgrade
 
 # update packages and switch
 update: (_run "_update")
@@ -41,4 +46,5 @@ update: (_run "_update")
 # clean up nix garbage
 clean:
     home-manager expire-generations "-7 days"
-    nix-collect-garbage -d --delete-old
+    sudo nix-collect-garbage -d --delete-older-than 7d
+    brew cleanup  --prune 7

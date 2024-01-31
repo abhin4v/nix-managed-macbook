@@ -32,6 +32,7 @@ in {
       fenv source /nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh
       fenv source /etc/profiles/per-user/${username}/etc/profile.d/hm-session-vars.sh
       fish_add_path -m ~/.local/bin ~/.cabal/bin /etc/profiles/per-user/${username}/bin
+      eval "$(/usr/local/bin/brew shellenv)"
     '';
   };
 }

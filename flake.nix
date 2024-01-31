@@ -1,5 +1,5 @@
 {
-  description = "Home Manager configuration of Abhinav Sarkar";
+  description = "Nix Darwin + Home Manager configuration of Abhinav Sarkar";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs?rev=5f5210aa20e343b7e35f40c033000db0ef80d7b9";
@@ -47,6 +47,7 @@
         specialArgs = { inherit inputs; };
         modules = [
           ./configuration.nix
+          ./homebrew.nix
           home-manager.darwinModules.home-manager
           {
             home-manager.useGlobalPkgs = true;
