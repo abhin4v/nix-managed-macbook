@@ -4,7 +4,7 @@ This is the [Nix] and [Home Manager] configuration for managing my MacBook.
 
 ## Usage
 
-First install [Nix]. Then, in the repo directory, run `nix develop` to get into the Nix shell.
+First install [Nix] and [Homebrew]. Then, in the repo directory, run `nix develop` to get into the Nix shell.
 
 To set up the MacBook as per the config, run:
 
@@ -31,5 +31,6 @@ just <repo_dir>/switch # or update or clean
 ```
 
 [Nix]: https://nixos.org
+[Homebrew]: https://brew.sh
 [Home Manager]: https://github.com/nix-community/home-manager
 [`just`]: https://just.systems
