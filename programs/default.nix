@@ -21,6 +21,7 @@ let
     comma
     dua
     entr
+    hyperfine
     gitui
     graphviz-nox
     iterm2
@@ -30,7 +31,6 @@ let
     neofetch
     proselint
     shellcheck
-    toot
     typos
   ];
   fonts = with pkgs; [
