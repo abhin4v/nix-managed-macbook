@@ -12,23 +12,8 @@ let
     statix
     cachix
   ];
-  networkingPackages = with pkgs; [
-    curl
-    dig
-    httpie
-    openssh
-    mosh
-  ];
-  cmdLineUtilPackages = with pkgs; [
-    bash
-    broot
-    coreutils-full
-    fd
-    gnugrep
-    less
-    ranger
-    tree
-  ];
+  networkingPackages = with pkgs; [ curl dig httpie openssh mosh ];
+  cmdLineUtilPackages = with pkgs; [ bash broot coreutils-full fd gnugrep less ranger tree ];
   miscPackages = with pkgs; [
     binutils
     cabal2nix

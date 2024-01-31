@@ -40,8 +40,7 @@
         inherit system;
         config = { allowUnfree = true; };
       };
-    in
-    {
+    in {
       darwinConfigurations."Abhinavs-MacBook-Pro" = nix-darwin.lib.darwinSystem {
         inherit system;
         specialArgs = { inherit inputs; };

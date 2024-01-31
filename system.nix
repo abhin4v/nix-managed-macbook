@@ -1,5 +1,4 @@
-{ pkgs, inputs, ... }:
-{
+{ pkgs, inputs, ... }: {
   security.pam.enableSudoTouchIdAuth = true;
   system = {
     defaults = {

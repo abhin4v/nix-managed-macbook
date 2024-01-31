@@ -1,4 +1,1 @@
-{ pkgs, inputs, ... }:
-{
-  imports = [./nix.nix ./system.nix];
-}
+{ pkgs, inputs, ... }: { imports = [ ./nix.nix ./system.nix ]; }

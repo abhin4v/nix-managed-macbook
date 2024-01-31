@@ -156,7 +156,7 @@ in {
       "[json]" = { editor.defaultFormatter = "esbenp.prettier-vscode"; };
       "[python]" = { editor.defaultFormatter = "ms-python.black-formatter"; };
 
-      black-formatter.args = ["--line-length" "100"];
+      black-formatter.args = [ "--line-length" "100" ];
     };
 
     keybindings = [

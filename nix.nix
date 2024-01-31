@@ -1,5 +1,4 @@
-{ config, pkgs, inputs, ... }:
-{
+{ config, pkgs, inputs, ... }: {
   services.nix-daemon.enable = true;
   nix = {
     package = pkgs.nixFlakes;
@@ -26,7 +25,7 @@
       max-jobs = 6;
       min-free = 128000000;
       warn-dirty = false;
-      trusted-users = ["@admin"];
+      trusted-users = [ "@admin" ];
     };
   };
   nixpkgs = {
