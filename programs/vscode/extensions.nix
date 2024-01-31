@@ -20,8 +20,8 @@
   {
     name = "vscode-markdownlint";
     publisher = "DavidAnson";
-    version = "0.53.0";
-    sha256 = "1jd2bgzmk11jgv897605ibfl38lr0yssmic6yv6mrrwcgvmrg402";
+    version = "0.54.0";
+    sha256 = "171qw6mymc9hmm8xin3gwr8r2ac8yfr3s8agagsqq9193cawbcq6";
   }
   {
     name = "mustache";
@@ -44,14 +44,14 @@
   {
     name = "copilot";
     publisher = "GitHub";
-    version = "1.153.669";
-    sha256 = "11qy0ksv8baym7ds7j6qmggr0l41bfacd3sy6niypxn33iad01mv";
+    version = "1.156.683";
+    sha256 = "0hks2vav7xxcrrwqrpg6lckanxh8qd0a5zzhywn72i8r18a14jl2";
   }
   {
     name = "copilot-chat";
     publisher = "GitHub";
-    version = "0.12.2024012301";
-    sha256 = "18px2wnlb8vrh2fy0c413m0s57bkqcjmciv35bzfmi5grp5h6gwx";
+    version = "0.12.2024013003";
+    sha256 = "0k5mqhx1acf41sf2qn5fnw5icah2awvivgpqgfrkxn98b5adc2p0";
   }
   {
     name = "go";
@@ -110,8 +110,8 @@
   {
     name = "black-formatter";
     publisher = "ms-python";
-    version = "2023.9.10231018";
-    sha256 = "104ng2sl8pdi011pqbwdlp6b3xpkj6mfs9d5jcw099y9m18h5s3w";
+    version = "2023.9.10291927";
+    sha256 = "1alh8j35qidgmbb293ar02x5xbigqcv7khq1bp7blsffisdxdqm4";
   }
   {
     name = "debugpy";
@@ -122,14 +122,14 @@
   {
     name = "python";
     publisher = "ms-python";
-    version = "2023.25.10221012";
-    sha256 = "14bkvlflib4wky6lw1hq0i01ymzf5349cl4d9minaam2lq0451i0";
+    version = "2023.25.10292213";
+    sha256 = "09r82h3px2nlkyd3h5y8p6xcz9pccayvfnrnymlkiy9n2j2889sy";
   }
   {
     name = "vscode-pylance";
     publisher = "ms-python";
-    version = "2023.12.104";
-    sha256 = "07hh0x4z255xswcwd0dkyridpaxsbfnrna9hhbqiiz50vf4grzjx";
+    version = "2024.1.102";
+    sha256 = "05wikxrc7bw2m71gp2n4myfqdk7gk8y474v2fhg0qrxz5hafkyx6";
   }
   {
     name = "vscode-cljfmt";
@@ -140,8 +140,8 @@
   {
     name = "rust-analyzer";
     publisher = "rust-lang";
-    version = "0.4.1817";
-    sha256 = "1nj3cw4nhan7gh04f91z09rh14l37zq6yjjvxqjw2ylvfjrz0klr";
+    version = "0.4.1825";
+    sha256 = "19yqnrxf5c8wm330g13i3vyjbabakw2ary4c6z0j74fh4f1xniz8";
   }
   {
     name = "just";
