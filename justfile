@@ -28,9 +28,9 @@ _switch: _build
     ./result/sw/bin/darwin-rebuild -v switch --flake "{{ root_dir }}"
 
 # switch to latest home-manager generation
-switch: (_run "_switch")
+switch: (_run "_switch") && _report-changes
 
-_update: && _switch _brew-update
+_update: && _switch _brew-update _report-changes
     nix flake update --commit-lock-file "{{ root_dir }}"
     $NIXPKGS_PATH/pkgs/applications/editors/vscode/extensions/update_installed_exts.sh > \
         {{ root_dir }}/programs/vscode/extensions.nix
@@ -40,11 +40,19 @@ _brew-update:
     brew upgrade
     mas upgrade
 
+_report-changes:
+  #!/bin/bash
+  if [ $(ls -d1v /nix/var/nix/profiles/system-*-link 2>/dev/null | wc -l) -lt 2 ]; then
+    echo "Skipping changes report..."
+  else
+    nvd diff $(/bin/ls -d1v /nix/var/nix/profiles/system-*-link | tail -2)
+  fi
+
 # update packages and switch
 update: (_run "_update")
 
 # clean up nix garbage
-clean:
-    home-manager expire-generations "-7 days"
-    sudo nix-collect-garbage -d --delete-older-than 7d
-    brew cleanup  --prune 7
+clean days="7":
+    home-manager expire-generations "-{{days}} days"
+    sudo nix-collect-garbage -d --delete-older-than {{days}}d
+    brew cleanup  --prune {{days}}

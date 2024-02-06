@@ -8,6 +8,7 @@ let
     nix-diff
     nix-tree
     nixfmt
+    nvd
     rnix-lsp
     statix
     cachix
