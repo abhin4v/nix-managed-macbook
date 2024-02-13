@@ -19,7 +19,7 @@
   }
   {
     name = "vscode-markdownlint";
-    publisher = "DavidAnson";
+    publisher = "davidanson";
     version = "0.54.0";
     sha256 = "171qw6mymc9hmm8xin3gwr8r2ac8yfr3s8agagsqq9193cawbcq6";
   }
@@ -31,7 +31,7 @@
   }
   {
     name = "xml";
-    publisher = "DotJoshJohnson";
+    publisher = "dotjoshjohnson";
     version = "2.5.1";
     sha256 = "1v4x6yhzny1f8f4jzm4g7vqmqg5bqchyx4n25mkgvw2xp6yls037";
   }
@@ -43,15 +43,15 @@
   }
   {
     name = "copilot";
-    publisher = "GitHub";
-    version = "1.156.691";
-    sha256 = "1q36fqphfk0n0p9yqczmrns1x91xvs7sxbq84ha4hvraz30p7f9b";
+    publisher = "github";
+    version = "1.160.705";
+    sha256 = "1fs91p6r7clk47zmg8rpg7dbgrns3j0v95xirvdsfkdlhijr9yn0";
   }
   {
     name = "copilot-chat";
-    publisher = "GitHub";
-    version = "0.13.2024020601";
-    sha256 = "1wqx5aklwv0xdd944nvmhzgpk82c3whxxp3g5p82b7wwc6wx55x9";
+    publisher = "github";
+    version = "0.13.2024021201";
+    sha256 = "18h370d036bkm6h39winyrysca3r0al615b10a6nz91ny7yajqkf";
   }
   {
     name = "go";
@@ -122,14 +122,14 @@
   {
     name = "python";
     publisher = "ms-python";
-    version = "2024.1.10371009";
-    sha256 = "1n76zdfbyb1l8609yylvf0qkn7f7dfx8nn6gwk7ljkwnw4sk10y2";
+    version = "2024.1.10431006";
+    sha256 = "0zb7brbrr2asn6jdb7vqzyhhc8pdai8j1lpc90x4q6pzd8z26c5p";
   }
   {
     name = "vscode-pylance";
     publisher = "ms-python";
-    version = "2024.1.104";
-    sha256 = "00h7iri4xn01k6pmxlmzvhsasljl5jnpc7y4q8njc5v37illgzyv";
+    version = "2024.2.1";
+    sha256 = "1a5d6gdavbb3m9p68201vn5bd5q7j8q8gv4s4459d2qzllvz2mr2";
   }
   {
     name = "vscode-cljfmt";
@@ -140,8 +140,8 @@
   {
     name = "rust-analyzer";
     publisher = "rust-lang";
-    version = "0.4.1832";
-    sha256 = "0zf1biqy8i5bczjj41l3wmwybgdz8ssk3qfrz6nf2a11s2pjpxjh";
+    version = "0.4.1840";
+    sha256 = "11ys7qi7c8dn8l548qpk9gqh1grdl8bwzk4d5xkik67sl9g5y8jw";
   }
   {
     name = "just";
@@ -169,7 +169,7 @@
   }
   {
     name = "sort-lines";
-    publisher = "Tyriar";
+    publisher = "tyriar";
     version = "1.11.0";
     sha256 = "0c8y2b64gsfbwjy6yvzkz86vj9vqhsrf50ah0645yybc737hzzig";
   }
