@@ -4,6 +4,7 @@ let
   marketplaceExtensions = [
     "13xforever/language-x86-64-assembly"
     "ban/spellright"
+    "cs128/cs128-clang-tidy"
     "dawhite/mustache"
     "GitHub/copilot"
     "kirozen/wordcounter"
@@ -22,7 +23,6 @@ in {
     extensions = with pkgs.vscode-extensions;
       [
         bierner.markdown-mermaid
-        tamasfe.even-better-toml
         davidanson.vscode-markdownlint
         dotjoshjohnson.xml
         esbenp.prettier-vscode
@@ -33,11 +33,15 @@ in {
         jnoortheen.nix-ide
         justusadam.language-haskell
         kamikillerto.vscode-colorize
+        llvm-vs-code-extensions.vscode-clangd
         mhutchie.git-graph
+        mkhl.direnv
         rust-lang.rust-analyzer
         skellock.just
         streetsidesoftware.code-spell-checker
+        tamasfe.even-better-toml
         timonwong.shellcheck
+        twxs.cmake
         tyriar.sort-lines
         zhuangtongfa.material-theme
       ] ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace (builtins.filter

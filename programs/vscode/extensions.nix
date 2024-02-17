@@ -18,6 +18,12 @@
     sha256 = "1ii6slnmj5ck40mdnixbybqjqbmqg7wl7yqw66p31wsnpqk71q28";
   }
   {
+    name = "cs128-clang-tidy";
+    publisher = "cs128";
+    version = "0.5.1";
+    sha256 = "1f2r3k6z33chsfav51j2qsn14lyjz645ffzvi5ic5mhi3v6j48hl";
+  }
+  {
     name = "vscode-markdownlint";
     publisher = "davidanson";
     version = "0.54.0";
@@ -102,10 +108,22 @@
     sha256 = "1df6qkvyhw2k1wmy9z3kr56bcljyr8yqdvxd5vjfh579s1k370ch";
   }
   {
+    name = "vscode-clangd";
+    publisher = "llvm-vs-code-extensions";
+    version = "0.1.26";
+    sha256 = "04wkzqdxpyjdjxb1szgz0rm83iafy11af7rvsjibp45mf9smgx37";
+  }
+  {
     name = "git-graph";
     publisher = "mhutchie";
     version = "1.30.0";
     sha256 = "000zhgzijf3h6abhv4p3cz99ykj6489wfn81j0s691prr8q9lxxh";
+  }
+  {
+    name = "direnv";
+    publisher = "mkhl";
+    version = "0.16.0";
+    sha256 = "1jmwqbbh5x5z7dscgcn4pb0g41k7zlhgf5i8syl3ipv6z270aq5v";
   }
   {
     name = "black-formatter";
@@ -166,6 +184,12 @@
     publisher = "timonwong";
     version = "0.35.0";
     sha256 = "0bnrad3s66nv0kqlrzq8wfw9jycn7vj80nwq8f4l171l14j5c7jj";
+  }
+  {
+    name = "cmake";
+    publisher = "twxs";
+    version = "0.0.17";
+    sha256 = "11hzjd0gxkq37689rrr2aszxng5l9fwpgs9nnglq3zhfa1msyn08";
   }
   {
     name = "sort-lines";
