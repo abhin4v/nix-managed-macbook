@@ -20,6 +20,7 @@ let
     cabal2nix
     cloc
     comma
+    difftastic
     dua
     entr
     hyperfine
