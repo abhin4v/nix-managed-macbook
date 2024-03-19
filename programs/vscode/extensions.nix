@@ -50,20 +50,20 @@
   {
     name = "copilot";
     publisher = "github";
-    version = "1.172.758";
-    sha256 = "0vjycar1j7wvr8xvnkik254q363gb76nfag5ggna2hr61s4cibdh";
+    version = "1.175.0";
+    sha256 = "0k35jccqjdr5484zr36w9v1qpi8z2imw3xy6inrz9idx6xj2dlsz";
   }
   {
     name = "copilot-chat";
     publisher = "github";
-    version = "0.14.2024030801";
-    sha256 = "0zxjx5075a50v8mf48m6a5331wjdac2zw621nyv3lhq4j7x55m5z";
+    version = "0.14.2024031802";
+    sha256 = "1md70s79m9wr0x0im6xx94fgvpgc8fcipkbccmhdhji37awpvbdf";
   }
   {
     name = "go";
     publisher = "golang";
-    version = "0.41.1";
-    sha256 = "0i4h458x90v2bfr0la8axg6fs0756f2paby6h34pj4vflhi78axm";
+    version = "0.41.2";
+    sha256 = "13fdnwgci87x1rdz1hwq52ling81c3l67cqvmckcjzri2r8gsgvq";
   }
   {
     name = "haskell";
@@ -86,8 +86,8 @@
   {
     name = "nix-ide";
     publisher = "jnoortheen";
-    version = "0.2.2";
-    sha256 = "1264027sjh9a112si0y0p3pk3y36shj5b4qkpsj207z7lbxqq0wg";
+    version = "0.3.1";
+    sha256 = "1cpfckh6zg8byi6x1llkdls24w9b0fvxx4qybi9zfcy5gc60r6nk";
   }
   {
     name = "language-haskell";
@@ -110,8 +110,8 @@
   {
     name = "vscode-clangd";
     publisher = "llvm-vs-code-extensions";
-    version = "0.1.26";
-    sha256 = "04wkzqdxpyjdjxb1szgz0rm83iafy11af7rvsjibp45mf9smgx37";
+    version = "0.1.27";
+    sha256 = "09fb9a59852cs7g5lj40v8rl9zw4x155qir37lx1pkmm4qckrsp4";
   }
   {
     name = "git-graph";
@@ -122,8 +122,8 @@
   {
     name = "direnv";
     publisher = "mkhl";
-    version = "0.16.0";
-    sha256 = "1jmwqbbh5x5z7dscgcn4pb0g41k7zlhgf5i8syl3ipv6z270aq5v";
+    version = "0.17.0";
+    sha256 = "1n2qdd1rspy6ar03yw7g7zy3yjg9j1xb5xa4v2q12b0y6dymrhgn";
   }
   {
     name = "black-formatter";
@@ -134,20 +134,20 @@
   {
     name = "debugpy";
     publisher = "ms-python";
-    version = "2024.3.10661804";
-    sha256 = "15pqcsv14frr2mskmwi8a8gjbcchh5ff7zlaiikfr0ypk5g6avla";
+    version = "2024.3.10731010";
+    sha256 = "0jfjp0l47vdarbsa32v38kz0ibv4vp64jxr5y1y3sm2qr1s395lf";
   }
   {
     name = "python";
     publisher = "ms-python";
-    version = "2024.3.10681011";
-    sha256 = "0lx82p85qm2256qnzmb0mfsxfc3wzi94wamki0gyy202gv297yhj";
+    version = "2024.3.10782301";
+    sha256 = "142vj66xmqazii3rqy0m7zlkx6m5wqqrzj35yyxdinj9rv3n274l";
   }
   {
     name = "vscode-pylance";
     publisher = "ms-python";
-    version = "2024.2.105";
-    sha256 = "0iyz05nbkfmpn564axnd2fi1a4h15nr9yq3lzrxyd6zd7wk5ax73";
+    version = "2024.3.100";
+    sha256 = "1wgzf4gjrs3lijrgl24bmkbsngyisw8dsyc1370yxspi3npdmj59";
   }
   {
     name = "vscode-cljfmt";
@@ -158,8 +158,8 @@
   {
     name = "rust-analyzer";
     publisher = "rust-lang";
-    version = "0.4.1873";
-    sha256 = "0psd730rmnihpf010f5fkmn5nf30fi7k9iz1dcfw81f9v56paszv";
+    version = "0.4.1886";
+    sha256 = "0d0468laz6x5c7z1nw6mzg6aqmpknp8q6n6dwbf2ng50s9sg6xm1";
   }
   {
     name = "just";
@@ -206,8 +206,8 @@
   {
     name = "material-theme";
     publisher = "zhuangtongfa";
-    version = "3.16.2";
-    sha256 = "0ava94zn68lxy3ph78r5rma39qz03al5l5i6x070mpa1hzj3i319";
+    version = "3.17.0";
+    sha256 = "1gyf4fbam5wqd6swx6mr83ksa3sklhz7ripgp6yq39z7cijvi4ji";
   }
   {
     name = "vscode-zig";

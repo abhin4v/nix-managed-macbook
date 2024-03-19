@@ -105,9 +105,7 @@ in {
       };
 
       nix = {
-        enableLanguageServer = true;
         formatterPath = "${pkgs.nixfmt}/bin/nixfmt";
-        serverPath = "${pkgs.rnix-lsp}/bin/rnix-lsp";
       };
 
       oneDarkPro = {

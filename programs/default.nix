@@ -9,7 +9,6 @@ let
     nix-tree
     nixfmt
     nvd
-    rnix-lsp
     statix
     cachix
   ];
@@ -66,10 +65,7 @@ in {
       };
     };
 
-    eza = {
-      enable = true;
-      enableAliases = true;
-    };
+    eza.enable = true;
 
     direnv = {
       enable = true;
