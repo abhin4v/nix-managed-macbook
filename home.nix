@@ -24,7 +24,6 @@ in {
 
     sessionVariables = {
       EDITOR = "micro";
-      NIX_PATH = "/nix/var/nix/profiles/per-user/${username}/channels";
     };
 
     file."Applications/Home Manager Apps".source = let

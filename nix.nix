@@ -3,7 +3,7 @@
   nix = {
     package = pkgs.nixFlakes;
     registry.nixpkgs.flake = inputs.nixpkgs;
-    nixPath = [{ nixpkgs = inputs.nixpkgs.outPath; }];
+    nixPath = [ "nixpkgs=${inputs.nixpkgs}" ];
     extraOptions = ''
       keep-outputs = true
       keep-derivations = true

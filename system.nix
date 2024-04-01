@@ -1,6 +1,7 @@
 { pkgs, inputs, ... }: {
   security.pam.enableSudoTouchIdAuth = true;
   system = {
+    checks.verifyNixChannels = true;
     defaults = {
       dock = {
         appswitcher-all-displays = false;
