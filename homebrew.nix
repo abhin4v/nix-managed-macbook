@@ -20,6 +20,7 @@
       "garmin-express"
       "google-chrome"
       "homebrew/cask/handbrake"
+      "lastfm"
       "monodraw"
       "obsidian"
       "spotify"
