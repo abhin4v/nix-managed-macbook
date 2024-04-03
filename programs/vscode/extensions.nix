@@ -50,8 +50,8 @@
   {
     name = "copilot";
     publisher = "github";
-    version = "1.177.799";
-    sha256 = "1pkxb69zxiz9s9hhmf22slvx7dnpi32xxmvq9f053sknbh025dab";
+    version = "1.177.801";
+    sha256 = "1l5pwkgp1d9f28zpxlc8lix84j9cc420i3rbibyi6m6bsqgv6k2x";
   }
   {
     name = "copilot-chat";
@@ -152,8 +152,8 @@
   {
     name = "vscode-pylance";
     publisher = "ms-python";
-    version = "2024.3.102";
-    sha256 = "1zwsgrq8xrl552p6103q49xclgj80cvh5v7j106j9rhjajxya5xk";
+    version = "2024.4.1";
+    sha256 = "0nj0cm9jfgxqab51nbx82zr6v5525kwy4cwhrfd766cz4zmsxql6";
   }
   {
     name = "vscode-cljfmt";
@@ -164,8 +164,8 @@
   {
     name = "rust-analyzer";
     publisher = "rust-lang";
-    version = "0.4.1907";
-    sha256 = "07nva6cbxi665kzry9vf0b1vjvfz01959a0dkdmzsl5fdaw67f41";
+    version = "0.4.1908";
+    sha256 = "05c9m0saj0csf3byzwxij8cjiqhdnm072jj5h30qp3xyxz0l77lm";
   }
   {
     name = "just";
@@ -218,8 +218,8 @@
   {
     name = "vscode-zig";
     publisher = "ziglang";
-    version = "0.5.5";
-    sha256 = "1mkv9p76sg1z3nblghbgpjkccx2jqf0w2cc0gd1kkw61nny8j726";
+    version = "0.5.6";
+    sha256 = "0vxsfvrv3l2yvimffdxxk9xp80k759vv894x4dp474c80c3m42db";
   }
 ];
 }
