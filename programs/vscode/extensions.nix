@@ -26,8 +26,8 @@
   {
     name = "vscode-markdownlint";
     publisher = "davidanson";
-    version = "0.54.0";
-    sha256 = "171qw6mymc9hmm8xin3gwr8r2ac8yfr3s8agagsqq9193cawbcq6";
+    version = "0.55.0";
+    sha256 = "00rx55aapb7w6wazc3kyl8gzvfyr5d0flrwgxfz1pffw2dywfmxj";
   }
   {
     name = "mustache";
@@ -50,20 +50,20 @@
   {
     name = "copilot";
     publisher = "github";
-    version = "1.180.0";
-    sha256 = "0izxzja04bd3kzg87415ii22khspjgp9r8yf9cj697pjjz6906jg";
+    version = "1.180.831";
+    sha256 = "1kqr01r7j3q21qf0l37g492apsr8fhil0vfbicjajfcz43q8zljg";
   }
   {
     name = "copilot-chat";
     publisher = "github";
-    version = "0.15.2024041103";
-    sha256 = "1792phbd2rl9vr0f1m4j1nk8wf98fczm4y886bfl4cb73r0hgl9j";
+    version = "0.15.2024042201";
+    sha256 = "1q33n578rfn3dj5yrfcdnihqr4kada19dwr54d8ga5xdjxabdr4g";
   }
   {
     name = "go";
     publisher = "golang";
-    version = "0.41.2";
-    sha256 = "13fdnwgci87x1rdz1hwq52ling81c3l67cqvmckcjzri2r8gsgvq";
+    version = "0.41.3";
+    sha256 = "0yi3fvxcv622cmkfa18vjxp6lf48lmgf0sdsx7vkc4kvsapc9yn6";
   }
   {
     name = "haskell";
@@ -152,14 +152,14 @@
   {
     name = "python";
     publisher = "ms-python";
-    version = "2024.5.11021008";
-    sha256 = "11mnnbdl7cqr18s2cvv2132rrq1f5zslnihp5i2jpa2awjak8wjj";
+    version = "2024.5.11101014";
+    sha256 = "038pk15zyg4y8cqqqwladx3b6fvlxxlxywbr2dcdqhywkhxbp4sp";
   }
   {
     name = "vscode-pylance";
     publisher = "ms-python";
-    version = "2024.4.101";
-    sha256 = "13yi6v1l7k1g0r7fhw3gasv7drn03slh0lxp6pcmqlrajkp0cn1n";
+    version = "2024.4.102";
+    sha256 = "0yfcb7cq03cxjz85kys35y16j9x52xrf652c08dfld6z9crv26c0";
   }
   {
     name = "vscode-cljfmt";
@@ -170,8 +170,8 @@
   {
     name = "rust-analyzer";
     publisher = "rust-lang";
-    version = "0.4.1920";
-    sha256 = "1lzk52ikqp63hm01wjwql0r3z4d7vavzhm79bmfgwyakps2h1jav";
+    version = "0.4.1931";
+    sha256 = "0xr80mlmnichnhn678dlza9p4q1xgil6ksyr3fq159kxvdkqhdqi";
   }
   {
     name = "just";
@@ -224,8 +224,8 @@
   {
     name = "vscode-zig";
     publisher = "ziglang";
-    version = "0.5.6";
-    sha256 = "0vxsfvrv3l2yvimffdxxk9xp80k759vv894x4dp474c80c3m42db";
+    version = "0.5.7";
+    sha256 = "11kb0f1iwlxrd3iymd3vmlk9imf4inqirlcnsg22x23bfa4xvdb0";
   }
 ];
 }
