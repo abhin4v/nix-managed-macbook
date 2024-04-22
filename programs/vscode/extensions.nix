@@ -72,6 +72,12 @@
     sha256 = "09pr3ya77ryj5n80k5srwaxmr0j77f6xp67w0kz324i6fhjd12bq";
   }
   {
+    name = "roc-lang-unofficial";
+    publisher = "ivandemchenko";
+    version = "1.2.0";
+    sha256 = "0q9w0sv4988wh4p4vmf45jab614ggkd7qfjphdnlmnqcald7mhwl";
+  }
+  {
     name = "gruvbox";
     publisher = "jdinhlife";
     version = "1.18.0";

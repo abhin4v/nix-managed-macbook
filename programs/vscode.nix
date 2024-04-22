@@ -104,6 +104,8 @@ in {
         plugin.tactics.config.timeout_duration = 5;
       };
 
+      roc-lang.language-server.exe = "/nix/store/1m7xfjx1b79s39cxl52aq77z22yffs4a-roc-0.0.1/bin/roc_language_server";
+
       nix = {
         formatterPath = "${pkgs.nixfmt}/bin/nixfmt";
       };
