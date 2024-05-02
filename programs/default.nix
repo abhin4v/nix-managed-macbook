@@ -29,7 +29,7 @@ let
     jetbrains.idea-community
     just
     micro
-    neofetch
+    fastfetch
     proselint
     shellcheck
     typos
