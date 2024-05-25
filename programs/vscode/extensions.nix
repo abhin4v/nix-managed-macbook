@@ -50,14 +50,14 @@
   {
     name = "copilot";
     publisher = "github";
-    version = "1.192.0";
-    sha256 = "0kvj14hyb0cg0yl3xlka0f8z4q6x965g29437xh5v9wy7s0jfxmp";
+    version = "1.195.0";
+    sha256 = "114n4wv4n7bk0h70kppx4gaqwn29wvz84689z1xpm65smdy91vqy";
   }
   {
     name = "copilot-chat";
     publisher = "github";
-    version = "0.16.2024051402";
-    sha256 = "0nwfh95rgbssyfijnj2g9bhbmn2vk9gi06by28ysqa799b6yky28";
+    version = "0.16.2024052402";
+    sha256 = "0hamza14ddxcgn1zb3pgf7bxlgq89qvkcdfybviykf09ah4jf78c";
   }
   {
     name = "go";
@@ -140,26 +140,26 @@
   {
     name = "black-formatter";
     publisher = "ms-python";
-    version = "2024.2.0";
-    sha256 = "14w1ix8pm924piyw0dx2rq27cm5kmps9q99mkwrhi3ypliibx0x8";
+    version = "2024.3.11371020";
+    sha256 = "1a12ssqa75vx79qiv10k3mw7al73yi4rlr31a1hbqc8xp0y23113";
   }
   {
     name = "debugpy";
     publisher = "ms-python";
-    version = "2024.6.0";
-    sha256 = "0gq7gkf4mcq7ckfqmhc2ahv9ny8skl98kyx27zwyl1k2jpmxwlsn";
+    version = "2024.7.11371019";
+    sha256 = "143qm27p62jjgl0mamp7jwb234ljflm4ha934v42yrlbw7csk7cd";
   }
   {
     name = "python";
     publisher = "ms-python";
-    version = "2024.7.11341012";
-    sha256 = "01dynn86cm360ipfx43z8klqg2ghpgc5awx75xm947l9byn4dpxk";
+    version = "2024.7.11451014";
+    sha256 = "1mwfza5rzhl9f2mgbknnhr6davmdin2qrq8rc4z10aknws8gs9rh";
   }
   {
     name = "vscode-pylance";
     publisher = "ms-python";
-    version = "2024.5.100";
-    sha256 = "05lccr0mmccvf0mk0q36rxyd9znp29p6brgcnnz648zygi3l1bm8";
+    version = "2024.5.102";
+    sha256 = "0dk30r0w2vfgsyi61rvawb6n04n0l4c70sz1n3pbx71ar52746xh";
   }
   {
     name = "vscode-cljfmt";
@@ -170,8 +170,8 @@
   {
     name = "rust-analyzer";
     publisher = "rust-lang";
-    version = "0.4.1960";
-    sha256 = "00m0lxzz9bn9pcxlrp0m45ppib0m6ms1whi8pc7gchc53sj6h4b3";
+    version = "0.4.1972";
+    sha256 = "0s8vww50kapfr900jdw1yggsnp61agirsss233852w9lg8kk4zca";
   }
   {
     name = "just";
@@ -182,8 +182,8 @@
   {
     name = "code-spell-checker";
     publisher = "streetsidesoftware";
-    version = "3.0.1";
-    sha256 = "0i76gf7zr0j4dr02zmxwfphk6yy8rvlj9rzq3k8pvnlfzkmh9ri9";
+    version = "4.0.0";
+    sha256 = "1bpsq2kcnmdfwp5x6j7jwq36ksv890ppw48j5wpda97mx9bi0i25";
   }
   {
     name = "even-better-toml";
@@ -224,8 +224,8 @@
   {
     name = "vscode-zig";
     publisher = "ziglang";
-    version = "0.5.7";
-    sha256 = "11kb0f1iwlxrd3iymd3vmlk9imf4inqirlcnsg22x23bfa4xvdb0";
+    version = "0.5.8";
+    sha256 = "1q3sa5lizaqb4j5426d91qrkc2g9ccrh47x3zk0jjk3bnrixm4jv";
   }
 ];
 }
