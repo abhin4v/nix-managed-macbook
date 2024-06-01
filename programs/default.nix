@@ -17,6 +17,7 @@ let
   miscPackages = with pkgs; [
     binutils
     cabal2nix
+    haskellPackages.cabal-plan
     cloc
     comma
     difftastic
