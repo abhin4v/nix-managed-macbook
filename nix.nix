@@ -15,7 +15,7 @@
     };
     settings = {
       auto-optimise-store = true;
-      connect-timeout = 5;
+      connect-timeout = 30;
       cores = 2;
       experimental-features = [ "nix-command" "flakes" "repl-flake" ];
       fallback = true;
