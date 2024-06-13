@@ -8,8 +8,8 @@
   {
     name = "spellright";
     publisher = "ban";
-    version = "3.0.124";
-    sha256 = "1c2z2fsdj81vn95mxqc98ifkkdcrbx6415s651h2k5nsgmradcnh";
+    version = "3.0.128";
+    sha256 = "12vkqac62zgwjf5skjsiqxjw4d13vik073hpsh6gxqfcl163h3py";
   }
   {
     name = "markdown-mermaid";
@@ -50,14 +50,14 @@
   {
     name = "copilot";
     publisher = "github";
-    version = "1.195.0";
-    sha256 = "114n4wv4n7bk0h70kppx4gaqwn29wvz84689z1xpm65smdy91vqy";
+    version = "1.201.0";
+    sha256 = "0c08ja8hg2snxj2ndpzp1y35cpxh97dmwcpqjx6biw6w8mdv270h";
   }
   {
     name = "copilot-chat";
     publisher = "github";
-    version = "0.16.2024052402";
-    sha256 = "0hamza14ddxcgn1zb3pgf7bxlgq89qvkcdfybviykf09ah4jf78c";
+    version = "0.17.2024061201";
+    sha256 = "1y4ipcfr7sr72yf4bsxmh9nbym35i8as57kwvghmghqc717gpnab";
   }
   {
     name = "go";
@@ -140,26 +140,26 @@
   {
     name = "black-formatter";
     publisher = "ms-python";
-    version = "2024.3.11371020";
-    sha256 = "1a12ssqa75vx79qiv10k3mw7al73yi4rlr31a1hbqc8xp0y23113";
+    version = "2024.3.11501016";
+    sha256 = "18hiv31h5i5c7664rc3pk96a8adw73li4fkgwlyf3s16wpwlz7kc";
   }
   {
     name = "debugpy";
     publisher = "ms-python";
-    version = "2024.7.11371019";
-    sha256 = "143qm27p62jjgl0mamp7jwb234ljflm4ha934v42yrlbw7csk7cd";
+    version = "2024.7.11591015";
+    sha256 = "12b4rwz33fj1d68z69pbhhfdcnb0c0n16qbmbab8yiyr8v5g3di6";
   }
   {
     name = "python";
     publisher = "ms-python";
-    version = "2024.7.11451014";
-    sha256 = "1mwfza5rzhl9f2mgbknnhr6davmdin2qrq8rc4z10aknws8gs9rh";
+    version = "2024.9.11641010";
+    sha256 = "0xpjrqcjlsq3lal3x93bl5q7mk56yfdbgzz5gpsa70sv6ncrmjdf";
   }
   {
     name = "vscode-pylance";
     publisher = "ms-python";
-    version = "2024.5.102";
-    sha256 = "0dk30r0w2vfgsyi61rvawb6n04n0l4c70sz1n3pbx71ar52746xh";
+    version = "2024.6.1";
+    sha256 = "1x6qa7f40j2mg3gjvlc1370cllgcg8ir52rrx4kcbn5pj1c79v1l";
   }
   {
     name = "vscode-cljfmt";
@@ -170,8 +170,8 @@
   {
     name = "rust-analyzer";
     publisher = "rust-lang";
-    version = "0.4.1972";
-    sha256 = "0s8vww50kapfr900jdw1yggsnp61agirsss233852w9lg8kk4zca";
+    version = "0.4.1997";
+    sha256 = "06x1j0pr5zaqpmfd99sdgfy7pzapkgii4fbyc29j48drp768wg1d";
   }
   {
     name = "just";
@@ -182,8 +182,8 @@
   {
     name = "code-spell-checker";
     publisher = "streetsidesoftware";
-    version = "4.0.0";
-    sha256 = "1bpsq2kcnmdfwp5x6j7jwq36ksv890ppw48j5wpda97mx9bi0i25";
+    version = "4.0.3";
+    sha256 = "0y48rrfyk74bxmrhrip8zppq3992kis8ldpq0wgmp92i1rpv0h88";
   }
   {
     name = "even-better-toml";
