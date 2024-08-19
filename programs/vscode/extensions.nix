@@ -44,20 +44,20 @@
   {
     name = "prettier-vscode";
     publisher = "esbenp";
-    version = "10.4.0";
-    sha256 = "1iy7i0yxnhizz40llnc1dk9q8kk98rz6ki830sq7zj3ak9qp9vzk";
+    version = "11.0.0";
+    sha256 = "1fcz8f4jgnf24kblf8m8nwgzd5pxs2gmrv235cpdgmqz38kf9n54";
   }
   {
     name = "copilot";
     publisher = "github";
-    version = "1.221.1040";
-    sha256 = "1lh781lzjq033j8dxkgidz1d2k493lxkamj2z7463vwg957yssxk";
+    version = "1.223.1056";
+    sha256 = "1j15bmvazlydz62pjw3h4qy7c16icalsfzhmr566rpqw89jq3h9c";
   }
   {
     name = "copilot-chat";
     publisher = "github";
-    version = "0.19.2024080902";
-    sha256 = "1qqin7r0xnaq99q5sv4bdv5x2bzj434n0byr4lpmy3xhnlj639m9";
+    version = "0.20.2024081901";
+    sha256 = "1fxikrln46pqjbl96v1vyyzamcv82is70wqkwcj4xa432kfvhm9g";
   }
   {
     name = "go";
@@ -146,20 +146,20 @@
   {
     name = "debugpy";
     publisher = "ms-python";
-    version = "2024.11.2024080801";
-    sha256 = "17b5ji947y4gims43f9zj5mmncjj880mzwrxd30qsra2jlvggq8y";
+    version = "2024.11.2024081401";
+    sha256 = "0kijqp4qn07viid205ckrixpj01vmkc53ks50d5j5rvgr5zjmpvl";
   }
   {
     name = "python";
     publisher = "ms-python";
-    version = "2024.13.2024080901";
-    sha256 = "1zbbm5zl50wcwsn6h6szd3vcviqkyjww4a92g168d37zcvxpd13g";
+    version = "2024.13.2024081501";
+    sha256 = "1xijdyz33whn8nq6zb1gw8wa1azhdmkwym5000f9g11ld9y6fmp6";
   }
   {
     name = "vscode-pylance";
     publisher = "ms-python";
-    version = "2024.8.100";
-    sha256 = "0mfkq9gr034x9ma54cfws22jh1i9vy2q0iv2whnpvxc0c5yngnlb";
+    version = "2024.8.101";
+    sha256 = "0b4fxpwkp7avcmva4z5pbrvxc5ihm7ppxvh0n0m43kzczma3d60d";
   }
   {
     name = "vscode-cljfmt";
@@ -170,8 +170,8 @@
   {
     name = "rust-analyzer";
     publisher = "rust-lang";
-    version = "0.4.2068";
-    sha256 = "122bh4g0c7n3vyadj65nh86k10rcgms6v4b0zgnb4i6pb2fdm9sf";
+    version = "0.4.2077";
+    sha256 = "05pkdhl772462947nlzgfgd8ibs5yisrwhpnv1r36ndfspgdwqay";
   }
   {
     name = "just";
@@ -182,8 +182,8 @@
   {
     name = "code-spell-checker";
     publisher = "streetsidesoftware";
-    version = "4.0.7";
-    sha256 = "0gpgjry30w30wpsz3k8li1vq9qk8578vayq1pkd5izlsngr47v6b";
+    version = "4.0.9";
+    sha256 = "125cizg9k552x4jigr04bpaw2lq0mx0pjqazif30x5mzqhhajk3g";
   }
   {
     name = "even-better-toml";
