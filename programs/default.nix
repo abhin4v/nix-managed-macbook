@@ -11,6 +11,7 @@ let
     nvd
     statix
     cachix
+    nix-output-monitor
   ];
   networkingPackages = with pkgs; [ curl dig httpie openssh mosh ];
   cmdLineUtilPackages = with pkgs; [ bash broot coreutils-full fd gnugrep less ranger tree ];
