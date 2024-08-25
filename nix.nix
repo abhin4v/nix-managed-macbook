@@ -15,11 +15,13 @@
     };
     settings = {
       auto-optimise-store = true;
-      connect-timeout = 30;
+      connect-timeout = 60;
+      download-attempts = 10;
       cores = 2;
       experimental-features = [ "nix-command" "flakes" "repl-flake" ];
       fallback = true;
       keep-outputs = true;
+      keep-going = true;
       log-lines = 25;
       max-free = 1000000000;
       max-jobs = 6;
