@@ -19,7 +19,7 @@ _run cmd:
     fi
 
 _build:
-    nix build {{ root_dir }}#darwinConfigurations.{{ hostname }}.system
+    nom build {{ root_dir }}#darwinConfigurations.{{ hostname }}.system
 
 # build latest home-manager generation
 build: (_run "_build")
