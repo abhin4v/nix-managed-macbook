@@ -9,6 +9,7 @@ let
     nix-tree
     nixfmt
     nvd
+    nixd
     statix
     cachix
     nix-output-monitor

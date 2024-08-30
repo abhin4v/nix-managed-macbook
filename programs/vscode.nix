@@ -108,6 +108,13 @@ in {
 
       nix = {
         formatterPath = "${pkgs.nixfmt}/bin/nixfmt";
+        enableLanguageServer = true;
+        serverPath = "nixd";
+        serverSettings = {
+          nixd = {
+            formatting.command = [ "nixfmt" ];
+          };
+        };
       };
 
       oneDarkPro = {
