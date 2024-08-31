@@ -30,10 +30,12 @@ _switch: _build
 # switch to latest home-manager generation
 switch: (_run "_switch") && _report-changes
 
-_update: && _switch _brew-update _report-changes
-    nix flake update --commit-lock-file --flake {{ root_dir }}
-    $NIXPKGS_PATH/pkgs/applications/editors/vscode/extensions/update_installed_exts.sh > \
+_update-vscode-extensions:
+  $NIXPKGS_PATH/pkgs/applications/editors/vscode/extensions/update_installed_exts.sh > \
         {{ root_dir }}/programs/vscode/extensions.nix
+
+_update: && _update-vscode-extensions _switch _brew-update _report-changes
+    nix flake update --commit-lock-file --flake {{ root_dir }}
 
 _brew-update:
     brew update

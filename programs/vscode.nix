@@ -2,26 +2,22 @@
 
 let
   marketplaceExtensions = [
-    "13xforever/language-x86-64-assembly"
-    "ban/spellright"
     "cs128/cs128-clang-tidy"
     "dawhite/mustache"
-    "GitHub/copilot"
+    "donjayamanne/githistory"
+    "ivandemchenko/roc-lang-unofficial"
     "kirozen/wordcounter"
-    "ms-python/black-formatter"
-    "ms-python/python"
-    "ms-python/vscode-pylance"
     "pedrorgirardi/vscode-cljfmt"
-    "wmaurer/change-case"
-    "ziglang/vscode-zig"
+    "viablelab/capitaliz"
   ];
 in {
   programs.vscode = {
     enable = true;
-    mutableExtensionsDir = true;
+    mutableExtensionsDir = false;
 
     extensions = with pkgs.vscode-extensions;
       [
+        pkgs.vscode-extensions."13xforever".language-x86-64-assembly
         bierner.markdown-mermaid
         davidanson.vscode-markdownlint
         dotjoshjohnson.xml
@@ -34,8 +30,12 @@ in {
         justusadam.language-haskell
         kamikillerto.vscode-colorize
         llvm-vs-code-extensions.vscode-clangd
-        mhutchie.git-graph
+        mesonbuild.mesonbuild
         mkhl.direnv
+        ms-python.black-formatter
+        ms-python.debugpy
+        ms-python.python
+        ms-python.vscode-pylance
         rust-lang.rust-analyzer
         skellock.just
         streetsidesoftware.code-spell-checker
@@ -43,7 +43,10 @@ in {
         timonwong.shellcheck
         twxs.cmake
         tyriar.sort-lines
+        vadimcn.vscode-lldb
+        wmaurer.change-case
         zhuangtongfa.material-theme
+        ziglang.vscode-zig
       ] ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace (builtins.filter
         ({ publisher, name, ... }: builtins.elem (publisher + "/" + name) marketplaceExtensions)
         (import ./vscode/extensions.nix).extensions);
@@ -125,13 +128,6 @@ in {
       spellright = {
         documentTypes = [ "markdown" "latex" ];
         language = [ "en" ];
-      };
-
-      github.copilot.enable = {
-        "*" = true;
-        yaml = false;
-        plaintext = false;
-        markdown = true;
       };
 
       telemetry = {
