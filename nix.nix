@@ -1,4 +1,18 @@
-{ config, pkgs, inputs, ... }: {
+{ config, pkgs, inputs, ... }:
+let
+  nixSettings = {
+    auto-optimise-store = true;
+    connect-timeout = 60;
+    download-attempts = 10;
+    cores = 2;
+    experimental-features = [ "nix-command" "flakes" "repl-flake" ];
+    fallback = true;
+    keep-outputs = true;
+    keep-going = true;
+    log-lines = 25;
+    max-jobs = 6;
+  };
+in {
   services.nix-daemon.enable = true;
   nix = {
     package = pkgs.nixFlakes;
@@ -16,21 +30,30 @@
       };
       options = "-d --delete-older-than 7d";
     };
-    settings = {
-      auto-optimise-store = true;
-      connect-timeout = 60;
-      download-attempts = 10;
-      cores = 2;
-      experimental-features = [ "nix-command" "flakes" "repl-flake" ];
-      fallback = true;
-      keep-outputs = true;
-      keep-going = true;
-      log-lines = 25;
+    settings = nixSettings // {
       max-free = 1000000000;
-      max-jobs = 6;
       min-free = 128000000;
       warn-dirty = false;
       trusted-users = [ "@admin" ];
+    };
+    distributedBuilds = true;
+    linux-builder = {
+      enable = true;
+      maxJobs = 6;
+      config = ({ pkgs, ... }: {
+        users.extraGroups.docker.members =
+          builtins.map (i: "nixbld" + builtins.toString i)
+          (pkgs.lib.genList (i: i + 1) 32);
+        virtualisation = {
+          docker.enable = true;
+          darwin-builder = {
+            diskSize = 40 * 1024;
+            memorySize = 8 * 1024;
+          };
+          cores = 12;
+        };
+        nix.settings = nixSettings // { sandbox = false; };
+      });
     };
   };
   nixpkgs = {
