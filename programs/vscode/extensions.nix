@@ -8,8 +8,8 @@
   {
     name = "markdown-mermaid";
     publisher = "bierner";
-    version = "1.23.1";
-    sha256 = "1qyhm4cq5i2f1c17hy61bhr3h6ydg44s52ygqq6cga712mw951c5";
+    version = "1.24.0";
+    sha256 = "1zdvcjii90680q86ksqmg6bdg0sc7rwbzaamnpxqh8hhk6f8ikw2";
   }
   {
     name = "cs128-clang-tidy";
@@ -128,8 +128,8 @@
   {
     name = "python";
     publisher = "ms-python";
-    version = "2024.13.2024082701";
-    sha256 = "1r828xjvnzxyis45f14x93dchvacid0khr152az8kbk2x1gi74ih";
+    version = "2024.15.2024090406";
+    sha256 = "07gff474x7q12llfap9m8xiryriq43gpdprwmdh679br2xbp9dkg";
   }
   {
     name = "vscode-pylance";
@@ -146,8 +146,8 @@
   {
     name = "rust-analyzer";
     publisher = "rust-lang";
-    version = "0.4.2093";
-    sha256 = "190fydbi741v7vbd58dj38g6l7yaplwn6fxrygbkm1mb1p3n6yk3";
+    version = "0.4.2101";
+    sha256 = "1din257f9zlpq6avim3hxsb6fq6ls5xhnjvjxyks98wwck1m0gpg";
   }
   {
     name = "just";
@@ -158,8 +158,8 @@
   {
     name = "code-spell-checker";
     publisher = "streetsidesoftware";
-    version = "4.0.12";
-    sha256 = "17jggq1zbpwz3g37wpxp0grwqiyz9ck6mxzn41dhdyq1r64c21wh";
+    version = "4.0.13";
+    sha256 = "0rscnclf3j1f2xxn3db99myw3jl1bxpapx4h5nd6sd85s3n20mpi";
   }
   {
     name = "even-better-toml";
@@ -186,10 +186,10 @@
     sha256 = "0c8y2b64gsfbwjy6yvzkz86vj9vqhsrf50ah0645yybc737hzzig";
   }
   {
-    name = "capitalize";
-    publisher = "viablelab";
-    version = "0.2.1";
-    sha256 = "0i7xa7vdkvhhri3w88znr8fnj6xqc5pam37zlanrbl1v6kjq2bn4";
+    name = "vscode-lldb";
+    publisher = "vadimcn";
+    version = "1.10.0";
+    sha256 = "0s7lwvq7fmd2hms6qlbvq0g17gaf896kqkphdazp3l5h8knay0j4";
   }
   {
     name = "change-case";
@@ -206,8 +206,8 @@
   {
     name = "vscode-zig";
     publisher = "ziglang";
-    version = "0.5.8";
-    sha256 = "1q3sa5lizaqb4j5426d91qrkc2g9ccrh47x3zk0jjk3bnrixm4jv";
+    version = "0.5.9";
+    sha256 = "0pa7rn0y31vcllijb1qigmsajvfdvlk2vgmvcyh8jkyh08cci85l";
   }
 ];
 }
