@@ -22,10 +22,6 @@ in {
       cat = "${pkgs.bat}/bin/bat";
     };
 
-    sessionVariables = {
-      EDITOR = "micro";
-    };
-
     file."Applications/Home Manager Apps".source = let
       apps = pkgs.buildEnv {
         name = "home-manager-applications";

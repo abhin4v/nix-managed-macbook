@@ -34,6 +34,7 @@ in {
       end
 
       fastfetch
+      set -gx EDITOR micro
     '';
 
     shellInit = ''
