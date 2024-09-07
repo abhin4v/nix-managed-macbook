@@ -28,7 +28,6 @@ let
     entr
     hyperfine
     git-absorb
-    gitui
     graphviz-nox
     iterm2
     jetbrains.idea-community
@@ -70,7 +69,10 @@ in {
       };
     };
 
-    eza.enable = true;
+    eza = {
+      enable = true;
+      git = true;
+    };
 
     direnv = {
       enable = true;

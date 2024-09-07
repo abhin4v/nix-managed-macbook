@@ -10,8 +10,11 @@
     '';
     gc = {
       automatic = true;
-      interval.Day = 1;
-      options = "--delete-older-than 7d";
+      interval = {
+        Hour = 18;
+        Minute = 15;
+      };
+      options = "-d --delete-older-than 7d";
     };
     settings = {
       auto-optimise-store = true;
