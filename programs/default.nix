@@ -18,6 +18,7 @@ let
   cmdLineUtilPackages = with pkgs; [ bash broot coreutils-full fd gnugrep less ranger tree ];
   miscPackages = with pkgs; [
     binutils
+    brotli
     cabal2nix
     haskellPackages.cabal-plan
     cloc
@@ -26,6 +27,7 @@ let
     dua
     entr
     hyperfine
+    git-absorb
     gitui
     graphviz-nox
     iterm2
