@@ -9,6 +9,7 @@ let
     "kirozen/wordcounter"
     "pedrorgirardi/vscode-cljfmt"
     "viablelab/capitaliz"
+    "ms-python/python"
   ];
 in {
   programs.vscode = {
@@ -34,7 +35,6 @@ in {
         mkhl.direnv
         ms-python.black-formatter
         ms-python.debugpy
-        ms-python.python
         ms-python.vscode-pylance
         rust-lang.rust-analyzer
         skellock.just

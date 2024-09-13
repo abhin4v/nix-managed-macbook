@@ -20,8 +20,8 @@
   {
     name = "vscode-markdownlint";
     publisher = "davidanson";
-    version = "0.55.0";
-    sha256 = "00rx55aapb7w6wazc3kyl8gzvfyr5d0flrwgxfz1pffw2dywfmxj";
+    version = "0.56.0";
+    sha256 = "17cz1nnb94qngnq9mwzc5i78sj27ab945lap4837gn9pxlysjd11";
   }
   {
     name = "mustache";
@@ -44,8 +44,8 @@
   {
     name = "go";
     publisher = "golang";
-    version = "0.43.0";
-    sha256 = "0nafbz1wh3azh9a372yvk7vhcy80d8r11mj0yfq37wznh3m1kwc7";
+    version = "0.43.1";
+    sha256 = "1dib2qp56l7awpr6a7g7lkdmsrv2zhhh5fi5hjqkbvb28rsdl3i7";
   }
   {
     name = "haskell";
@@ -74,8 +74,8 @@
   {
     name = "nix-ide";
     publisher = "jnoortheen";
-    version = "0.3.3";
-    sha256 = "1rhb845l32r9ncwxynngq1zji2lf487ryc54n8hw8y9hph95pw7y";
+    version = "0.3.5";
+    sha256 = "12sg67mn3c8mjayh9d6y8qaky00vrlnwwx58v1f1m4qrbdjqab46";
   }
   {
     name = "language-haskell";
@@ -128,14 +128,14 @@
   {
     name = "python";
     publisher = "ms-python";
-    version = "2024.15.2024090406";
-    sha256 = "07gff474x7q12llfap9m8xiryriq43gpdprwmdh679br2xbp9dkg";
+    version = "2024.15.2024091202";
+    sha256 = "0w2lw6404clwihx0n77dxp2r43f3lk87nqkvlija9wq06w4fg886";
   }
   {
     name = "vscode-pylance";
     publisher = "ms-python";
-    version = "2024.8.104";
-    sha256 = "1c40cig0dv8bn072ddy73d9i6z3npxblv7znbdyxns7rlqdd39hc";
+    version = "2024.9.100";
+    sha256 = "004ifi68f2p91kq6h5k9i5r5lrx37v6ck10sbh95wdab86m04qfl";
   }
   {
     name = "vscode-cljfmt";
@@ -146,8 +146,8 @@
   {
     name = "rust-analyzer";
     publisher = "rust-lang";
-    version = "0.4.2101";
-    sha256 = "1din257f9zlpq6avim3hxsb6fq6ls5xhnjvjxyks98wwck1m0gpg";
+    version = "0.4.2108";
+    sha256 = "0hjq77qv8jg3fcl8dfgpj6aplq9h66wsflrq3yg6d6mzw8zwwfh0";
   }
   {
     name = "just";
@@ -200,8 +200,8 @@
   {
     name = "material-theme";
     publisher = "zhuangtongfa";
-    version = "3.17.2";
-    sha256 = "1myqi6fffaq7szwz70bb0b2q9npgsk1s5fpakjkzdajlablcikg2";
+    version = "3.17.3";
+    sha256 = "1ay471r05na6ripcgsirsa7zj16qldwvlb0mb812w4h8n2v6vdgl";
   }
   {
     name = "vscode-zig";

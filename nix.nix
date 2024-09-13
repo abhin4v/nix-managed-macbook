@@ -4,20 +4,18 @@ let
     auto-optimise-store = true;
     connect-timeout = 60;
     download-attempts = 10;
-    cores = 2;
+    cores = 4;
     experimental-features = [ "nix-command" "flakes" "repl-flake" ];
     fallback = true;
     keep-outputs = true;
     keep-going = true;
     log-lines = 25;
-    max-jobs = 6;
+    max-jobs = 3;
   };
 in {
   services.nix-daemon.enable = true;
   nix = {
     package = pkgs.nixFlakes;
-    registry.nixpkgs.flake = inputs.nixpkgs;
-    nixPath = [ "nixpkgs=${inputs.nixpkgs}" ];
     extraOptions = ''
       keep-outputs = true
       keep-derivations = true
@@ -39,7 +37,7 @@ in {
     distributedBuilds = true;
     linux-builder = {
       enable = true;
-      maxJobs = 6;
+      maxJobs = 3;
       config = ({ pkgs, ... }: {
         users.extraGroups.docker.members =
           builtins.map (i: "nixbld" + builtins.toString i)
@@ -50,7 +48,7 @@ in {
             diskSize = 40 * 1024;
             memorySize = 8 * 1024;
           };
-          cores = 12;
+          cores = 4;
         };
         nix.settings = nixSettings // { sandbox = false; };
       });
