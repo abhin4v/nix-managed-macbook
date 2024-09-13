@@ -56,5 +56,6 @@ update: (_run "_update")
 # clean up nix garbage
 clean days="7":
     home-manager expire-generations "-{{days}} days"
+    nix profile wipe-history --older-than "{{days}}d"
     sudo nix-collect-garbage -d --delete-older-than {{days}}d
     brew cleanup  --prune {{days}}
