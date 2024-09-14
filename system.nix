@@ -3,6 +3,10 @@
   system = {
     checks.verifyNixChannels = true;
     defaults = {
+      loginwindow = {
+        GuestEnabled = false;
+        DisableConsoleAccess = true;
+      };
       dock = {
         appswitcher-all-displays = false;
         autohide = true;

@@ -28,6 +28,7 @@
       "telegram"
       "utm"
       "vlc"
+      "zed"
     ];
     masApps = {
       Amphetamine = 937984704;

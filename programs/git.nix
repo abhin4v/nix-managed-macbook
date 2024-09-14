@@ -50,6 +50,10 @@
         ff = "only";
         rebase = true;
       };
+      rebase.autoStash = true;
+      core = {
+        editor = "micro";
+	    };
       merge.conflictstyle = "diff3";
     };
 
