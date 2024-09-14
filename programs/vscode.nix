@@ -1,55 +1,62 @@
-{ config, pkgs, ... }:
+{ inputs, config, pkgs, ... }:
 
 let
-  marketplaceExtensions = [
-    "cs128/cs128-clang-tidy"
-    "dawhite/mustache"
-    "donjayamanne/githistory"
-    "ivandemchenko/roc-lang-unofficial"
-    "kirozen/wordcounter"
-    "pedrorgirardi/vscode-cljfmt"
-    "viablelab/capitaliz"
-    "ms-python/python"
-  ];
+  lib = pkgs.lib;
+  extension =
+    (inputs.nix-vscode-extensions.extensions.${pkgs.system}.forVSCodeVersion
+      pkgs.vscode.version);
+  marketplace-prerelease = extension.vscode-marketplace;
+  marketplace-release = extension.vscode-marketplace-release;
+  resolveExtension = ex:
+    let exParts = lib.strings.splitString "." ex;
+    in if lib.attrsets.hasAttrByPath exParts marketplace-release then
+      lib.attrsets.getAttrFromPath exParts marketplace-release
+    else
+      lib.attrsets.getAttrFromPath exParts marketplace-prerelease;
 in {
   programs.vscode = {
     enable = true;
     mutableExtensionsDir = false;
 
-    extensions = with pkgs.vscode-extensions;
-      [
-        pkgs.vscode-extensions."13xforever".language-x86-64-assembly
-        bierner.markdown-mermaid
-        davidanson.vscode-markdownlint
-        dotjoshjohnson.xml
-        esbenp.prettier-vscode
-        golang.go
-        haskell.haskell
-        jdinhlife.gruvbox
-        jebbs.plantuml
-        jnoortheen.nix-ide
-        justusadam.language-haskell
-        kamikillerto.vscode-colorize
-        llvm-vs-code-extensions.vscode-clangd
-        mesonbuild.mesonbuild
-        mkhl.direnv
-        ms-python.black-formatter
-        ms-python.debugpy
-        ms-python.vscode-pylance
-        rust-lang.rust-analyzer
-        skellock.just
-        streetsidesoftware.code-spell-checker
-        tamasfe.even-better-toml
-        timonwong.shellcheck
-        twxs.cmake
-        tyriar.sort-lines
-        vadimcn.vscode-lldb
-        wmaurer.change-case
-        zhuangtongfa.material-theme
-        ziglang.vscode-zig
-      ] ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace (builtins.filter
-        ({ publisher, name, ... }: builtins.elem (publisher + "/" + name) marketplaceExtensions)
-        (import ./vscode/extensions.nix).extensions);
+    extensions = builtins.map resolveExtension [
+      "13xforever.language-x86-64-assembly"
+      "bierner.markdown-mermaid"
+      "cs128.cs128-clang-tidy"
+      "davidanson.vscode-markdownlint"
+      "dawhite.mustache"
+      "donjayamanne.githistory"
+      "dotjoshjohnson.xml"
+      "esbenp.prettier-vscode"
+      "golang.go"
+      "haskell.haskell"
+      "ivandemchenko.roc-lang-unofficial"
+      "jdinhlife.gruvbox"
+      "jebbs.plantuml"
+      "jnoortheen.nix-ide"
+      "justusadam.language-haskell"
+      "kamikillerto.vscode-colorize"
+      "kirozen.wordcounter"
+      "llvm-vs-code-extensions.vscode-clangd"
+      "mesonbuild.mesonbuild"
+      "mkhl.direnv"
+      "ms-python.black-formatter"
+      "ms-python.debugpy"
+      "ms-python.python"
+      "ms-python.vscode-pylance"
+      "pedrorgirardi.vscode-cljfmt"
+      "rust-lang.rust-analyzer"
+      "skellock.just"
+      "streetsidesoftware.code-spell-checker"
+      "tamasfe.even-better-toml"
+      "timonwong.shellcheck"
+      "twxs.cmake"
+      "tyriar.sort-lines"
+      "vadimcn.vscode-lldb"
+      "viablelab.capitalize"
+      "wmaurer.change-case"
+      "zhuangtongfa.material-theme"
+      "ziglang.vscode-zig"
+    ];
 
     userSettings = {
       debug.console.fontSize = 13;
@@ -59,7 +66,8 @@ in {
         accessibilitySupport = "off";
         bracketPairColorization.enabled = true;
         folding = false;
-        fontFamily = "'DM Mono', NanumGothicCoding, Menlo, Monaco, 'Courier New', monospace";
+        fontFamily =
+          "'DM Mono', NanumGothicCoding, Menlo, Monaco, 'Courier New', monospace";
         fontLigatures = true;
         fontSize = 13;
         guides = {
@@ -107,17 +115,14 @@ in {
         plugin.tactics.config.timeout_duration = 5;
       };
 
-      roc-lang.language-server.exe = "/nix/store/1m7xfjx1b79s39cxl52aq77z22yffs4a-roc-0.0.1/bin/roc_language_server";
+      roc-lang.language-server.exe =
+        "/nix/store/1m7xfjx1b79s39cxl52aq77z22yffs4a-roc-0.0.1/bin/roc_language_server";
 
       nix = {
         formatterPath = "${pkgs.nixfmt}/bin/nixfmt";
         enableLanguageServer = true;
         serverPath = "nixd";
-        serverSettings = {
-          nixd = {
-            formatting.command = [ "nixfmt" ];
-          };
-        };
+        serverSettings = { nixd = { formatting.command = [ "nixfmt" ]; }; };
       };
 
       oneDarkPro = {
@@ -137,7 +142,8 @@ in {
 
       terminal.integrated = {
         copyOnSelection = true;
-        fontFamily = "'DM Mono', NanumGothicCoding, Menlo, Monaco, 'Courier New', monospace";
+        fontFamily =
+          "'DM Mono', NanumGothicCoding, Menlo, Monaco, 'Courier New', monospace";
         scrollback = 10000;
         shell.osx = "${pkgs.fish}/bin/fish";
         shellIntegration.enabled = true;

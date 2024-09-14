@@ -101,7 +101,9 @@
     },
     "lix-module": {
       "inputs": {
-        "flake-utils": "flake-utils",
+        "flake-utils": [
+          "flake-utils"
+        ],
         "flakey-profile": "flakey-profile",
         "lix": "lix",
         "nixpkgs": [
@@ -123,17 +125,16 @@
     "monaspace-font": {
       "flake": false,
       "locked": {
-        "lastModified": 1699482037,
-        "narHash": "sha256-Zo56r0QoLwxwGQtcWP5cDlasx000G9BFeGINvvwEpQs=",
+        "lastModified": 1715284772,
+        "narHash": "sha256-wdGDv5IO6X4gB1maSdEzh92UXAb+BQauAqKWz+//dwE=",
         "owner": "githubnext",
         "repo": "monaspace",
-        "rev": "601eb27f902432999302e0e64db2daacc954f156",
+        "rev": "ac94165d2a6d5fb60f876c22989e986dcaaf8a87",
         "type": "github"
       },
       "original": {
         "owner": "githubnext",
         "repo": "monaspace",
-        "rev": "601eb27f902432999302e0e64db2daacc954f156",
         "type": "github"
       }
     },
@@ -157,6 +158,32 @@
         "type": "github"
       }
     },
+    "nix-vscode-extensions": {
+      "inputs": {
+        "flake-compat": [
+          "flake-compat"
+        ],
+        "flake-utils": [
+          "flake-utils"
+        ],
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1726277723,
+        "narHash": "sha256-/Dk8qrBs9XE2kS3bbvKaq+EZTH9lTsSrkxx/MdTQZ4s=",
+        "owner": "nix-community",
+        "repo": "nix-vscode-extensions",
+        "rev": "42c1ec06e709349f11bec2b3c61a75018bd6b9b9",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-community",
+        "repo": "nix-vscode-extensions",
+        "type": "github"
+      }
+    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1726142289,
@@ -177,10 +204,12 @@
       "inputs": {
         "dm-mono-font": "dm-mono-font",
         "flake-compat": "flake-compat",
+        "flake-utils": "flake-utils",
         "home-manager": "home-manager",
         "lix-module": "lix-module",
         "monaspace-font": "monaspace-font",
         "nix-darwin": "nix-darwin",
+        "nix-vscode-extensions": "nix-vscode-extensions",
         "nixpkgs": "nixpkgs"
       }
     },
