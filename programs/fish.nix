@@ -1,20 +1,23 @@
 { inputs, config, osConfig, pkgs, ... }:
 
-let username = config.home.username;
+let
+  username = config.home.username;
+  fishPlugins = with pkgs.fishPlugins; [
+    autopair-fish
+    colored-man-pages
+    foreign-env
+    fzf-fish
+    gruvbox
+  ];
+
 in {
   programs.fish = {
     enable = true;
 
-    plugins = [
-      {
-        name = "foreign-env";
-        src = inputs.fish-plugin-foreign-env;
-      }
-      {
-        name = "fzf";
-        src = inputs.fish-plugin-fzf;
-      }
-    ];
+    plugins = builtins.map (p: {
+      name = p.meta.name;
+      src = p.src;
+    }) fishPlugins;
 
     functions = {
       where = "readlink -f (which $argv)";

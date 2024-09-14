@@ -27,14 +27,6 @@
       url = "github:githubnext/monaspace?rev=601eb27f902432999302e0e64db2daacc954f156";
       flake = false;
     };
-    fish-plugin-foreign-env = {
-      url = "github:oh-my-fish/plugin-foreign-env";
-      flake = false;
-    };
-    fish-plugin-fzf = {
-      url = "github:PatrickF1/fzf.fish";
-      flake = false;
-    };
   };
 
   outputs = inputs@{ self, nixpkgs, nix-darwin, home-manager, lix-module, ... }:

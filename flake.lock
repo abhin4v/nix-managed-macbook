@@ -16,38 +16,6 @@
         "type": "github"
       }
     },
-    "fish-plugin-foreign-env": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1692819433,
-        "narHash": "sha256-4+k5rSoxkTtYFh/lEjhRkVYa2S4KEzJ/IJbyJl+rJjQ=",
-        "owner": "oh-my-fish",
-        "repo": "plugin-foreign-env",
-        "rev": "7f0cf099ae1e1e4ab38f46350ed6757d54471de7",
-        "type": "github"
-      },
-      "original": {
-        "owner": "oh-my-fish",
-        "repo": "plugin-foreign-env",
-        "type": "github"
-      }
-    },
-    "fish-plugin-fzf": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1712464035,
-        "narHash": "sha256-T8KYLA/r/gOKvAivKRoeqIwE2pINlxFQtZJHpOy9GMM=",
-        "owner": "PatrickF1",
-        "repo": "fzf.fish",
-        "rev": "8920367cf85eee5218cc25a11e209d46e2591e7a",
-        "type": "github"
-      },
-      "original": {
-        "owner": "PatrickF1",
-        "repo": "fzf.fish",
-        "type": "github"
-      }
-    },
     "flake-compat": {
       "flake": false,
       "locked": {
@@ -208,8 +176,6 @@
     "root": {
       "inputs": {
         "dm-mono-font": "dm-mono-font",
-        "fish-plugin-foreign-env": "fish-plugin-foreign-env",
-        "fish-plugin-fzf": "fish-plugin-fzf",
         "flake-compat": "flake-compat",
         "home-manager": "home-manager",
         "lix-module": "lix-module",
