@@ -52,10 +52,10 @@ in {
         virtualisation = {
           docker.enable = true;
           darwin-builder = {
-            diskSize = 40 * 1024;
+            diskSize = 50 * 1024;
             memorySize = 8 * 1024;
           };
-          cores = 4;
+          cores = 8;
         };
         nix.settings = nixSettings // { sandbox = false; };
       });
