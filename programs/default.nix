@@ -15,12 +15,11 @@ let
     nix-output-monitor
   ];
   networkingPackages = with pkgs; [ curl dig httpie openssh mosh ];
-  cmdLineUtilPackages = with pkgs; [ bash broot coreutils-full fd gnugrep less ranger tree ];
+  cmdLineUtilPackages = with pkgs; [ bash broot coreutils-full fd gnugrep less ranger tree unixtools.watch ];
   miscPackages = with pkgs; [
     binutils
     brotli
     cabal2nix
-    haskellPackages.cabal-plan
     cloc
     comma
     difftastic
