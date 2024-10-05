@@ -23,6 +23,7 @@ in {
       where = "readlink -f (which $argv)";
       ghe =
         "set -l dir (mktemp -d); git clone --depth 1 https://github.com/$argv $dir; cd $dir; ranger;";
+      nix-roots = "nix-store --gc --print-roots | grep -v lsof | grep -v flake-inputs | grep -v libproc | grep -v temp";
     };
 
     interactiveShellInit = ''

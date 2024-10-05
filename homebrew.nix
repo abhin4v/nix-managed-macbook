@@ -23,6 +23,7 @@
       "lastfm"
       "monodraw"
       "obsidian"
+      "signal"
       "spotify"
       "steam"
       "telegram"
