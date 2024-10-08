@@ -17,6 +17,7 @@ let
   networkingPackages = with pkgs; [ curl dig httpie openssh mosh ];
   cmdLineUtilPackages = with pkgs; [ bash broot coreutils-full fd gnugrep less ranger tree unixtools.watch ];
   miscPackages = with pkgs; [
+    as-tree
     binutils
     brotli
     cabal2nix
