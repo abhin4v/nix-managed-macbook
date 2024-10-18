@@ -5,7 +5,7 @@ let
     connect-timeout = 60;
     download-attempts = 10;
     cores = 4;
-    experimental-features = [ "nix-command" "flakes" "repl-flake" ];
+    experimental-features = [ "nix-command" "flakes" ];
     fallback = true;
     keep-outputs = true;
     keep-going = true;
