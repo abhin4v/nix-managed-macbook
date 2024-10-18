@@ -3,6 +3,7 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
+    nixpkgs-stable.url = "github:nixos/nixpkgs/nixpkgs-24.05-darwin";
     nix-darwin = {
       url = "github:LnL7/nix-darwin";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -37,17 +38,21 @@
     };
   };
 
-  outputs = inputs@{ self, nixpkgs, nix-darwin, home-manager, lix-module, ... }:
+  outputs = inputs@{ self, nixpkgs, nixpkgs-stable, nix-darwin, home-manager, lix-module, ... }:
     let
       system = "x86_64-darwin";
       pkgs = import nixpkgs {
         inherit system;
         config = { allowUnfree = true; };
       };
+      pkgs-stable = import nixpkgs-stable {
+        inherit system;
+        config = { allowUnfree = true; };
+      };
     in {
       darwinConfigurations."Abhinavs-MacBook-Pro" = nix-darwin.lib.darwinSystem {
         inherit system;
-        specialArgs = { inherit inputs; };
+        specialArgs = { inherit inputs pkgs-stable; };
         modules = [
           ./configuration.nix
           ./homebrew.nix
@@ -58,7 +63,7 @@
             home-manager.useUserPackages = true;
             home-manager.backupFileExtension = "backup";
             home-manager.users.abhinav = import ./home.nix;
-            home-manager.extraSpecialArgs = { inherit inputs; };
+            home-manager.extraSpecialArgs = { inherit inputs pkgs-stable; };
           }
         ];
       };

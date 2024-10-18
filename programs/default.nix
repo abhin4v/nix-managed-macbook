@@ -1,26 +1,35 @@
-{ inputs, config, pkgs, ... }:
+{ inputs, config, pkgs, pkgs-stable, ... }:
 
 let
+  leanHaskellBinary = pkgs.haskell.lib.compose.overrideCabal (old: {
+    isLibrary = false;
+    doHaddock = false;
+    enableLibraryProfiling = false;
+    enableSharedLibraries = false;
+    enableSeparateBinOutput = true;
+  });
+  opaComplete = name: pkgs.haskellPackages.generateOptparseApplicativeCompletions [name];
   nixPackages = with pkgs; [
     config.nix.package
     niv
     nix
     nix-diff
     nix-tree
-    nixfmt
+    nixfmt-rfc-style
     nvd
     nixd
     statix
     cachix
     nix-output-monitor
   ];
-  networkingPackages = with pkgs; [ curl dig httpie openssh mosh ];
+  networkingPackages = with pkgs; [ curl dig httpie openssh ] ++ [ pkgs-stable.mosh ];
   cmdLineUtilPackages = with pkgs; [ bash broot coreutils-full fd gnugrep less ranger tree unixtools.watch ];
   miscPackages = with pkgs; [
     as-tree
     binutils
     brotli
     cabal2nix
+    (opaComplete "cabal-plan" (leanHaskellBinary haskellPackages.cabal-plan))
     cloc
     comma
     difftastic

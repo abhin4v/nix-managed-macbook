@@ -24,7 +24,7 @@ in {
       ghe =
         "set -l dir (mktemp -d); git clone --depth 1 https://github.com/$argv $dir; cd $dir; ranger;";
       nix-roots = ''
-        nix-store --gc --print-roots | grep -v lsof | grep -v libproc
+        nix-store --gc --print-roots | grep -v lsof | grep -v libproc | grep -v "{temp:"
       '';
       nix-roots-tree = ''nix-roots | sed "s/\/nix\/store\///g" | as-tree'';
     };
