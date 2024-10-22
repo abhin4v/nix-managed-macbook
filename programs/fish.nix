@@ -1,4 +1,10 @@
-{ inputs, config, osConfig, pkgs, ... }:
+{
+  inputs,
+  config,
+  osConfig,
+  pkgs,
+  ...
+}:
 
 let
   username = config.home.username;
@@ -10,7 +16,8 @@ let
     gruvbox
   ];
 
-in {
+in
+{
   programs.fish = {
     enable = true;
 
@@ -21,8 +28,7 @@ in {
 
     functions = {
       where = "readlink -f (which $argv)";
-      ghe =
-        "set -l dir (mktemp -d); git clone --depth 1 https://github.com/$argv $dir; cd $dir; ranger;";
+      ghe = "set -l dir (mktemp -d); git clone --depth 1 https://github.com/$argv $dir; cd $dir; ranger;";
       nix-roots = ''
         nix-store --gc --print-roots | grep -v lsof | grep -v libproc | grep -v "{temp:"
       '';

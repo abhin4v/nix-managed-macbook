@@ -1,8 +1,19 @@
-{ config, pkgs, lib, ... }:
+{
+  config,
+  pkgs,
+  lib,
+  ...
+}:
 
-let username = config.home.username;
-in {
-  imports = [ ./programs ./scripts ./launchd.nix ];
+let
+  username = config.home.username;
+in
+{
+  imports = [
+    ./programs
+    ./scripts
+    ./launchd.nix
+  ];
 
   home = {
     username = "abhinav";
@@ -22,12 +33,14 @@ in {
       cat = "${pkgs.bat}/bin/bat";
     };
 
-    file."Applications/Home Manager Apps".source = let
-      apps = pkgs.buildEnv {
-        name = "home-manager-applications";
-        paths = config.home.packages;
-        pathsToLink = "/Applications";
-      };
-    in "${apps}/Applications";
+    file."Applications/Home Manager Apps".source =
+      let
+        apps = pkgs.buildEnv {
+          name = "home-manager-applications";
+          paths = config.home.packages;
+          pathsToLink = "/Applications";
+        };
+      in
+      "${apps}/Applications";
   };
 }

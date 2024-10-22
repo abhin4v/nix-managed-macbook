@@ -1,4 +1,10 @@
-{ inputs, config, pkgs, pkgs-stable, ... }:
+{
+  inputs,
+  config,
+  pkgs,
+  pkgs-stable,
+  ...
+}:
 
 let
   leanHaskellBinary = pkgs.haskell.lib.compose.overrideCabal (old: {
@@ -8,7 +14,7 @@ let
     enableSharedLibraries = false;
     enableSeparateBinOutput = true;
   });
-  opaComplete = name: pkgs.haskellPackages.generateOptparseApplicativeCompletions [name];
+  opaComplete = name: pkgs.haskellPackages.generateOptparseApplicativeCompletions [ name ];
   nixPackages = with pkgs; [
     config.nix.package
     niv
@@ -22,8 +28,26 @@ let
     cachix
     nix-output-monitor
   ];
-  networkingPackages = with pkgs; [ curl dig httpie openssh ] ++ [ pkgs-stable.mosh ];
-  cmdLineUtilPackages = with pkgs; [ bash broot coreutils-full fd gnugrep less ranger tree unixtools.watch ];
+  networkingPackages =
+    with pkgs;
+    [
+      curl
+      dig
+      httpie
+      openssh
+    ]
+    ++ [ pkgs-stable.mosh ];
+  cmdLineUtilPackages = with pkgs; [
+    bash
+    broot
+    coreutils-full
+    fd
+    gnugrep
+    less
+    ranger
+    tree
+    unixtools.watch
+  ];
   miscPackages = with pkgs; [
     as-tree
     binutils
@@ -56,10 +80,24 @@ let
     source-code-pro
     (pkgs.callPackage ../packages/dm-mono.nix { dm-mono-src = "${inputs.dm-mono-font}"; })
     (pkgs.callPackage ../packages/monaspace.nix { monaspace-src = "${inputs.monaspace-font}"; })
-    (nerdfonts.override { fonts = [ "Monoid" "Agave" "Iosevka" "Lekton" "VictorMono" ]; })
+    (nerdfonts.override {
+      fonts = [
+        "Monoid"
+        "Agave"
+        "Iosevka"
+        "Lekton"
+        "VictorMono"
+      ];
+    })
   ];
-in {
-  imports = [ ./fish.nix ./git.nix ./starship.nix ./vscode.nix ];
+in
+{
+  imports = [
+    ./fish.nix
+    ./git.nix
+    ./starship.nix
+    ./vscode.nix
+  ];
 
   home.packages = nixPackages ++ networkingPackages ++ cmdLineUtilPackages ++ miscPackages ++ fonts;
 
@@ -85,7 +123,9 @@ in {
 
     direnv = {
       enable = true;
-      nix-direnv = { enable = true; };
+      nix-direnv = {
+        enable = true;
+      };
     };
 
     nix-index = {
@@ -107,7 +147,11 @@ in {
       enable = true;
       enableFishIntegration = true;
       fileWidgetCommand = "fd --type f --no-ignore";
-      historyWidgetOptions = [ "--reverse" "--sort" "--exact" ];
+      historyWidgetOptions = [
+        "--reverse"
+        "--sort"
+        "--exact"
+      ];
     };
 
     micro = {

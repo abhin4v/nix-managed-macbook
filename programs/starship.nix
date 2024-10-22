@@ -1,7 +1,26 @@
-{ config, pkgs, lib, ... }:
+{
+  config,
+  pkgs,
+  lib,
+  ...
+}:
 
-let langs = [ "c" "golang" "haskell" "java" "kotlin" "nodejs" "python" "perl" "ruby" "rust" "zig" ];
-in {
+let
+  langs = [
+    "c"
+    "golang"
+    "haskell"
+    "java"
+    "kotlin"
+    "nodejs"
+    "python"
+    "perl"
+    "ruby"
+    "rust"
+    "zig"
+  ];
+in
+{
   programs.starship = {
     enable = true;
     enableFishIntegration = true;
@@ -58,16 +77,17 @@ in {
         sudo.symbol = "sudo ";
         zig.symbol = "zig ";
       }
-      (lib.attrsets.foldAttrs (i: _: i) [ ] (builtins.map (s: {
-        "${s}" = {
-          "version_format" = "\${raw}";
-          "format" = "\\[[$symbol($version)]($style)\\]";
-        };
-      }) langs))
+      (lib.attrsets.foldAttrs (i: _: i) [ ] (
+        builtins.map (s: {
+          "${s}" = {
+            "version_format" = "\${raw}";
+            "format" = "\\[[$symbol($version)]($style)\\]";
+          };
+        }) langs
+      ))
       {
         c.format = "\\[[$symbol($version(-$name))]($style)\\]";
-        python.format =
-          "\\[[\${symbol}\${pyenv_prefix}(\${version})(\\($virtualenv\\))]($style)\\]";
+        python.format = "\\[[\${symbol}\${pyenv_prefix}(\${version})(\\($virtualenv\\))]($style)\\]";
       }
     ];
   };

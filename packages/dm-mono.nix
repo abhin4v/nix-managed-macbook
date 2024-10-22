@@ -1,6 +1,12 @@
-{ dm-mono-src, lib, pkgs }:
+{
+  dm-mono-src,
+  lib,
+  pkgs,
+}:
 
-pkgs.linkFarm "dm-mono" [{
-  name = "share/fonts/truetype";
-  path = "${dm-mono-src}/exports";
-}]
+pkgs.linkFarm "dm-mono" [
+  {
+    name = "share/fonts/truetype";
+    path = "${dm-mono-src}/exports";
+  }
+]

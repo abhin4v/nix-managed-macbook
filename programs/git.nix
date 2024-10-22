@@ -18,8 +18,7 @@
       ca = "commit --amend --no-edit";
       cm = "commit -m";
       pf = "push --force-with-lease";
-      lg =
-        "log --graph --abbrev-commit --decorate --all --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(auto)%d%C(reset)'";
+      lg = "log --graph --abbrev-commit --decorate --all --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(auto)%d%C(reset)'";
       uc = "reset --soft HEAD~1";
     };
 
@@ -40,7 +39,9 @@
           hunk-header-line-number-style = "#067a00";
           hunk-header-style = "file line-number syntax";
         };
-        interactive = { keep-plus-minus-markers = false; };
+        interactive = {
+          keep-plus-minus-markers = false;
+        };
       };
     };
 
@@ -53,10 +54,17 @@
       rebase.autoStash = true;
       core = {
         editor = "micro";
-	    };
+      };
       merge.conflictstyle = "diff3";
     };
 
-    ignores = [ "*.swp" "*~" "#*" ".DS_Store" ".direnv/" ".vscode/" ];
+    ignores = [
+      "*.swp"
+      "*~"
+      "#*"
+      ".DS_Store"
+      ".direnv/"
+      ".vscode/"
+    ];
   };
 }

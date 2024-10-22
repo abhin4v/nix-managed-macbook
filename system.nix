@@ -1,4 +1,5 @@
-{ pkgs, inputs, ... }: {
+{ pkgs, inputs, ... }:
+{
   security.pam.enableSudoTouchIdAuth = true;
   system = {
     checks.verifyNixChannels = true;

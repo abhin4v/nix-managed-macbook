@@ -1,19 +1,28 @@
-{ inputs, config, pkgs, ... }:
+{
+  inputs,
+  config,
+  pkgs,
+  ...
+}:
 
 let
   lib = pkgs.lib;
-  extension =
-    (inputs.nix-vscode-extensions.extensions.${pkgs.system}.forVSCodeVersion
-      pkgs.vscode.version);
+  extension = (
+    inputs.nix-vscode-extensions.extensions.${pkgs.system}.forVSCodeVersion pkgs.vscode.version
+  );
   marketplace-prerelease = extension.vscode-marketplace;
   marketplace-release = extension.vscode-marketplace-release;
-  resolveExtension = ex:
-    let exParts = lib.strings.splitString "." ex;
-    in if lib.attrsets.hasAttrByPath exParts marketplace-release then
+  resolveExtension =
+    ex:
+    let
+      exParts = lib.strings.splitString "." ex;
+    in
+    if lib.attrsets.hasAttrByPath exParts marketplace-release then
       lib.attrsets.getAttrFromPath exParts marketplace-release
     else
       lib.attrsets.getAttrFromPath exParts marketplace-prerelease;
-in {
+in
+{
   programs.vscode = {
     enable = true;
     mutableExtensionsDir = false;
@@ -66,8 +75,7 @@ in {
         accessibilitySupport = "off";
         bracketPairColorization.enabled = true;
         folding = false;
-        fontFamily =
-          "'DM Mono', NanumGothicCoding, Menlo, Monaco, 'Courier New', monospace";
+        fontFamily = "'DM Mono', NanumGothicCoding, Menlo, Monaco, 'Courier New', monospace";
         fontLigatures = true;
         fontSize = 13;
         guides = {
@@ -115,14 +123,17 @@ in {
         plugin.tactics.config.timeout_duration = 5;
       };
 
-      roc-lang.language-server.exe =
-        "/nix/store/1m7xfjx1b79s39cxl52aq77z22yffs4a-roc-0.0.1/bin/roc_language_server";
+      roc-lang.language-server.exe = "/nix/store/1m7xfjx1b79s39cxl52aq77z22yffs4a-roc-0.0.1/bin/roc_language_server";
 
       nix = {
         formatterPath = "${pkgs.nixfmt}/bin/nixfmt";
         enableLanguageServer = true;
         serverPath = "nixd";
-        serverSettings = { nixd = { formatting.command = [ "nixfmt" ]; }; };
+        serverSettings = {
+          nixd = {
+            formatting.command = [ "nixfmt" ];
+          };
+        };
       };
 
       oneDarkPro = {
@@ -131,7 +142,10 @@ in {
       };
 
       spellright = {
-        documentTypes = [ "markdown" "latex" ];
+        documentTypes = [
+          "markdown"
+          "latex"
+        ];
         language = [ "en" ];
       };
 
@@ -142,8 +156,7 @@ in {
 
       terminal.integrated = {
         copyOnSelection = true;
-        fontFamily =
-          "'DM Mono', NanumGothicCoding, Menlo, Monaco, 'Courier New', monospace";
+        fontFamily = "'DM Mono', NanumGothicCoding, Menlo, Monaco, 'Courier New', monospace";
         scrollback = 10000;
         shell.osx = "${pkgs.fish}/bin/fish";
         shellIntegration.enabled = true;
@@ -164,12 +177,23 @@ in {
 
       update.mode = "none";
 
-      "[haskell]" = { editor.defaultFormatter = "haskell.haskell"; };
-      "[javascript]" = { editor.defaultFormatter = "esbenp.prettier-vscode"; };
-      "[json]" = { editor.defaultFormatter = "esbenp.prettier-vscode"; };
-      "[python]" = { editor.defaultFormatter = "ms-python.black-formatter"; };
+      "[haskell]" = {
+        editor.defaultFormatter = "haskell.haskell";
+      };
+      "[javascript]" = {
+        editor.defaultFormatter = "esbenp.prettier-vscode";
+      };
+      "[json]" = {
+        editor.defaultFormatter = "esbenp.prettier-vscode";
+      };
+      "[python]" = {
+        editor.defaultFormatter = "ms-python.black-formatter";
+      };
 
-      black-formatter.args = [ "--line-length" "100" ];
+      black-formatter.args = [
+        "--line-length"
+        "100"
+      ];
     };
 
     keybindings = [

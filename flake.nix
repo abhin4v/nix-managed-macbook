@@ -38,21 +38,37 @@
     };
   };
 
-  outputs = inputs@{ self, nixpkgs, nixpkgs-stable, nix-darwin, home-manager, lix-module, ... }:
+  outputs =
+    inputs@{
+      self,
+      nixpkgs,
+      nixpkgs-stable,
+      nix-darwin,
+      home-manager,
+      lix-module,
+      ...
+    }:
     let
       system = "x86_64-darwin";
       pkgs = import nixpkgs {
         inherit system;
-        config = { allowUnfree = true; };
+        config = {
+          allowUnfree = true;
+        };
       };
       pkgs-stable = import nixpkgs-stable {
         inherit system;
-        config = { allowUnfree = true; };
+        config = {
+          allowUnfree = true;
+        };
       };
-    in {
+    in
+    {
       darwinConfigurations."Abhinavs-MacBook-Pro" = nix-darwin.lib.darwinSystem {
         inherit system;
-        specialArgs = { inherit inputs pkgs-stable; };
+        specialArgs = {
+          inherit inputs pkgs-stable;
+        };
         modules = [
           ./configuration.nix
           ./homebrew.nix
@@ -63,12 +79,17 @@
             home-manager.useUserPackages = true;
             home-manager.backupFileExtension = "backup";
             home-manager.users.abhinav = import ./home.nix;
-            home-manager.extraSpecialArgs = { inherit inputs pkgs-stable; };
+            home-manager.extraSpecialArgs = {
+              inherit inputs pkgs-stable;
+            };
           }
         ];
       };
       devShells.${system}.default = pkgs.mkShell {
-        buildInputs = with pkgs; [ (import home-manager { inherit pkgs; }).home-manager just ];
+        buildInputs = with pkgs; [
+          (import home-manager { inherit pkgs; }).home-manager
+          just
+        ];
         shellHook = ''
           export NIXPKGS_PATH=${pkgs.path};
         '';

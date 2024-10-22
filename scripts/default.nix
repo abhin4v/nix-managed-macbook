@@ -1,3 +1,10 @@
-{ config, lib, pkgs, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
 
-{ home.packages = []; }
+{
+  home.packages = [ ];
+}

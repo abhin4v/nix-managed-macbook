@@ -1,4 +1,9 @@
-{ config, pkgs, lib, ... }:
+{
+  config,
+  pkgs,
+  lib,
+  ...
+}:
 
 let
   binPath = "${pkgs.coreutils-full}/bin";
@@ -8,7 +13,8 @@ let
     ${binPath}/echo && ${binPath}/date
     ${pkgs.cloudflare-dyndns}/bin/cloudflare-dyndns --debug home.abhinavsarkar.net
   '';
-in {
+in
+{
   launchd.agents.dyndns-updater = lib.optionalAttrs pkgs.stdenv.hostPlatform.isDarwin {
     enable = true;
     config = {
