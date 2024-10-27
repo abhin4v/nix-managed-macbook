@@ -24,7 +24,7 @@ in
 {
   services.nix-daemon.enable = true;
   nix = {
-    package = pkgs.nixFlakes;
+    package = pkgs.nixVersions.stable;
     extraOptions = ''
       keep-outputs = true
       keep-derivations = true

@@ -21,13 +21,13 @@ _run cmd:
 _build:
     nom build {{ root_dir }}#darwinConfigurations.{{ hostname }}.system
 
-# build latest home-manager generation
+# build nix-darwin system
 build: (_run "_build")
 
 _switch: _build
     ./result/sw/bin/darwin-rebuild -v switch --flake "{{ root_dir }}"
 
-# switch to latest home-manager generation
+# build nix-darwin system and switch to it
 switch: (_run "_switch") && _report-changes
 
 _update: && _switch _brew-update _report-changes
@@ -49,7 +49,7 @@ _report-changes:
 # update packages and switch
 update: (_run "_update")
 
-# clean up nix garbage
+# clean up garbage
 clean days="7":
     home-manager expire-generations "-{{days}} days"
     nix profile wipe-history --older-than "{{days}}d"
