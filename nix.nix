@@ -29,14 +29,6 @@ in
       keep-outputs = true
       keep-derivations = true
     '';
-    gc = {
-      automatic = true;
-      interval = {
-        Hour = 18;
-        Minute = 15;
-      };
-      options = "-d --delete-older-than 7d";
-    };
     settings = nixSettings // {
       max-free = 1000000000;
       min-free = 128000000;
