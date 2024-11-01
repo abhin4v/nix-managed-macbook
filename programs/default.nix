@@ -63,13 +63,14 @@ let
     git-absorb
     graphviz-nox
     iterm2
-    jetbrains.idea-community
+    jless
     just
     micro
     fastfetch
     proselint
     shellcheck
     typos
+    xmlformat
   ];
   fonts = with pkgs; [
     fira-mono
