@@ -6,7 +6,6 @@
 }:
 let
   nixSettings = {
-    auto-optimise-store = true;
     connect-timeout = 60;
     download-attempts = 10;
     cores = 4;
@@ -29,6 +28,7 @@ in
       keep-outputs = true
       keep-derivations = true
     '';
+    optimise.automatic = true;
     settings = nixSettings // {
       max-free = 1000000000;
       min-free = 128000000;
@@ -64,9 +64,11 @@ in
             };
             cores = 8;
           };
+          nix.package = pkgs.lix;
           nix.settings = nixSettings // {
             sandbox = false;
           };
+          environment.systemPackages = [ pkgs.htop ];
         }
       );
     };
