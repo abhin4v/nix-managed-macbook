@@ -14,9 +14,15 @@
     };
     nix-vscode-extensions = {
       url = "github:nix-community/nix-vscode-extensions";
+      inputs = {
+        nixpkgs.follows = "nixpkgs";
+        flake-compat.follows = "flake-compat";
+        flake-utils.follows = "flake-utils";
+      };
+    };
+    nixd = {
+      url = "github:nix-community/nixd/2.5.1";
       inputs.nixpkgs.follows = "nixpkgs";
-      inputs.flake-compat.follows = "flake-compat";
-      inputs.flake-utils.follows = "flake-utils";
     };
     lix-module = {
       url = "https://git.lix.systems/lix-project/nixos-module/archive/2.91.1.tar.gz";
@@ -81,6 +87,7 @@
             home-manager.users.abhinav = import ./home.nix;
             home-manager.extraSpecialArgs = {
               inherit inputs pkgs-stable;
+              nixd = inputs.nixd.packages.${system}.nixd;
             };
           }
         ];

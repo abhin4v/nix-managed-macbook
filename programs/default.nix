@@ -2,7 +2,7 @@
   inputs,
   config,
   pkgs,
-  pkgs-stable,
+  nixd,
   ...
 }:
 
@@ -28,15 +28,13 @@ let
     cachix
     nix-output-monitor
   ];
-  networkingPackages =
-    with pkgs;
-    [
-      curl
-      dig
-      httpie
-      openssh
-    ]
-    ++ [ pkgs-stable.mosh ];
+  networkingPackages = with pkgs; [
+    curl
+    dig
+    httpie
+    openssh
+    mosh
+  ];
   cmdLineUtilPackages = with pkgs; [
     bash
     broot
