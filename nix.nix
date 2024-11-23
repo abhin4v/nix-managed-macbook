@@ -49,6 +49,8 @@ in
     distributedBuilds = true;
     linux-builder = {
       enable = true;
+      package = pkgs.darwin.linux-builder-x86_64;
+      systems = [ "x86_64-linux" ];
       maxJobs = 3;
       config = (
         { pkgs, ... }:
@@ -68,13 +70,14 @@ in
           nix.settings = nixSettings // {
             sandbox = false;
           };
+          nixpkgs.config.allowUnfree = true;
           environment.systemPackages = [ pkgs.htop ];
         }
       );
     };
   };
   nixpkgs = {
-    hostPlatform = "x86_64-darwin";
+    hostPlatform = "aarch64-darwin";
     config.allowUnfree = true;
   };
 }

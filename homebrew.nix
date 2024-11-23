@@ -25,20 +25,14 @@
       "appcleaner"
       "calibre"
       "dropbox"
-      "fanny"
       "firefox"
-      "garmin-express"
       "google-chrome"
-      "homebrew/cask/handbrake"
-      "lastfm"
       "monodraw"
-      "obsidian"
       "signal"
       "spotify"
-      "steam"
+#      "steam"
       "telegram"
-      "utm"
-      "vlc"
+#      "vlc"
       "zed"
     ];
     masApps = {
@@ -51,7 +45,6 @@
       NextDNS = 1464122853;
       Numbers = 409203825;
       Pages = 409201541;
-      Reeder = 1449412482;
       TestFlight = 899247664;
       Xcode = 497799835;
     };

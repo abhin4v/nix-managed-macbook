@@ -55,7 +55,7 @@
       ...
     }:
     let
-      system = "x86_64-darwin";
+      system = "aarch64-darwin";
       pkgs = import nixpkgs {
         inherit system;
         config = {
@@ -70,7 +70,7 @@
       };
     in
     {
-      darwinConfigurations."Abhinavs-MacBook-Pro" = nix-darwin.lib.darwinSystem {
+      darwinConfigurations."Abhinavs-M4-MacBook-Pro" = nix-darwin.lib.darwinSystem {
         inherit system;
         specialArgs = {
           inherit inputs pkgs-stable;
@@ -96,6 +96,8 @@
         buildInputs = with pkgs; [
           (import home-manager { inherit pkgs; }).home-manager
           just
+          nix-output-monitor
+          nvd
         ];
         shellHook = ''
           export NIXPKGS_PATH=${pkgs.path};
