@@ -3,6 +3,7 @@
   config,
   pkgs,
   nixd,
+  hell,
   ...
 }:
 
@@ -52,6 +53,7 @@ let
     brotli
     cabal2nix
     (opaComplete "cabal-plan" (leanHaskellBinary haskellPackages.cabal-plan))
+    (opaComplete "hell" (leanHaskellBinary hell))
     (leanHaskellBinary (
       import ../packages/pandoc-cli-3.5.nix {
         system = pkgs.system;

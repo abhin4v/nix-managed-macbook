@@ -24,6 +24,11 @@
       url = "github:nix-community/nixd/2.5.1";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    hell = {
+      url = "github:chrisdone/hell";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.flake-utils.follows = "flake-utils";
+    };
     lix-module = {
       url = "https://git.lix.systems/lix-project/nixos-module/archive/2.91.1.tar.gz";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -88,6 +93,7 @@
             home-manager.extraSpecialArgs = {
               inherit inputs pkgs-stable;
               nixd = inputs.nixd.packages.${system}.nixd;
+              hell = inputs.hell.packages.${system}.default;
             };
           }
         ];

@@ -98,6 +98,29 @@
         "type": "github"
       }
     },
+    "hell": {
+      "inputs": {
+        "flake-utils": [
+          "flake-utils"
+        ],
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1732117297,
+        "narHash": "sha256-oGm9mCSRhQDUDjB88mcxCFYyACCYg9zeimZt32y4LXw=",
+        "owner": "chrisdone",
+        "repo": "hell",
+        "rev": "c34b46d1988d4db3cd571bfc13007eb76d509c97",
+        "type": "github"
+      },
+      "original": {
+        "owner": "chrisdone",
+        "repo": "hell",
+        "type": "github"
+      }
+    },
     "home-manager": {
       "inputs": {
         "nixpkgs": [
@@ -296,6 +319,7 @@
         "dm-mono-font": "dm-mono-font",
         "flake-compat": "flake-compat",
         "flake-utils": "flake-utils",
+        "hell": "hell",
         "home-manager": "home-manager",
         "lix-module": "lix-module",
         "monaspace-font": "monaspace-font",
