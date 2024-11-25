@@ -17,7 +17,7 @@ let
     keep-outputs = true;
     keep-going = true;
     log-lines = 25;
-    max-jobs = 3;
+    max-jobs = 5;
   };
 in
 {
@@ -51,7 +51,7 @@ in
       enable = true;
       package = pkgs.darwin.linux-builder-x86_64;
       systems = [ "x86_64-linux" ];
-      maxJobs = 3;
+      maxJobs = 5;
       config = (
         { pkgs, ... }:
         {
