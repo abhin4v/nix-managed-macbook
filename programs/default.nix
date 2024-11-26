@@ -104,6 +104,7 @@ in
     ./git.nix
     ./starship.nix
     ./vscode.nix
+    ./zed.nix
   ];
 
   home.packages = nixPackages ++ networkingPackages ++ cmdLineUtilPackages ++ miscPackages ++ fonts;
