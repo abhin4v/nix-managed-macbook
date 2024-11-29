@@ -108,11 +108,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1732117297,
-        "narHash": "sha256-oGm9mCSRhQDUDjB88mcxCFYyACCYg9zeimZt32y4LXw=",
+        "lastModified": 1732633043,
+        "narHash": "sha256-zD5evJHyw8M459K/Eo3XvdPWwZjDIRhwDZbmvk/rukg=",
         "owner": "chrisdone",
         "repo": "hell",
-        "rev": "c34b46d1988d4db3cd571bfc13007eb76d509c97",
+        "rev": "ec773da7d0b1f8f5330de5b12a761019b4e87e6d",
         "type": "github"
       },
       "original": {
