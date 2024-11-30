@@ -43,10 +43,6 @@
       url = "github:googlefonts/dm-mono";
       flake = false;
     };
-    monaspace-font = {
-      url = "github:githubnext/monaspace";
-      flake = false;
-    };
   };
 
   outputs =
