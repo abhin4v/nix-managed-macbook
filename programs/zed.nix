@@ -24,9 +24,9 @@
         diagnostic = false;
         metrics = false;
       };
-      buffer_font_family = "Zed Plex Mono";
+      buffer_font_family = "PragmataPro Mono Liga"; # "Zed Plex Mono";
       ui_font_size = 16;
-      buffer_font_size = 12;
+      buffer_font_size = 13;
       confirm_quit = true;
       cursor_blink = false;
       tab_size = 2;
@@ -42,6 +42,13 @@
         coloring = "indent_aware";
       };
       wrap_guides = [ 100 ];
+      assistant = {
+        default_model = {
+          provider = "ollama";
+          model = "qwen2.5-coder:latest";
+        };
+        version = "2";
+      };
       languages = {
         Haskell = {
           tab_size = 2;
