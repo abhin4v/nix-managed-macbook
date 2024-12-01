@@ -51,6 +51,7 @@ in
       enable = true;
       package = pkgs.darwin.linux-builder-x86_64;
       systems = [ "x86_64-linux" ];
+      ephemeral = true;
       maxJobs = 5;
       config = (
         { pkgs, ... }:
@@ -69,6 +70,7 @@ in
           nix.package = pkgs.lix;
           nix.settings = nixSettings // {
             sandbox = false;
+            trusted-users = [ "builder" ];
           };
           nixpkgs.config.allowUnfree = true;
           environment.systemPackages = [ pkgs.htop ];
