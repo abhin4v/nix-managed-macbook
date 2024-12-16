@@ -67,7 +67,7 @@ in
             };
             cores = 8;
           };
-          nix.package = pkgs.lix;
+          #nix.package = pkgs.lix;
           nix.settings = nixSettings // {
             sandbox = false;
             trusted-users = [ "builder" ];
