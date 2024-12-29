@@ -83,29 +83,6 @@
         "type": "github"
       }
     },
-    "hell": {
-      "inputs": {
-        "flake-utils": [
-          "flake-utils"
-        ],
-        "nixpkgs": [
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "lastModified": 1734340528,
-        "narHash": "sha256-tunoxL4wT57SOIZ0gDqMFVdH0zgzsqfdGGPU2g5QT/k=",
-        "owner": "chrisdone",
-        "repo": "hell",
-        "rev": "2dad319c03a664c65039324d9d1bfc73ae1202ed",
-        "type": "github"
-      },
-      "original": {
-        "owner": "chrisdone",
-        "repo": "hell",
-        "type": "github"
-      }
-    },
     "home-manager": {
       "inputs": {
         "nixpkgs": [
@@ -251,7 +228,6 @@
         "dm-mono-font": "dm-mono-font",
         "flake-compat": "flake-compat",
         "flake-utils": "flake-utils",
-        "hell": "hell",
         "home-manager": "home-manager",
         "nix-darwin": "nix-darwin",
         "nix-vscode-extensions": "nix-vscode-extensions",
