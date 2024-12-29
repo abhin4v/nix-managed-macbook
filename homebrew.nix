@@ -26,6 +26,7 @@
       "calibre"
       "dropbox"
       "firefox"
+      "ghostty"
       "google-chrome"
       "monodraw"
       "signal"
