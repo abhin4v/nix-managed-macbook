@@ -17,6 +17,7 @@
       "roc"
       "haskell"
       "toml"
+      "typos"
     ];
     userSettings = {
       theme = "Summercamp";
