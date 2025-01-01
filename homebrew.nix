@@ -33,7 +33,7 @@
       "spotify"
 #      "steam"
       "telegram"
-#      "vlc"
+       "vlc"
     ];
     masApps = {
       Amphetamine = 937984704;
@@ -45,6 +45,7 @@
       NextDNS = 1464122853;
       Numbers = 409203825;
       Pages = 409201541;
+      ReadKit = 1615798039;
       TestFlight = 899247664;
       Xcode = 497799835;
     };
