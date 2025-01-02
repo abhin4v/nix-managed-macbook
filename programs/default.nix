@@ -171,5 +171,28 @@ in
     };
 
     zoxide.enable = true;
+
+    ghostty = {
+      enable = true;
+      enableFishIntegration = true;
+      enableBashIntegration = true;
+      installBatSyntax = false;
+      settings = {
+        background-opacity = 0.95;
+        command = "/etc/profiles/per-user/abhinav/bin/fish";
+        copy-on-select = true;
+        font-family = "PragmataPro Mono";
+        font-size = 14;
+        macos-titlebar-style = "hidden";
+        quick-terminal-position = "right";
+        quit-after-last-window-closed = false;
+        scrollback-limit = 100000000;
+        shell-integration = "detect";
+        theme = "ayu";
+        keybind = [
+          "global:cmd+shift+a=toggle_quick_terminal"
+        ];
+      };
+    };
   };
 }
