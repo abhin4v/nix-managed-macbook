@@ -24,7 +24,7 @@ in
     shellAliases = {
       g = "${pkgs.git}/bin/git";
       j = "${pkgs.just}/bin/just";
-      l = "${pkgs.bat}/bin/bat";
+      l = "${pkgs.bat}/bin/bat -n";
       m = "${pkgs.micro}/bin/micro";
 
       br = "${pkgs.broot}/bin/broot";
