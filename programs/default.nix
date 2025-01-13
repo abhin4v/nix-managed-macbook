@@ -2,6 +2,7 @@
   inputs,
   config,
   pkgs,
+  pkgs-ghostty,
   ...
 }:
 
@@ -187,6 +188,7 @@ in
 
     ghostty = {
       enable = true;
+      package = pkgs-ghostty.ghostty;
       enableFishIntegration = true;
       enableBashIntegration = true;
       installBatSyntax = false;

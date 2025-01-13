@@ -4,6 +4,7 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
     nixpkgs-stable.url = "github:nixos/nixpkgs/nixpkgs-24.05-darwin";
+    nixpkgs-ghostty.url = "github:nixos/nixpkgs/69b9a8c860bdbb977adfa9c5e817ccb717884182";
     nix-darwin = {
       url = "github:LnL7/nix-darwin";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -41,6 +42,7 @@
       self,
       nixpkgs,
       nixpkgs-stable,
+      nixpkgs-ghostty,
       nix-darwin,
       home-manager,
       # lix-module,
@@ -55,6 +57,12 @@
         };
       };
       pkgs-stable = import nixpkgs-stable {
+        inherit system;
+        config = {
+          allowUnfree = true;
+        };
+      };
+      pkgs-ghostty = import nixpkgs-ghostty {
         inherit system;
         config = {
           allowUnfree = true;
@@ -78,7 +86,7 @@
             home-manager.backupFileExtension = "backup";
             home-manager.users.abhinav = import ./home.nix;
             home-manager.extraSpecialArgs = {
-              inherit inputs pkgs-stable;
+              inherit inputs pkgs-stable pkgs-ghostty;
             };
           }
         ];
