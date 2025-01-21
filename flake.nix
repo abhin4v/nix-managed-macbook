@@ -21,11 +21,11 @@
         flake-utils.follows = "flake-utils";
       };
     };
-    # lix-module = {
-    #   url = "https://git.lix.systems/lix-project/nixos-module/archive/2.91.1-2.tar.gz";
-    #   inputs.nixpkgs.follows = "nixpkgs";
-    #   inputs.flake-utils.follows = "flake-utils";
-    # };
+    lix-module = {
+      url = "https://git.lix.systems/lix-project/nixos-module/archive/2.92.0.tar.gz";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.flake-utils.follows = "flake-utils";
+    };
     flake-utils.url = "github:numtide/flake-utils";
     flake-compat = {
       url = "github:edolstra/flake-compat";
@@ -45,7 +45,7 @@
       nixpkgs-ghostty,
       nix-darwin,
       home-manager,
-      # lix-module,
+      lix-module,
       ...
     }:
     let
@@ -78,7 +78,7 @@
         modules = [
           ./configuration.nix
           ./homebrew.nix
-          # lix-module.nixosModules.default
+          lix-module.nixosModules.default
           home-manager.darwinModules.home-manager
           {
             home-manager.useGlobalPkgs = true;
