@@ -52,12 +52,6 @@ let
     brotli
     cabal2nix
     (opaComplete "cabal-plan" (leanHaskellBinary haskellPackages.cabal-plan))
-    (leanHaskellBinary (
-      import ../packages/pandoc-cli-3.5.nix {
-        system = pkgs.system;
-        nixpkgs = inputs.nixpkgs;
-      }
-    ))
     cloc
     comma
     difftastic
