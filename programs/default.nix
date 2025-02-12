@@ -63,6 +63,7 @@ let
     iterm2
     jless
     just
+    mas
     micro
     fastfetch
     proselint

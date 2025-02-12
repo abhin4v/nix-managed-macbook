@@ -2,7 +2,6 @@
 {
   security.pam.enableSudoTouchIdAuth = true;
   system = {
-    checks.verifyNixChannels = true;
     defaults = {
       loginwindow = {
         GuestEnabled = false;

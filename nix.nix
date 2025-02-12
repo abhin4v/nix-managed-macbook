@@ -21,8 +21,9 @@ let
   };
 in
 {
-  services.nix-daemon.enable = true;
+  ids.gids.nixbld = 350;
   nix = {
+    enable = true;
     package = pkgs.nixVersions.stable;
     extraOptions = ''
       keep-outputs = true
