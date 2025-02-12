@@ -97,12 +97,13 @@ in
   programs = {
     tmux = {
       enable = true;
+      prefix = "C-a";
       clock24 = true;
       historyLimit = 100000000;
       mouse = true;
       shell = "/etc/profiles/per-user/abhinav/bin/fish";
       terminal = "tmux-256color";
-      plugins = with pkgs; [tmuxPlugins.better-mouse-mode];
+      plugins = with pkgs; [ tmuxPlugins.better-mouse-mode ];
       extraConfig = ''
         set -g status off
       '';
