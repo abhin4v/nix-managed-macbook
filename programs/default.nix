@@ -52,6 +52,13 @@ let
     brotli
     cabal2nix
     (opaComplete "cabal-plan" (leanHaskellBinary haskellPackages.cabal-plan))
+    (opaComplete "hdc" (
+      leanHaskellBinary (
+        pkgs.haskellPackages.callPackage ../packages/haskell-docs-cli.nix {
+          optparse-applicative = pkgs.haskellPackages.callPackage ../packages/optparse-applicative.nix { };
+        }
+      )
+    ))
     cloc
     difftastic
     dua
