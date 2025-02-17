@@ -53,7 +53,6 @@ let
     cabal2nix
     (opaComplete "cabal-plan" (leanHaskellBinary haskellPackages.cabal-plan))
     cloc
-    comma
     difftastic
     dua
     entr
