@@ -1,6 +1,10 @@
 { pkgs, inputs, ... }:
 {
-  security.pam.enableSudoTouchIdAuth = true;
+  security.pam.services.sudo_local = {
+    enable = true;
+    touchIdAuth = true;
+    reattach = true;
+  };
   system = {
     defaults = {
       loginwindow = {
