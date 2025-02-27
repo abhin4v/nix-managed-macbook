@@ -26,13 +26,19 @@
       "calibre"
       "dropbox"
       "firefox"
+      {
+        name = "librewolf";
+        args = {
+          no_quarantine = true;
+        };
+      }
       "google-chrome"
       "monodraw"
       "signal"
       "spotify"
-#      "steam"
+      # "steam"
       "telegram"
-       "vlc"
+      "vlc"
     ];
     masApps = {
       Amphetamine = 937984704;
