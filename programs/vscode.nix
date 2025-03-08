@@ -52,7 +52,6 @@ in
         "ms-python.black-formatter"
         "ms-python.debugpy"
         "ms-python.python"
-        "ms-python.vscode-pylance"
         "pedrorgirardi.vscode-cljfmt"
         "rust-lang.rust-analyzer"
         "skellock.just"
