@@ -20,7 +20,7 @@
       "typos"
     ];
     userSettings = {
-      theme = "Summercamp";
+      theme = "Gruvbox Dark Hard";
       telemetry = {
         diagnostic = false;
         metrics = false;

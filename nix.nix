@@ -24,7 +24,7 @@ in
   ids.gids.nixbld = 350;
   nix = {
     enable = true;
-    package = pkgs.nixVersions.stable;
+    package = pkgs.lix;
     extraOptions = ''
       keep-outputs = true
       keep-derivations = true
