@@ -3,7 +3,7 @@
   config,
   pkgs,
   pkgs-ghostty,
-  nixd,
+  # nixd,
   ...
 }:
 

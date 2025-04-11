@@ -24,10 +24,10 @@
         flake-utils.follows = "flake-utils";
       };
     };
-    nixd = {
-      url = "github:nix-community/nixd/2.6.1";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    # nixd = {
+    #   url = "github:nix-community/nixd/2.6.1";
+    #   inputs.nixpkgs.follows = "nixpkgs";
+    # };
     lix-module = {
       url = "https://git.lix.systems/lix-project/nixos-module/archive/2.92.0-3.tar.gz";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -96,7 +96,7 @@
             home-manager.users.abhinav = import ./home.nix;
             home-manager.extraSpecialArgs = {
               inherit inputs pkgs-stable pkgs-ghostty;
-              nixd = inputs.nixd.packages.${system}.nixd;
+              # nixd = inputs.nixd.packages.${system}.nixd;
             };
           }
           { programs.nix-index-database.comma.enable = true; }

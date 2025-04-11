@@ -19,7 +19,7 @@ _run cmd:
     fi
 
 _build:
-    nom build {{ root_dir }}#darwinConfigurations.{{ hostname }}.system
+    nom build --show-trace {{ root_dir }}#darwinConfigurations.{{ hostname }}.system
 
 # build nix-darwin system
 build: (_run "_build")
