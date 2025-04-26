@@ -1,0 +1,13 @@
+diff --git a/pyproject.toml b/pyproject.toml
+index 94e2b8e..b2ceea4 100644
+--- a/pyproject.toml
++++ b/pyproject.toml
+@@ -86,7 +86,7 @@ typecheck = { chain = [
+ "typecheck:mypy" = "mypy ."
+ 
+ [build-system]
+-requires = ["hatchling==1.26.3", "hatch-fancy-pypi-readme"]
++requires = ["hatchling", "hatch-fancy-pypi-readme"]
+ build-backend = "hatchling.build"
+ 
+ [tool.hatch.build]
