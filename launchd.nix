@@ -6,15 +6,7 @@
 }:
 
 let
-  cloudflare = pkgs.python3.pkgs.cloudflare.overrideAttrs (oldAttrs: {
-    patches = [ ./packages/python-cloudflare/hatchling.patch ];
-  });
-  pkg = (pkgs.cloudflare-dyndns).overridePythonAttrs (old: {
-    dependencies = (lib.lists.remove pkgs.python3.pkgs.cloudflare old.dependencies) ++ [
-      cloudflare
-    ];
-  });
-  # pkgs = pkgs-python-cloudflare-4_0_0;
+  pkg = pkgs.cloudflare-dyndns;
   binPath = "${pkgs.coreutils-full}/bin";
   dyndns-updater-script = pkgs.writeScript "dyndns-updater" ''
     #!${pkgs.bash}/bin/bash
