@@ -42,11 +42,11 @@
         enabled = true;
         coloring = "indent_aware";
       };
-      wrap_guides = [ 100 ];
+      wrap_guides = [ 80 100 120 ];
       assistant = {
         default_model = {
           provider = "ollama";
-          model = "qwen2.5-coder:latest";
+          model = "gemma3:latest";
         };
         version = "2";
       };
@@ -54,7 +54,6 @@
         Haskell = {
           tab_size = 2;
           format_on_save = "on";
-          wrap_guides = [ 100 ];
         };
         Nix = {
           tab_size = 2;
