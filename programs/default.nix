@@ -90,7 +90,7 @@ in
     ./fish.nix
     ./git.nix
     ./starship.nix
-    ./vscode.nix
+    # ./vscode.nix
     ./zed.nix
   ];
 
