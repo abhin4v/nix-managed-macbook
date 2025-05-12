@@ -10,6 +10,14 @@ default:
 help:
     @just --list --unsorted --list-heading $'Available commands:\n'
 
+forecast:
+    nix-forecast -s -c {{ root_dir }}#darwinConfigurations.{{ hostname }} | \
+      tee -p /tmp/nix-forecast.txt | head -4
+    @echo "Packages to be built:"
+    @cat /tmp/nix-forecast.txt | grep "/nix/store/" | \
+      grep -Pv "\-completions$|\.zip$|\.patch$|\.lock$|\.fish$|\.sh$|\.json$|\.conf$|\.keep$|\.md$" | \
+      cut -c 45- | sort | nl
+
 _run cmd:
     #!/usr/bin/env -S sh -eu
     if [ "{{ in_nix_shell }}" = "false" ]; then

@@ -27,6 +27,7 @@ let
     statix
     cachix
     nix-output-monitor
+    nix-forecast
   ];
   networkingPackages = with pkgs; [
     curl
