@@ -33,7 +33,7 @@ _build:
 build: (_run "_build")
 
 _switch: _build
-    ./result/sw/bin/darwin-rebuild -v switch --flake "{{ root_dir }}"
+    sudo ./result/sw/bin/darwin-rebuild -v switch --flake "{{ root_dir }}"
 
 # build nix-darwin system and switch to it
 switch: (_run "_switch") && _report-changes

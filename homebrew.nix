@@ -34,6 +34,7 @@
       }
       "google-chrome"
       "monodraw"
+      "nextcloud"
       "signal"
       "spotify"
       # "steam"

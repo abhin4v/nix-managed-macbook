@@ -6,6 +6,7 @@
     reattach = true;
   };
   system = {
+    primaryUser = "abhinav";
     defaults = {
       loginwindow = {
         GuestEnabled = false;
