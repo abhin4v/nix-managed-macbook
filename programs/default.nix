@@ -67,6 +67,7 @@ let
     mas
     micro
     fastfetch
+    obsidian
     proselint
     shellcheck
     typos
