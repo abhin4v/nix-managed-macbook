@@ -9,15 +9,17 @@
   programs.zed-editor = {
     enable = true;
     extensions = [
+      # themes
+      "catppuccin"
+      #languages
       "assembly"
       "brainfuck"
       "ini"
       "just"
       "nix"
-      "roc"
       "haskell"
       "toml"
-      "typos"
+      "codebook"
     ];
     userSettings = {
       theme = "Gruvbox Dark Hard";
@@ -36,14 +38,18 @@
         shell = {
           program = "/etc/profiles/per-user/abhinav/bin/fish";
         };
+        env = {
+          EDITOR = "zed --wait";
+        };
         copy_on_select = true;
       };
       indent_guides = {
         enabled = true;
         coloring = "indent_aware";
       };
+      inlay_hints.enabled = true;
       wrap_guides = [ 80 100 120 ];
-      assistant = {
+      agent = {
         default_model = {
           provider = "ollama";
           model = "gemma3:latest";
@@ -57,22 +63,34 @@
         };
         Nix = {
           tab_size = 2;
+          language_servers = [ "nil" "nixd" ];
+          format_on_save = {
+            external = {
+              command = "nixfmt";
+              arguments = [
+                "--filename"
+                "{buffer_path}"
+                "-s"
+                "-w"
+                "1000"
+              ];
+            };
+          };
         };
       };
       lsp = {
         hls = {
           initialization_options = {
-            sessionLoading = "multiComponent";
+            haskell = {
+              formattingProvider = "ormolu";
+              cabalFormattingProvider = "cabal-fmt";
+              sessionLoading = "multipleComponents";
+            };
           };
         };
-        nixd = {
-          formatting = {
-            command = [
-              "nixfmt"
-              "-s"
-              "-w"
-              "100"
-            ];
+        nix = {
+          binary = {
+            path_lookup = true;
           };
         };
       };

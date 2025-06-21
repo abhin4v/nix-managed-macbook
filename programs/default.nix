@@ -23,6 +23,7 @@ let
     nix-tree
     nixfmt-rfc-style
     nvd
+    nil
     nixd
     statix
     cachix
