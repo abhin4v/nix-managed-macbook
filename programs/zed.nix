@@ -9,9 +9,7 @@
   programs.zed-editor = {
     enable = true;
     extensions = [
-      # themes
       "catppuccin"
-      #languages
       "assembly"
       "brainfuck"
       "ini"
