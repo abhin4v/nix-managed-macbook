@@ -71,8 +71,6 @@ let
     obsidian
     proselint
     shellcheck
-    typos
-    typos-lsp
     xmlformat
   ];
   fonts = with pkgs; [
