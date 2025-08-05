@@ -28,11 +28,11 @@
     #   url = "github:nix-community/nixd/2.6.1";
     #   inputs.nixpkgs.follows = "nixpkgs";
     # };
-    lix-module = {
-      url = "https://git.lix.systems/lix-project/nixos-module/archive/2.93.2-1.tar.gz";
-      inputs.nixpkgs.follows = "nixpkgs";
-      inputs.flake-utils.follows = "flake-utils";
-    };
+    # lix-module = {
+    #   url = "https://git.lix.systems/lix-project/nixos-module/archive/2.93.3-1.tar.gz";
+    #   inputs.nixpkgs.follows = "nixpkgs";
+    #   inputs.flake-utils.follows = "flake-utils";
+    # };
     flake-utils.url = "github:numtide/flake-utils";
     flake-compat = {
       url = "github:edolstra/flake-compat";
@@ -53,7 +53,7 @@
       nix-darwin,
       home-manager,
       nix-index-database,
-      lix-module,
+      # lix-module,
       ...
     }:
     let
@@ -86,7 +86,7 @@
         modules = [
           ./configuration.nix
           ./homebrew.nix
-          lix-module.nixosModules.default
+          # lix-module.nixosModules.default
           home-manager.darwinModules.home-manager
           nix-index-database.darwinModules.nix-index
           {
