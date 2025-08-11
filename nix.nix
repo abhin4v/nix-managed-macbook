@@ -24,7 +24,7 @@ in
   ids.gids.nixbld = 350;
   nix = {
     enable = true;
-    # package = pkgs.lix;
+    package = pkgs.lix;
     extraOptions = ''
       keep-outputs = true
       keep-derivations = true
@@ -68,7 +68,7 @@ in
             };
             cores = 8;
           };
-          # nix.package = pkgs.lix;
+          nix.package = pkgs.lix;
           nix.settings = nixSettings // {
             sandbox = false;
             trusted-users = [ "builder" ];
