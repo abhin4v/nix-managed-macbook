@@ -76,7 +76,7 @@ let
   fonts = with pkgs; [
     fira-mono
     inconsolata
-    #jetbrains-mono
+    jetbrains-mono
     nanum-gothic-coding
     roboto-mono
     source-code-pro
