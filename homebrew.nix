@@ -20,6 +20,9 @@
       autoUpdate = false;
       brewfile = true;
     };
+    brews = [
+      "gemini-cli"
+    ];
     casks = [
       "amethyst"
       "appcleaner"
