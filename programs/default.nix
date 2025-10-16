@@ -64,6 +64,7 @@ let
     graphviz-nox
     iterm2
     jless
+    jjui
     just
     mas
     micro
@@ -89,6 +90,7 @@ in
   imports = [
     ./fish.nix
     ./git.nix
+    ./jj.nix
     ./starship.nix
     # ./vscode.nix
     ./zed.nix
@@ -203,9 +205,7 @@ in
         scrollback-limit = 100000000;
         shell-integration = "detect";
         theme = "ayu";
-        keybind = [
-          "global:cmd+shift+a=toggle_quick_terminal"
-        ];
+        keybind = [ "global:cmd+shift+a=toggle_quick_terminal" ];
       };
     };
   };
