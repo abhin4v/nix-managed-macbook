@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 
 {
-  programs.gitui.enable = true;
+  programs.gitui.enable = false;
   programs.git = {
     enable = true;
     userName = "Abhinav Sarkar";
