@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 
 {
-  programs.gitui.enable = false;
+  programs.lazygit.enable = true;
   programs.git = {
     enable = true;
     userName = "Abhinav Sarkar";
