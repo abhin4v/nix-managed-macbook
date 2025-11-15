@@ -4,48 +4,28 @@
   programs.lazygit.enable = true;
   programs.git = {
     enable = true;
-    userName = "Abhinav Sarkar";
-    userEmail = "abhinav@abhinavsarkar.net";
 
-    aliases = {
-      a = "add";
-      d = "diff";
-      c = "commit";
-      p = "push";
-      s = "status";
-      ui = "!gitui";
-      ap = "add -p";
-      ca = "commit --amend --no-edit";
-      cm = "commit -m";
-      pf = "push --force-with-lease";
-      lg = "log --graph --abbrev-commit --decorate --all --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(auto)%d%C(reset)'";
-      uc = "reset --soft HEAD~1";
-    };
-
-    delta = {
-      enable = true;
-      options = {
-        features = "decorations";
-        navigate = true;
-        line-numbers = true;
-        syntax-theme = "Dracula";
-        side-by-side = true;
-        decorations = {
-          commit-decoration-style = "blue ol";
-          commit-style = "raw";
-          file-style = "omit";
-          hunk-header-decoration-style = "blue box";
-          hunk-header-file-style = "red";
-          hunk-header-line-number-style = "#067a00";
-          hunk-header-style = "file line-number syntax";
-        };
-        interactive = {
-          keep-plus-minus-markers = false;
-        };
+    settings = {
+      user = {
+        name = "Abhinav Sarkar";
+        email = "abhinav@abhinavsarkar.net";
       };
-    };
 
-    extraConfig = {
+      alias = {
+        a = "add";
+        d = "diff";
+        c = "commit";
+        p = "push";
+        s = "status";
+        ui = "!lazygit";
+        ap = "add -p";
+        ca = "commit --amend --no-edit";
+        cm = "commit -m";
+        pf = "push --force-with-lease";
+        lg = "log --graph --abbrev-commit --decorate --all --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(auto)%d%C(reset)'";
+        uc = "reset --soft HEAD~1";
+      };
+
       init.defaultBranch = "main";
       pull = {
         ff = "only";
@@ -66,5 +46,28 @@
       ".direnv/"
       ".vscode/"
     ];
+  };
+
+  programs.delta = {
+    enable = true;
+    options = {
+      features = "decorations";
+      navigate = true;
+      line-numbers = true;
+      syntax-theme = "Dracula";
+      side-by-side = true;
+      decorations = {
+        commit-decoration-style = "blue ol";
+        commit-style = "raw";
+        file-style = "omit";
+        hunk-header-decoration-style = "blue box";
+        hunk-header-file-style = "red";
+        hunk-header-line-number-style = "#067a00";
+        hunk-header-style = "file line-number syntax";
+      };
+      interactive = {
+        keep-plus-minus-markers = false;
+      };
+    };
   };
 }

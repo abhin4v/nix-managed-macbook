@@ -8,6 +8,7 @@
 {
   programs.zed-editor = {
     enable = true;
+    extraPackages = [ pkgs.harper ];
     extensions = [
       "catppuccin"
       "assembly"
@@ -17,12 +18,16 @@
       "nix"
       "haskell"
       "toml"
-      "codebook"
+      "harper"
+      "xml"
+      "clojure"
+      "mustache"
+      "make"
     ];
     userSettings = {
       theme = "Gruvbox Dark Hard";
       telemetry = {
-        diagnostic = false;
+        diagnostics = false;
         metrics = false;
       };
       buffer_font_family = "PragmataPro Mono Liga"; # "Zed Plex Mono";
@@ -32,7 +37,7 @@
       cursor_blink = false;
       tab_size = 2;
       terminal = {
-        font_family = "Zed Plex Mono";
+        font_family = ".ZedMono";
         shell = {
           program = "/etc/profiles/per-user/abhinav/bin/fish";
         };
@@ -46,23 +51,32 @@
         coloring = "indent_aware";
       };
       inlay_hints.enabled = true;
-      wrap_guides = [ 80 100 120 ];
+      wrap_guides = [
+        80
+        100
+        120
+      ];
       agent = {
         default_model = {
           provider = "ollama";
           model = "gemma3:latest";
         };
-        version = "2";
       };
       languages = {
         Haskell = {
           tab_size = 2;
           format_on_save = "on";
+          preferred_line_length = 90;
+          language_servers = [ "hls" ];
         };
         Nix = {
           tab_size = 2;
-          language_servers = [ "nil" "nixd" ];
-          format_on_save = {
+          format_on_save = "on";
+          language_servers = [
+            "nil"
+            "nixd"
+          ];
+          formatter = {
             external = {
               command = "nixfmt";
               arguments = [
@@ -70,7 +84,7 @@
                 "{buffer_path}"
                 "-s"
                 "-w"
-                "1000"
+                "100"
               ];
             };
           };
@@ -86,11 +100,7 @@
             };
           };
         };
-        nix = {
-          binary = {
-            path_lookup = true;
-          };
-        };
+        nix = { };
       };
     };
   };
