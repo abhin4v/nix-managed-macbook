@@ -3,11 +3,17 @@
 , haskeline, hoogle, html-conduit, http-client, http-client-tls
 , http-types, lib, mtl, network-uri, optparse-applicative, process
 , temporary, terminal-size, text, time, transformers, xml-conduit
+, fetchFromGitHub
 }:
 mkDerivation {
   pname = "haskell-docs-cli";
   version = "1.0.0.0";
-  sha256 = "c19d975dd499b5a461e2a45faa99e933bba7901141321dc9c106b7c6e7a3e267";
+  src = fetchFromGitHub {
+    owner = "lazamar";
+    repo = "haskell-docs-cli";
+    rev = "main";
+    hash = "sha256-j/hOmRWEM23qoIQwbyOrRV51Kqi3RqhfsK9fDR9sSVA=";
+  };
   isLibrary = true;
   isExecutable = true;
   libraryHaskellDepends = [
@@ -32,7 +38,7 @@ mkDerivation {
     transformers xml-conduit
   ];
   doHaddock = false;
-  jailbreak = true;
+  jailbreak = false;
   doCheck = false;
   hyperlinkSource = false;
   homepage = "https://github.com/lazamar/haskell-docs-cli#readme";

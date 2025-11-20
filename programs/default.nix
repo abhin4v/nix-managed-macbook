@@ -56,6 +56,7 @@ let
     brotli
     cabal2nix
     (opaComplete "cabal-plan" (leanHaskellBinary haskellPackages.cabal-plan))
+    (opaComplete "hdc" (leanHaskellBinary (haskellPackages.callPackage ../packages/haskell-docs-cli.nix {})))
     cloc
     difftastic
     dua
