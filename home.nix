@@ -15,6 +15,8 @@ in
     ./launchd.nix
   ];
 
+  targets.darwin.linkApps.enable = true;
+
   home = {
     username = "abhinav";
     homeDirectory = lib.mkForce "/Users/${username}";
@@ -32,15 +34,5 @@ in
       tf = "${pkgs.coreutils-full}/bin/tail -f";
       cat = "${pkgs.bat}/bin/bat";
     };
-
-    file."Applications/Home Manager Apps".source =
-      let
-        apps = pkgs.buildEnv {
-          name = "home-manager-applications";
-          paths = config.home.packages;
-          pathsToLink = "/Applications";
-        };
-      in
-      "${apps}/Applications";
   };
 }

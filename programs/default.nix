@@ -50,6 +50,7 @@ let
     unixtools.watch
   ];
   miscPackages = with pkgs; [
+    amp-cli
     as-tree
     binutils
     brotli
