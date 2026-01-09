@@ -96,7 +96,7 @@
         modules = [
           ./configuration.nix
           ./homebrew.nix
-          lix-module.nixosModules.default
+          lix-module.darwinModules.default
           home-manager.darwinModules.home-manager
           nix-index-database.darwinModules.nix-index
           {

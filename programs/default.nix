@@ -203,6 +203,7 @@ in
         minimum-contrast = 1.05;
         mouse-hide-while-typing = true;
         quick-terminal-position = "right";
+        quick-terminal-size = "50%";
         quit-after-last-window-closed = false;
         scrollback-limit = 100000000;
         shell-integration = "detect";
