@@ -198,7 +198,7 @@ in
         command = "/etc/profiles/per-user/abhinav/bin/tmux new";
         copy-on-select = true;
         font-family = "PragmataPro Mono";
-        font-size = 14;
+        font-size = 16;
         macos-titlebar-style = "hidden";
         minimum-contrast = 1.05;
         mouse-hide-while-typing = true;

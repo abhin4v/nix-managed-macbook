@@ -9,10 +9,6 @@
         email = "abhinav@abhinavsarkar.net";
       };
 
-      git = {
-        push-new-bookmarks = true;
-      };
-
       ui = {
         default-command = "log-recent";
         diff-formatter = "difft";
