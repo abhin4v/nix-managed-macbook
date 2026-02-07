@@ -30,7 +30,7 @@
         diagnostics = false;
         metrics = false;
       };
-      buffer_font_family = "PragmataPro Mono Liga"; # "Zed Plex Mono";
+      buffer_font_family = "Maple Mono"; # "PragmataPro Mono Liga"; # "Zed Plex Mono";
       ui_font_size = 16;
       buffer_font_size = 13;
       confirm_quit = true;

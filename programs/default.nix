@@ -80,12 +80,12 @@ let
     fira-mono
     inconsolata
     jetbrains-mono
-    nanum-gothic-coding
     roboto-mono
     source-code-pro
     (pkgs.callPackage ../packages/dm-mono.nix { dm-mono-src = "${inputs.dm-mono-font}"; })
     monaspace
     nerd-fonts.iosevka
+    maple-mono.variable
   ];
 in
 {
