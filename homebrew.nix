@@ -27,6 +27,7 @@
       "amethyst"
       "appcleaner"
       "calibre"
+      "claude-code"
       "dropbox"
       "firefox"
       {
