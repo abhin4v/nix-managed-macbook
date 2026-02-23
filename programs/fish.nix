@@ -56,7 +56,7 @@ in
       fenv source /run/current-system/etc/bashrc
       fenv source /etc/profiles/per-user/${username}/etc/profile.d/hm-session-vars.sh
       fish_add_path -m ~/.local/bin ~/.cabal/bin /etc/profiles/per-user/${username}/bin
-      eval "$(${osConfig.homebrew.brewPrefix}/brew shellenv)"
+      eval "$(${osConfig.homebrew.prefix}/bin/brew shellenv)"
     '';
   };
 }
