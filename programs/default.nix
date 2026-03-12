@@ -101,20 +101,6 @@ in
   home.packages = nixPackages ++ networkingPackages ++ cmdLineUtilPackages ++ miscPackages ++ fonts;
 
   programs = {
-    tmux = {
-      enable = true;
-      prefix = "C-a";
-      clock24 = true;
-      historyLimit = 100000000;
-      mouse = true;
-      shell = "/etc/profiles/per-user/abhinav/bin/fish";
-      terminal = "tmux-256color";
-      plugins = with pkgs; [ tmuxPlugins.better-mouse-mode ];
-      extraConfig = ''
-        set -g status off
-      '';
-    };
-
     htop = {
       enable = true;
       settings = {
@@ -195,10 +181,11 @@ in
       installBatSyntax = false;
       settings = {
         background-opacity = 0.95;
-        command = "/etc/profiles/per-user/abhinav/bin/tmux new";
-        copy-on-select = true;
+        command = "/etc/profiles/per-user/abhinav/bin/fish";
+        copy-on-select = "clipboard";
         font-family = "PragmataPro Mono";
         font-size = 16;
+        link-previews = true;
         macos-titlebar-style = "hidden";
         minimum-contrast = 1.05;
         mouse-hide-while-typing = true;
@@ -207,7 +194,7 @@ in
         quit-after-last-window-closed = false;
         scrollback-limit = 100000000;
         shell-integration = "detect";
-        theme = "ayu";
+        theme = "aura";
         keybind = [ "global:cmd+shift+a=toggle_quick_terminal" ];
       };
     };
