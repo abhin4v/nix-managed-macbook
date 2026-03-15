@@ -15,8 +15,9 @@ forecast:
       tee -p /tmp/nix-forecast.txt | head -4
     @echo "Packages to be built:"
     @cat /tmp/nix-forecast.txt | grep "/nix/store/" | \
-      grep -Pv "\-completions$|\.zip$|\.patch$|\.lock$|\.fish$|\.sh$|\.json$|\.conf$|\.keep$|\.md|\.plist|\.service$" | \
-      cut -c 45- | sort | nl
+      grep -Pv "\-completions$|\.zip$|\.dmg$|\.patch$|\.lock$|\.fish$|\.sh$|\.json$|\.conf$|\.keep$|\.md|\.plist|\.service$" | \
+      cut -c 45- | perl -pe 's/-(dev|doc|main|man|bin|dist|npm-deps)$//' | \
+      perl -pe 's/(\.|-)\d.*$//' | sort -u | nl
 
 _run cmd:
     #!/usr/bin/env -S sh -eu
