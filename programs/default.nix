@@ -24,57 +24,35 @@ let
     nixfmt-rfc-style
     nvd
     nil
-    nixd
     statix
     cachix
-    nix-output-monitor
     nix-forecast
   ];
   networkingPackages = with pkgs; [
-    curl
     dig
-    httpie
     openssh
     mosh
   ];
   cmdLineUtilPackages = with pkgs; [
-    bash
-    broot
-    coreutils-full
-    fd
     glow
-    gnugrep
-    less
     ranger
-    tree
-    unixtools.watch
   ];
   miscPackages = with pkgs; [
-    amp-cli
-    as-tree
     binutils
     brotli
     cabal2nix
     (opaComplete "cabal-plan" (leanHaskellBinary haskellPackages.cabal-plan))
-    (opaComplete "hdc" (leanHaskellBinary (haskellPackages.callPackage ../packages/haskell-docs-cli.nix {})))
-    cloc
-    difftastic
-    dua
-    entr
-    hyperfine
-    git-absorb
+    (opaComplete "hdc" (
+      leanHaskellBinary (haskellPackages.callPackage ../packages/haskell-docs-cli.nix { })
+    ))
     graphviz-nox
     iterm2
     jless
-    jjui
-    just
     mas
-    micro
     fastfetch
     obsidian
     proselint
     shellcheck
-    xmlformat
   ];
   fonts = with pkgs; [
     fira-mono
@@ -90,10 +68,8 @@ let
 in
 {
   imports = [
+    ./shared.nix
     ./fish.nix
-    ./git.nix
-    ./jj.nix
-    ./starship.nix
     # ./vscode.nix
     ./zed.nix
   ];
@@ -101,77 +77,10 @@ in
   home.packages = nixPackages ++ networkingPackages ++ cmdLineUtilPackages ++ miscPackages ++ fonts;
 
   programs = {
-    htop = {
-      enable = true;
-      settings = {
-        hide_kernel_threads = true;
-        hide_threads = true;
-        hide_userland_threads = true;
-        highlight_base_name = true;
-        show_program_path = false;
-        sort_direction = false;
-        sort_key = "PERCENT_CPU";
-        tree_view = true;
-      };
-    };
-
-    eza = {
-      enable = true;
-      git = true;
-    };
-
-    direnv = {
-      enable = true;
-      nix-direnv = {
-        enable = true;
-      };
-    };
-
     nix-index = {
       enable = true;
       enableFishIntegration = true;
     };
-
-    bat = {
-      enable = true;
-      config = {
-        italic-text = "always";
-        paging = "always";
-        tabs = "2";
-        theme = "DarkNeon";
-      };
-    };
-
-    fzf = {
-      enable = true;
-      enableFishIntegration = true;
-      fileWidgetCommand = "fd --type f --no-ignore";
-      historyWidgetOptions = [
-        "--reverse"
-        "--sort"
-        "--exact"
-      ];
-    };
-
-    micro = {
-      enable = true;
-      settings = {
-        autoindent = true;
-        colorcolumn = 100;
-        colorscheme = "gruvbox";
-        diffgutter = true;
-        hlsearch = true;
-        mkparents = true;
-        savecursor = true;
-        softwrap = true;
-        tabsize = 2;
-        tabstospaces = true;
-        # plugins
-        manipulator = true;
-      };
-    };
-
-    zoxide.enable = true;
 
     ghostty = {
       enable = true;

@@ -3,7 +3,7 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
-    nixpkgs-stable.url = "github:nixos/nixpkgs/nixpkgs-25.05-darwin";
+    # nixpkgs-stable.url = "github:nixos/nixpkgs/nixpkgs-25.05-darwin";
     nixpkgs-ghostty.url = "github:nixos/nixpkgs/69b9a8c860bdbb977adfa9c5e817ccb717884182";
     nix-darwin = {
       url = "github:LnL7/nix-darwin";
@@ -50,7 +50,6 @@
     inputs@{
       self,
       nixpkgs,
-      nixpkgs-stable,
       nixpkgs-ghostty,
       nix-darwin,
       home-manager,
@@ -61,6 +60,7 @@
     }:
     let
       system = "aarch64-darwin";
+      microvm-system = builtins.replaceStrings [ "-darwin" ] [ "-linux" ] system;
       hostname = "Abhinavs-M4-MacBook-Pro";
       pkgs = import nixpkgs {
         inherit system;
@@ -68,12 +68,12 @@
           allowUnfree = true;
         };
       };
-      pkgs-stable = import nixpkgs-stable {
-        inherit system;
-        config = {
-          allowUnfree = true;
-        };
-      };
+      # pkgs-stable = import nixpkgs-stable {
+      #   inherit system;
+      #   config = {
+      #     allowUnfree = true;
+      #   };
+      # };
       pkgs-ghostty = import nixpkgs-ghostty {
         inherit system;
         config = {
@@ -84,7 +84,7 @@
     {
       darwinConfigurations.${hostname} = nix-darwin.lib.darwinSystem {
         inherit system;
-        specialArgs = { inherit inputs pkgs-stable; };
+        specialArgs = { inherit inputs; };
         modules = [
           ./configuration.nix
           ./homebrew.nix
@@ -97,11 +97,15 @@
             home-manager.backupFileExtension = "backup";
             home-manager.users.abhinav = import ./home.nix;
             home-manager.extraSpecialArgs = {
-              inherit inputs pkgs-stable pkgs-ghostty;
+              inherit inputs pkgs-ghostty;
               # nixd = inputs.nixd.packages.${system}.nixd;
             };
           }
           { programs.nix-index-database.comma.enable = true; }
+          {
+            environment.etc."nix/gcroots/microvm-projects".source =
+              self.nixosConfigurations.projects-microvm.config.system.build.toplevel;
+          }
         ];
       };
       devShells.${system}.default = pkgs.mkShell {
@@ -116,17 +120,29 @@
         '';
       };
       nixosConfigurations.projects-microvm = nixpkgs.lib.nixosSystem {
-        system = builtins.replaceStrings [ "-darwin" ] [ "-linux" ] system;
+        system = microvm-system;
+        specialArgs = { inherit inputs; };
         modules = [
           microvm.nixosModules.microvm
+          home-manager.nixosModules.home-manager
           ./microvms/projects.nix
-          { microvm.vmHostPackages = nixpkgs.legacyPackages.${system}; }
+          {
+            microvm.vmHostPackages = nixpkgs.legacyPackages.${system};
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.users.root = {
+              imports = [ ./programs/shared.nix ];
+              home.stateVersion = "25.05";
+            };
+            home-manager.extraSpecialArgs = { inherit inputs; };
+          }
         ];
       };
       packages.${system}.projects-microvm =
         let
           runner = self.nixosConfigurations.projects-microvm.config.microvm.declaredRunner;
-        in pkgs.writeShellScriptBin "microvm-run" ''
+        in
+        pkgs.writeShellScriptBin "microvm-run" ''
           cleanup() { stty "$(stty -g)"; }
           trap cleanup EXIT
           stty intr ^] susp ^] quit ^]
