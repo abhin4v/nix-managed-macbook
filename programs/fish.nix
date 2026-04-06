@@ -8,13 +8,10 @@
 
 let
   username = config.home.username;
-  fishPlugins = with pkgs.fishPlugins; [
-    autopair-fish
-    colored-man-pages
+  fishPlugins = import ./fish-plugins.nix { inherit pkgs; } ++ (with pkgs.fishPlugins; [
     foreign-env
     fzf-fish
-    gruvbox
-  ];
+  ]);
 
 in
 {

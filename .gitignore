@@ -1,3 +1,4 @@
 .DS_Store
 .cloudflare_dns_updater_api_token
 result
+nix-store-overlay.img

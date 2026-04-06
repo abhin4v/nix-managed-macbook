@@ -17,13 +17,6 @@
       url = "github:nix-community/nix-index-database";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    # nix-vscode-extensions = {
-    #   url = "github:nix-community/nix-vscode-extensions";
-    #   inputs = {
-    #     nixpkgs.follows = "nixpkgs";
-    #     flake-utils.follows = "flake-utils";
-    #   };
-    # };
     # nixd = {
     #   url = "github:nix-community/nixd/2.6.1";
     #   inputs.nixpkgs.follows = "nixpkgs";
@@ -38,11 +31,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.lix.follows = "lix";
     };
-    # lix-module = {
-    #   url = "https://git.lix.systems/lix-project/nixos-module/archive/2.93.3-1.tar.gz";
-    #   inputs.nixpkgs.follows = "nixpkgs";
-    #   inputs.flake-utils.follows = "flake-utils";
-    # };
     flake-utils.url = "github:numtide/flake-utils";
     flake-compat = {
       url = "github:edolstra/flake-compat";
@@ -51,6 +39,10 @@
     dm-mono-font = {
       url = "github:googlefonts/dm-mono";
       flake = false;
+    };
+    microvm = {
+      url = "github:microvm-nix/microvm.nix";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
@@ -64,10 +56,12 @@
       home-manager,
       nix-index-database,
       lix-module,
+      microvm,
       ...
     }:
     let
       system = "aarch64-darwin";
+      hostname = "Abhinavs-M4-MacBook-Pro";
       pkgs = import nixpkgs {
         inherit system;
         config = {
@@ -88,11 +82,9 @@
       };
     in
     {
-      darwinConfigurations."Abhinavs-M4-MacBook-Pro" = nix-darwin.lib.darwinSystem {
+      darwinConfigurations.${hostname} = nix-darwin.lib.darwinSystem {
         inherit system;
-        specialArgs = {
-          inherit inputs pkgs-stable;
-        };
+        specialArgs = { inherit inputs pkgs-stable; };
         modules = [
           ./configuration.nix
           ./homebrew.nix
@@ -123,5 +115,22 @@
           export NIXPKGS_PATH=${pkgs.path};
         '';
       };
+      nixosConfigurations.projects-microvm = nixpkgs.lib.nixosSystem {
+        system = builtins.replaceStrings [ "-darwin" ] [ "-linux" ] system;
+        modules = [
+          microvm.nixosModules.microvm
+          ./microvms/projects.nix
+          { microvm.vmHostPackages = nixpkgs.legacyPackages.${system}; }
+        ];
+      };
+      packages.${system}.projects-microvm =
+        let
+          runner = self.nixosConfigurations.projects-microvm.config.microvm.declaredRunner;
+        in pkgs.writeShellScriptBin "microvm-run" ''
+          cleanup() { stty "$(stty -g)"; }
+          trap cleanup EXIT
+          stty intr ^] susp ^] quit ^]
+          exec ${runner}/bin/microvm-run
+        '';
     };
 }
