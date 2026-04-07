@@ -1,0 +1,40 @@
+diff --git a/nix.nix b/nix.nix
+index 57d5c07..9d70ffb 100644
+--- a/nix.nix
++++ b/nix.nix
+@@ -50,33 +50,9 @@ in
+     distributedBuilds = true;
+     linux-builder = {
+       enable = true;
+-      package = pkgs.darwin.linux-builder-x86_64;
+-      systems = [ "x86_64-linux" ];
++      package = pkgs.darwin.linux-builder;
++      systems = [ "aarch64-linux" ];
+       ephemeral = true;
+-      maxJobs = 5;
+-      config = (
+-        { pkgs, ... }:
+-        {
+-          users.extraGroups.docker.members = builtins.map (i: "nixbld" + builtins.toString i) (
+-            pkgs.lib.genList (i: i + 1) 32
+-          );
+-          virtualisation = {
+-            docker.enable = true;
+-            darwin-builder = {
+-              diskSize = 50 * 1024;
+-              memorySize = 8 * 1024;
+-            };
+-            cores = 8;
+-          };
+-          nix.package = pkgs.lix;
+-          nix.settings = nixSettings // {
+-            sandbox = false;
+-            trusted-users = [ "builder" ];
+-          };
+-          nixpkgs.config.allowUnfree = true;
+-          environment.systemPackages = [ pkgs.htop ];
+-        }
+-      );
+     };
+   };
+   nixpkgs = {

@@ -37,7 +37,7 @@ in
         end
         mkdir -p ${config.xdg.stateHome}/microvm.nix/$argv;
         pushd ${config.xdg.stateHome}/microvm.nix/$argv;
-        nix run ${inputs.self}#$argv-microvm;
+        $argv-microvm-run;
         popd;
       '';
     };

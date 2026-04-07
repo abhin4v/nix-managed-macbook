@@ -80,6 +80,17 @@
           allowUnfree = true;
         };
       };
+      microvm-run =
+        name:
+        let
+          runner = self.nixosConfigurations."${name}-microvm".config.microvm.declaredRunner;
+        in
+        pkgs.writeShellScriptBin "${name}-microvm-run" ''
+          cleanup() { stty "$(stty -g)"; }
+          trap cleanup EXIT
+          stty intr ^] susp ^] quit ^]
+          exec ${runner}/bin/microvm-run
+        '';
     in
     {
       darwinConfigurations.${hostname} = nix-darwin.lib.darwinSystem {
@@ -97,7 +108,7 @@
             home-manager.backupFileExtension = "backup";
             home-manager.users.abhinav = import ./home.nix;
             home-manager.extraSpecialArgs = {
-              inherit inputs pkgs-ghostty;
+              inherit inputs pkgs-ghostty microvm-run;
               # nixd = inputs.nixd.packages.${system}.nixd;
             };
           }
@@ -138,15 +149,5 @@
           }
         ];
       };
-      packages.${system}.projects-microvm =
-        let
-          runner = self.nixosConfigurations.projects-microvm.config.microvm.declaredRunner;
-        in
-        pkgs.writeShellScriptBin "microvm-run" ''
-          cleanup() { stty "$(stty -g)"; }
-          trap cleanup EXIT
-          stty intr ^] susp ^] quit ^]
-          exec ${runner}/bin/microvm-run
-        '';
     };
 }
