@@ -96,11 +96,16 @@ switch_to_builder() {
         exit 1
     fi
     echo "Confirmed: Builder is ${arch}-linux"
+}
 
-    echo "${BOLD}===== Reverting patch to restore from ${arch}-linux builder ===${RESET}"
-    cd "$ROOT_DIR"
-    git apply -R "$patch_file"
-    CURRENT_PATCH=""
+revert_patch() {
+  local arch="$1"
+  local patch_file="$2"
+
+  echo "${BOLD}===== Reverting patch to restore from ${arch}-linux builder ===${RESET}"
+  cd "$ROOT_DIR"
+  git apply -R "$patch_file"
+  CURRENT_PATCH=""
 }
 
 echo "${BOLD}=== Step 1: Switching to aarch64-linux builder ===${RESET}"
@@ -109,10 +114,16 @@ switch_to_builder "aarch64" "$AARCH_PATCH_FILE"
 echo "${BOLD}=== Step 2: Running 'just _update' ===${RESET}"
 just _update
 
-echo "${BOLD}=== Step 3: Switching to x86_64-linux builder ===${RESET}"
+echo "${BOLD}=== Step 3: Switching back from aarch64-linux builder ===${RESET}"
+revert_patch "aarch64" "$AARCH_PATCH_FILE"
+
+echo "${BOLD}=== Step 4: Switching to x86_64-linux builder ===${RESET}"
 switch_to_builder "x86_64" "$X86_PATCH_FILE"
 
-echo "${BOLD}=== Step 4: Running 'just _switch' ===${RESET}"
-just _switch
+echo "${BOLD}=== Step 5: Switching back from x86_64-linux builder ===${RESET}"
+revert_patch "x86_64" "$X86_PATCH_FILE"
+
+echo "${BOLD}=== Step 6: Running 'just _switch' ===${RESET}"
+just switch
 
 echo "${BOLD}=== Done! ===${RESET}"
