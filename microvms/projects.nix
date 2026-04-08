@@ -16,7 +16,7 @@
       {
         image = "nix-store-overlay.img";
         mountPoint = "/nix/.rw-store";
-        size = 10240;
+        size = 20480;
       }
     ];
     shares = [
