@@ -54,3 +54,43 @@ clean days="7":
     nix profile wipe-history --older-than "{{ days }}d"
     sudo nix-collect-garbage -d --delete-older-than {{ days }}d
     brew cleanup  --prune {{ days }}
+
+# Switch linux builder to specified architecture (aarch64 or x86_64)
+switch-builder arch="aarch64":
+    #!/usr/bin/env bash
+    set -euo pipefail
+    cd {{ root_dir }}
+    source scripts/builder-functions.sh
+
+    if [[ "{{ arch }}" == "aarch64" ]]; then
+        switch_to_builder "aarch64" "$AARCH_PATCH_FILE"
+    elif [[ "{{ arch }}" == "x86_64" ]]; then
+        switch_to_builder "x86_64" "$X86_PATCH_FILE"
+    else
+        echo "Invalid architecture: {{ arch }}"
+        echo "Valid options: aarch64, x86_64"
+        exit 1
+    fi
+
+# Revert linux builder to default (x86_64)
+revert-builder:
+    #!/usr/bin/env bash
+    set -euo pipefail
+    cd {{ root_dir }}
+    source scripts/builder-functions.sh
+
+    # Determine which patch to revert by checking current state
+    if git apply --check "aarch64-linux-builder.patch" 2>/dev/null; then
+        # aarch64 patch is not applied, check for x86_64
+        if git apply --check "x86_64-linux-builder.patch" 2>/dev/null; then
+            echo "No patches applied"
+            exit 0
+        else
+            revert_patch "x86_64" "$X86_PATCH_FILE"
+        fi
+    else
+        revert_patch "aarch64" "$AARCH_PATCH_FILE"
+    fi
+
+    echo "Running 'just _switch' to restore default builder..."
+    just _switch
