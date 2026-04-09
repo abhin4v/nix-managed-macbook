@@ -10,13 +10,13 @@
   microvm = {
     hypervisor = "vfkit";
     vcpu = 4;
-    mem = 4096;
+    mem = 8192;
     writableStoreOverlay = "/nix/.rw-store";
     volumes = [
       {
         image = "nix-store-overlay.img";
         mountPoint = "/nix/.rw-store";
-        size = 20480;
+        size = 40960;
       }
     ];
     shares = [
@@ -64,6 +64,10 @@
 
   users.users.root.shell = pkgs.fish;
 
+  systemd.tmpfiles.rules = [
+    "d /nix/.rw-store/nix-build 0755 root root -"
+  ];
+
   nix = {
     settings = {
       connect-timeout = 60;
@@ -74,6 +78,8 @@
         "flakes"
       ];
       fallback = true;
+      sandbox = false;
+      build-dir = "/nix/.rw-store/nix-build";
     };
     registry.nixpkgs.flake = inputs.nixpkgs;
   };
