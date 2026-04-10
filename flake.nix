@@ -113,10 +113,6 @@
             };
           }
           { programs.nix-index-database.comma.enable = true; }
-          {
-            environment.etc."nix/gcroots/microvm-projects".source =
-              self.nixosConfigurations.projects-microvm.config.system.build.toplevel;
-          }
         ];
       };
       devShells.${system}.default = pkgs.mkShell {
