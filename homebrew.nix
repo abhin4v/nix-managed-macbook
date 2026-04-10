@@ -37,6 +37,7 @@
         };
       }
       "google-chrome"
+      "handy"
       "monodraw"
       "nextcloud"
       "signal"
