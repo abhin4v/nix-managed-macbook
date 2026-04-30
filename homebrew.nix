@@ -20,14 +20,11 @@
       autoUpdate = false;
       brewfile = true;
     };
-    brews = [
-      "gemini-cli"
-    ];
+    brews = [ "gemini-cli" ];
     casks = [
       "amethyst"
       "appcleaner"
       "calibre"
-      "claude-code"
       "dropbox"
       "firefox"
       {
@@ -40,24 +37,18 @@
       "handy"
       "monodraw"
       "nextcloud"
-      "signal"
       "spotify"
-      # "steam"
       "telegram"
       "vlc"
     ];
     masApps = {
       Amphetamine = 937984704;
       Bear = 1091189122;
-      iMovie = 408981434;
-      Ivory = 6444602274;
       Keynote = 409183694;
       Kindle = 302584613;
       NextDNS = 1464122853;
       Numbers = 409203825;
       Pages = 409201541;
-      ReadKit = 1615798039;
-      TestFlight = 899247664;
       Xcode = 497799835;
     };
   };

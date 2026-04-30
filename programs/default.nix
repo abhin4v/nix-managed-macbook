@@ -21,11 +21,10 @@ let
     niv
     nix
     nix-tree
-    nixfmt-rfc-style
+    nixfmt
     nvd
     nil
     statix
-    cachix
     nix-forecast
   ];
   networkingPackages = with pkgs; [
@@ -46,7 +45,6 @@ let
       leanHaskellBinary (haskellPackages.callPackage ../packages/haskell-docs-cli.nix { })
     ))
     graphviz-nox
-    iterm2
     jless
     mas
     fastfetch
