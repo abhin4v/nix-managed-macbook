@@ -48,12 +48,19 @@ _report-changes:
       nvd diff $(/bin/ls -d1v /nix/var/nix/profiles/system-*-link | tail -2)
     fi
 
-# clean up garbage
 clean days="7":
-    home-manager expire-generations "-{{ days }} days"
-    nix profile wipe-history --older-than "{{ days }}d"
-    sudo nix-collect-garbage -d --delete-older-than {{ days }}d
-    brew cleanup  --prune {{ days }}
+    #!/bin/bash
+    if [ "{{ days }}" = "0" ]; then
+        home-manager expire-generations "0 days"
+        nix profile wipe-history
+        sudo nix-collect-garbage -d
+        brew cleanup
+    else
+        home-manager expire-generations "-{{ days }} days"
+        nix profile wipe-history --older-than "{{ days }}d"
+        sudo nix-collect-garbage -d --delete-older-than {{ days }}d
+        brew cleanup --prune {{ days }}
+    fi
 
 # Switch linux builder to specified architecture (aarch64 or x86_64)
 switch-builder arch="aarch64":
