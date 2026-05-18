@@ -39,6 +39,7 @@
       "nextcloud"
       "spotify"
       "telegram"
+      "vivaldi"
       "vlc"
     ];
     masApps = {
