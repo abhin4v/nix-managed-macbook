@@ -15,6 +15,7 @@
       autoUpdate = false;
       cleanup = "uninstall";
       upgrade = false;
+      extraFlags = [ "--force-cleanup" ];
     };
     global = {
       autoUpdate = false;
