@@ -1,6 +1,7 @@
 {
   config,
   pkgs,
+  pkgs-stable,
   inputs,
   ...
 }:
@@ -67,6 +68,7 @@ in
               memorySize = 8 * 1024;
             };
             cores = 8;
+            qemu.package = pkgs-stable.qemu;
           };
           nix.package = pkgs.lix;
           nix.settings = nixSettings // {

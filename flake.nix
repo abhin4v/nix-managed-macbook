@@ -3,7 +3,7 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
-    # nixpkgs-stable.url = "github:nixos/nixpkgs/nixpkgs-25.05-darwin";
+    nixpkgs-stable.url = "github:nixos/nixpkgs/nixpkgs-26.05-darwin";
     nixpkgs-ghostty.url = "github:nixos/nixpkgs/69b9a8c860bdbb977adfa9c5e817ccb717884182";
     nix-darwin = {
       url = "github:LnL7/nix-darwin";
@@ -50,6 +50,7 @@
     inputs@{
       self,
       nixpkgs,
+      nixpkgs-stable,
       nixpkgs-ghostty,
       nix-darwin,
       home-manager,
@@ -68,12 +69,12 @@
           allowUnfree = true;
         };
       };
-      # pkgs-stable = import nixpkgs-stable {
-      #   inherit system;
-      #   config = {
-      #     allowUnfree = true;
-      #   };
-      # };
+      pkgs-stable = import nixpkgs-stable {
+        inherit system;
+        config = {
+          allowUnfree = true;
+        };
+      };
       pkgs-ghostty = import nixpkgs-ghostty {
         inherit system;
         config = {
@@ -95,7 +96,7 @@
     {
       darwinConfigurations.${hostname} = nix-darwin.lib.darwinSystem {
         inherit system;
-        specialArgs = { inherit inputs; };
+        specialArgs = { inherit inputs pkgs-stable; };
         modules = [
           ./configuration.nix
           ./homebrew.nix

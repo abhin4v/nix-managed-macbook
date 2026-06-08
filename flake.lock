@@ -233,6 +233,22 @@
         "type": "github"
       }
     },
+    "nixpkgs-stable": {
+      "locked": {
+        "lastModified": 1780773863,
+        "narHash": "sha256-t0AXyb11HJHwyRkCed8y15unmgwVlbgcIEVdV1XxYvA=",
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "20872773637de0b44f7ac04cde2098db1286e6d5",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nixos",
+        "ref": "nixpkgs-26.05-darwin",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
     "root": {
       "inputs": {
         "dm-mono-font": "dm-mono-font",
@@ -245,7 +261,8 @@
         "nix-darwin": "nix-darwin",
         "nix-index-database": "nix-index-database",
         "nixpkgs": "nixpkgs",
-        "nixpkgs-ghostty": "nixpkgs-ghostty"
+        "nixpkgs-ghostty": "nixpkgs-ghostty",
+        "nixpkgs-stable": "nixpkgs-stable"
       }
     },
     "spectrum": {
