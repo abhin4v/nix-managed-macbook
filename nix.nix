@@ -58,11 +58,7 @@ in
       config = (
         { pkgs, ... }:
         {
-          users.extraGroups.docker.members = builtins.map (i: "nixbld" + builtins.toString i) (
-            pkgs.lib.genList (i: i + 1) 32
-          );
           virtualisation = {
-            docker.enable = true;
             darwin-builder = {
               diskSize = 50 * 1024;
               memorySize = 8 * 1024;
