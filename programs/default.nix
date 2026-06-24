@@ -34,7 +34,7 @@ let
   ];
   cmdLineUtilPackages = with pkgs; [
     glow
-    ranger
+    (opaComplete "patat" (leanHaskellBinary haskellPackages.patat))
   ];
   miscPackages = with pkgs; [
     binutils
