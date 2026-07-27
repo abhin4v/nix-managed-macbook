@@ -63,11 +63,17 @@
       system = "aarch64-darwin";
       # microvm-system = builtins.replaceStrings [ "-darwin" ] [ "-linux" ] system;
       hostname = "Abhinavs-M4-MacBook-Pro";
-      pkgs = import nixpkgs {
+      nixpkgs-patched = (import nixpkgs { inherit system; }).applyPatches {
+        name = "nixpkgs-patched";
+        src = nixpkgs;
+        patches = [ ./packages/nixos-nixpkgs-545991.patch ];
+      };
+      pkgs = import nixpkgs-patched {
         inherit system;
         config = {
           allowUnfree = true;
         };
+        overlays = [ (final: prev: { nix = prev.lix; }) ];
       };
       pkgs-stable = import nixpkgs-stable {
         inherit system;
@@ -95,7 +101,7 @@
     in
     {
       darwinConfigurations.${hostname} = nix-darwin.lib.darwinSystem {
-        inherit system;
+        inherit system pkgs;
         specialArgs = { inherit inputs pkgs-stable; };
         modules = [
           ./configuration.nix

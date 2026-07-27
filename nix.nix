@@ -16,6 +16,7 @@ let
     ];
     fallback = true;
     keep-outputs = true;
+    keep-derivations = true;
     keep-going = true;
     log-lines = 25;
     max-jobs = 5;
@@ -26,10 +27,6 @@ in
   nix = {
     enable = true;
     package = pkgs.lix;
-    extraOptions = ''
-      keep-outputs = true
-      keep-derivations = true
-    '';
     optimise.automatic = true;
     settings = nixSettings // {
       max-free = 1000000000;

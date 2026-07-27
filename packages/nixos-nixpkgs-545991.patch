@@ -1,0 +1,23 @@
+From 880363114f11814024f4e740518eca16ca065450 Mon Sep 17 00:00:00 2001
+From: Kiskae <Kiskae@users.noreply.github.com>
+Date: Sun, 26 Jul 2026 17:43:45 +0200
+Subject: [PATCH] nixos/lib/qemu-common: restore `x86_64-linux` support on
+ `aarch64-darwin`
+
+Was accidentally removed in #535511
+---
+ nixos/lib/qemu-common.nix | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/nixos/lib/qemu-common.nix b/nixos/lib/qemu-common.nix
+index 346d3ffcef5af..768669747305e 100644
+--- a/nixos/lib/qemu-common.nix
++++ b/nixos/lib/qemu-common.nix
+@@ -50,6 +50,7 @@ rec {
+       otherHostGuestMatrix = {
+         aarch64-darwin = {
+           aarch64-linux = "${qemuPkg}/bin/qemu-system-aarch64 -machine virt,gic-version=2,accel=${accel "hvf"} -cpu max";
++          x86_64-linux = "${qemuPkg}/bin/qemu-system-x86_64 -machine type=q35,accel=${accel "hvf"} -cpu max";
+         };
+       };
+ 
