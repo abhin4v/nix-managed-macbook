@@ -53,15 +53,13 @@ in
       ephemeral = true;
       maxJobs = 5;
       config = (
-        { pkgs, ... }:
-        {
+        { pkgs, ... }: {
           virtualisation = {
             darwin-builder = {
               diskSize = 50 * 1024;
               memorySize = 8 * 1024;
             };
             cores = 8;
-            qemu.package = pkgs-stable.qemu;
           };
           nix.package = pkgs.lix;
           nix.settings = nixSettings // {
