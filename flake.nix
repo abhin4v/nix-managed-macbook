@@ -40,10 +40,10 @@
       url = "github:googlefonts/dm-mono";
       flake = false;
     };
-    microvm = {
-      url = "github:microvm-nix/microvm.nix";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    # microvm = {
+    #   url = "github:microvm-nix/microvm.nix";
+    #   inputs.nixpkgs.follows = "nixpkgs";
+    # };
   };
 
   outputs =
@@ -56,12 +56,12 @@
       home-manager,
       nix-index-database,
       lix-module,
-      microvm,
+      # microvm,
       ...
     }:
     let
       system = "aarch64-darwin";
-      microvm-system = builtins.replaceStrings [ "-darwin" ] [ "-linux" ] system;
+      # microvm-system = builtins.replaceStrings [ "-darwin" ] [ "-linux" ] system;
       hostname = "Abhinavs-M4-MacBook-Pro";
       pkgs = import nixpkgs {
         inherit system;
@@ -81,17 +81,17 @@
           allowUnfree = true;
         };
       };
-      microvm-run =
-        name:
-        let
-          runner = self.nixosConfigurations."${name}-microvm".config.microvm.declaredRunner;
-        in
-        pkgs.writeShellScriptBin "${name}-microvm-run" ''
-          cleanup() { stty "$(stty -g)"; }
-          trap cleanup EXIT
-          stty intr ^] susp ^] quit ^]
-          exec ${runner}/bin/microvm-run
-        '';
+      # microvm-run =
+      #   name:
+      #   let
+      #     runner = self.nixosConfigurations."${name}-microvm".config.microvm.declaredRunner;
+      #   in
+      #   pkgs.writeShellScriptBin "${name}-microvm-run" ''
+      #     cleanup() { stty "$(stty -g)"; }
+      #     trap cleanup EXIT
+      #     stty intr ^] susp ^] quit ^]
+      #     exec ${runner}/bin/microvm-run
+      #   '';
     in
     {
       darwinConfigurations.${hostname} = nix-darwin.lib.darwinSystem {
@@ -109,7 +109,7 @@
             home-manager.backupFileExtension = "backup";
             home-manager.users.abhinav = import ./home.nix;
             home-manager.extraSpecialArgs = {
-              inherit inputs pkgs-ghostty microvm-run;
+              inherit inputs pkgs-ghostty;
               # nixd = inputs.nixd.packages.${system}.nixd;
             };
           }
@@ -127,24 +127,24 @@
           export NIXPKGS_PATH=${pkgs.path};
         '';
       };
-      nixosConfigurations.projects-microvm = nixpkgs.lib.nixosSystem {
-        system = microvm-system;
-        specialArgs = { inherit inputs; };
-        modules = [
-          microvm.nixosModules.microvm
-          home-manager.nixosModules.home-manager
-          ./microvms/projects.nix
-          {
-            microvm.vmHostPackages = nixpkgs.legacyPackages.${system};
-            home-manager.useGlobalPkgs = true;
-            home-manager.useUserPackages = true;
-            home-manager.users.root = {
-              imports = [ ./programs/shared.nix ];
-              home.stateVersion = "25.05";
-            };
-            home-manager.extraSpecialArgs = { inherit inputs; };
-          }
-        ];
-      };
+      # nixosConfigurations.projects-microvm = nixpkgs.lib.nixosSystem {
+      #   system = microvm-system;
+      #   specialArgs = { inherit inputs; };
+      #   modules = [
+      #     microvm.nixosModules.microvm
+      #     home-manager.nixosModules.home-manager
+      #     ./microvms/projects.nix
+      #     {
+      #       microvm.vmHostPackages = nixpkgs.legacyPackages.${system};
+      #       home-manager.useGlobalPkgs = true;
+      #       home-manager.useUserPackages = true;
+      #       home-manager.users.root = {
+      #         imports = [ ./programs/shared.nix ];
+      #         home.stateVersion = "25.05";
+      #       };
+      #       home-manager.extraSpecialArgs = { inherit inputs; };
+      #     }
+      #   ];
+      # };
     };
 }

@@ -30,16 +30,16 @@ in
         nix-store --gc --print-roots | grep -v lsof | grep -v libproc | grep -v "{temp:"
       '';
       nix-roots-tree = ''nix-roots | sed "s/\/nix\/store\///g" | as-tree'';
-      microvm = ''
-        if test (count $argv) -ne 1
-          echo "Usage: microvm <name>" >&2
-          return 1
-        end
-        mkdir -p ${config.xdg.stateHome}/microvm.nix/$argv;
-        pushd ${config.xdg.stateHome}/microvm.nix/$argv;
-        $argv-microvm-run;
-        popd;
-      '';
+      # microvm = ''
+      #   if test (count $argv) -ne 1
+      #     echo "Usage: microvm <name>" >&2
+      #     return 1
+      #   end
+      #   mkdir -p ${config.xdg.stateHome}/microvm.nix/$argv;
+      #   pushd ${config.xdg.stateHome}/microvm.nix/$argv;
+      #   $argv-microvm-run;
+      #   popd;
+      # '';
     };
 
     interactiveShellInit = ''

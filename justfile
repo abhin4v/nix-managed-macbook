@@ -29,11 +29,11 @@ _switch: build
 switch: _switch && _report-changes
 
 # update packages and switch
-_update: && _switch _brew-update _report-changes
+update: && _switch _brew-update _report-changes
     nix flake update --commit-lock-file --flake {{ root_dir }}
 
-update:
-    scripts/update-with-aarch64-builder.sh
+# update:
+#     scripts/update-with-aarch64-builder.sh
 
 _brew-update:
     brew update

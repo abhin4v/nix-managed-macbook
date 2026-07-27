@@ -2,7 +2,7 @@
   config,
   pkgs,
   lib,
-  microvm-run,
+  # microvm-run,
   ...
 }:
 
@@ -23,6 +23,6 @@ in
     homeDirectory = lib.mkForce "/Users/${username}";
     stateVersion = "22.05";
     enableNixpkgsReleaseCheck = true;
-    packages = [ (microvm-run "projects") ];
+    # packages = [ (microvm-run "projects") ];
   };
 }
