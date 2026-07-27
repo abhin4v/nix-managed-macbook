@@ -10,19 +10,22 @@
     enable = true;
     extraPackages = [ pkgs.harper ];
     extensions = [
-      "catppuccin"
       "assembly"
       "brainfuck"
+      "catppuccin"
+      "clojure"
+      "harper"
+      "harper"
+      "haskell"
+      "html"
       "ini"
       "just"
-      "nix"
-      "haskell"
-      "toml"
-      "harper"
-      "xml"
-      "clojure"
-      "mustache"
       "make"
+      "mustache"
+      "nix"
+      "scss"
+      "toml"
+      "xml"
     ];
     userSettings = {
       theme = "Gruvbox Dark Hard";
@@ -32,7 +35,7 @@
       };
       buffer_font_family = "Maple Mono"; # "PragmataPro Mono Liga"; # "Zed Plex Mono";
       ui_font_size = 16;
-      buffer_font_size = 13;
+      buffer_font_size = 16;
       confirm_quit = true;
       cursor_blink = false;
       tab_size = 2;
