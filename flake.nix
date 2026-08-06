@@ -22,6 +22,11 @@
     #   inputs.nixpkgs.follows = "nixpkgs";
     # };
 
+    flake-utils.url = "github:numtide/flake-utils";
+    flake-compat = {
+      url = "github:edolstra/flake-compat";
+      flake = false;
+    };
     lix = {
       url = "https://git.lix.systems/lix-project/lix/archive/main.tar.gz";
       flake = false;
@@ -30,15 +35,16 @@
       url = "https://git.lix.systems/lix-project/nixos-module/archive/main.tar.gz";
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.lix.follows = "lix";
-    };
-    flake-utils.url = "github:numtide/flake-utils";
-    flake-compat = {
-      url = "github:edolstra/flake-compat";
-      flake = false;
+      inputs.flake-utils.follows = "flake-utils";
     };
     dm-mono-font = {
       url = "github:googlefonts/dm-mono";
       flake = false;
+    };
+    magix = {
+      url = "github:dschrempf/magix";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.flake-utils.follows = "flake-utils";
     };
     # microvm = {
     #   url = "github:microvm-nix/microvm.nix";
@@ -56,6 +62,7 @@
       home-manager,
       nix-index-database,
       lix-module,
+      magix,
       # microvm,
       ...
     }:
@@ -115,7 +122,7 @@
             home-manager.backupFileExtension = "backup";
             home-manager.users.abhinav = import ./home.nix;
             home-manager.extraSpecialArgs = {
-              inherit inputs pkgs-ghostty;
+              inherit inputs pkgs-ghostty system;
               # nixd = inputs.nixd.packages.${system}.nixd;
             };
           }

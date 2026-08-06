@@ -1,4 +1,5 @@
 {
+  system,
   inputs,
   config,
   pkgs,
@@ -40,6 +41,7 @@ let
     binutils
     brotli
     cabal2nix
+    inputs.magix.packages.${system}.magix
     (opaComplete "cabal-plan" (leanHaskellBinary haskellPackages.cabal-plan))
     (opaComplete "hdc" (
       leanHaskellBinary (haskellPackages.callPackage ../packages/haskell-docs-cli.nix { })
