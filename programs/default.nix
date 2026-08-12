@@ -26,7 +26,6 @@ let
     nvd
     nil
     statix
-    nix-forecast
   ];
   networkingPackages = with pkgs; [
     dig
@@ -50,7 +49,6 @@ let
     jless
     mas
     fastfetch
-    obsidian
     proselint
     shellcheck
   ];

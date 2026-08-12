@@ -11,7 +11,6 @@ in
   ];
 
   home.packages = with pkgs; [
-    amp-cli
     as-tree
     bash
     broot

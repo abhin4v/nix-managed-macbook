@@ -9,15 +9,6 @@ default:
 help:
     @just --list --unsorted --list-heading $'Available commands:\n'
 
-forecast:
-    nix-forecast -s -c {{ root_dir }}#darwinConfigurations.{{ hostname }} | \
-      tee -p /tmp/nix-forecast.txt | head -4
-    @echo "Packages to be built:"
-    @cat /tmp/nix-forecast.txt | grep "/nix/store/" | \
-      grep -Pv "\-completions$|\.zip$|\.dmg$|\.patch$|\.lock$|\.fish$|\.sh$|\.json$|\.conf$|\.keep$|\.md|\.plist|\.service$" | \
-      cut -c 45- | perl -pe 's/-(dev|doc|main|man|bin|dist|npm-deps)$//' | \
-      perl -pe 's/(\.|-)\d.*$//' | sort -u | nl
-
 # build nix-darwin system
 build:
     nom build --show-trace {{ root_dir }}#darwinConfigurations.{{ hostname }}.system
