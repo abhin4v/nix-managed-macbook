@@ -50,6 +50,8 @@ let
     mas
     fastfetch
     proselint
+    write-good
+    aha
     shellcheck
   ];
   fonts = with pkgs; [
