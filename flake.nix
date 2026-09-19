@@ -6,7 +6,7 @@
     nixpkgs-stable.url = "github:nixos/nixpkgs/nixpkgs-26.05-darwin";
     nixpkgs-ghostty.url = "github:nixos/nixpkgs/69b9a8c860bdbb977adfa9c5e817ccb717884182";
     nix-darwin = {
-      url = "github:LnL7/nix-darwin";
+      url = "github:nix-darwin/nix-darwin";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     home-manager = {
@@ -70,12 +70,7 @@
       system = "aarch64-darwin";
       # microvm-system = builtins.replaceStrings [ "-darwin" ] [ "-linux" ] system;
       hostname = "Abhinavs-M4-MacBook-Pro";
-      nixpkgs-patched = (import nixpkgs { inherit system; }).applyPatches {
-        name = "nixpkgs-patched";
-        src = nixpkgs;
-        patches = [ ./packages/nixos-nixpkgs-545991.patch ];
-      };
-      pkgs = import nixpkgs-patched {
+      pkgs = import nixpkgs {
         inherit system;
         config = {
           allowUnfree = true;
